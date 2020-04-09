@@ -1,24 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oyaanow </title>
-     <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/fontawesome.min.css" integrity="sha256-CuUPKpitgFmSNQuPDL5cEfPOOJT/+bwUlhfumDJ9CI4=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/fontawesome.min.js" integrity="sha256-NP9NujdEzS5m4ZxvNqkcbxyHB0dTRy9hG13RwTVBGwo=" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/27fba2f7f0.js"></script>
 </head>
-<body >
+
+<body>
     <!-- Preloader  -->
 
-<div class="loader bg-dark">
-    <div class="loader-inner ball-scale-ripple-multiple ball-scale-ripple-multiple-color">
-      <div></div>
-      <div></div>
-      <div></div>
+    <div class="loader bg-dark">
+        <div class="loader-inner ball-scale-ripple-multiple ball-scale-ripple-multiple-color">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </div>
-  </div>
-  <!-- /End Preloader  -->
-  
-  
+    <!-- /End Preloader  -->
 
+<!------------------Navbar-------------------->
+<div class="wrapper header">
+    <div class="navbar">
+        <a class="logo">OyaaNow</a>
+        <div class="options">
+            <a class="nav-item about">About</a>
+            <a class="nav-item contact">Contact</a>
+            <a class="nav-item login">Login/Create Account</a>
+            <a class="nav-item blog">Oyaanow Blog</a>
+            <a class="nav-item support">24/7 Support</a>
+            <div class="hamburger fa fa-bars "></div>
+        </div>
+
+
+    </div>
+
+
+
+
+    <div class="destination-picker">
+        
+    </div>
+</div>
+
+
+
+    <script>
+        window.setTimeout(function clear() {
+            document.querySelector(".loader").classList.add("loaded")
+        }, 2000
+        )
+    </script>
+ 
 </body>
+
 </html>
