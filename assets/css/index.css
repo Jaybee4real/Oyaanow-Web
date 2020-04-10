@@ -1,7 +1,7 @@
 /*/////////////////Imports///////////////////// */
 
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;500&family=Satisfy&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;500;600&display=swap');
 
 @font-face {
   font-family: "Font Awesome";
@@ -83,10 +83,13 @@
   -ms-flex-pack: center;
   justify-content: center;
   transition: all 1s linear;
+  background-color: orange;
+  transition: .5s all ease-out;
 }
 .loader.loaded {
   display: none !important;
   transition: all 1s linear;
+
 }
 .fade-out.loader {
   opacity: 0;
@@ -121,7 +124,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
-  background-image: linear-gradient(to top right, #b6b89d85 20%, #4e51554b 100%);
 }
 
 * {
@@ -131,6 +133,12 @@ body {
 
 /* /////////////////////////////////////////////////// */
 
+
+.wrapper {
+  height: 65vh;
+  width: 100vw;
+  background-color: #e67817;
+}
 .navbar {
   width: 100vw;
   display: flex;
@@ -142,7 +150,7 @@ body {
   font-size: 2rem;
   font-family: "Satisfy", sans-serif;
   text-align: center;
-  color: #f5e27a;
+  color:  white;
   font-weight: 600;
   padding: 1.5rem;
 }
@@ -153,17 +161,16 @@ body {
   height: 3rem;
   width: 3rem;
   background-position: center;
-  background-color: yellow;
+  background-color: #e67817;
   background-size: cover;
 }
 .header{
-  background-image: linear-gradient(to bottom right, rgb(119, 119, 108)30%,  white 20%, #f5e27a 5%, #ebe5c6b4 100%);
   background-size: 100%;
   height: 45vh;
 }
 
 .options {
-  font-family: "Baloo Paji 2", cursive;
+  font-family: 'Baloo Tammudu 2', cursive;
   display: flex;
   flex-direction: row;
   position: relative;
@@ -172,85 +179,18 @@ body {
 }
 
 .nav-item {
-  margin: 2px;
+  margin: 15px;
   margin-top: 0;
-  background-color: rgba(255, 255, 255, 0.192);
-  border-radius: 10px;
-  padding: 10px;
-  color: grey
+  color: white;
+  font-size: 1.3rem;
 }
 
 
 .nav-item:hover , .hamburger:hover{
-  box-shadow: 0px 0px 7px .5px rgb(153, 148, 148);
   transition: all .5s ease-out;
   cursor: pointer;
   transition-delay: -.1s;
 }
-
-.contact::before {
-  content: "\f879";
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Font Awesome";
-  font-weight: 500;
-  padding-right: 5px;
- 
-}
-
-.about::before{
-  content: "\f05a";
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Font Awesome";
-  font-weight: 500;
-  padding-right: 5px;
-
-}
-
-
-.login::before{
-  content: "\f2f6";
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Font Awesome";
-  font-weight: 500;
-  padding-right: 5px;
-}
-
-.blog::before{
-  content: "\f781";
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Font Awesome";
-  font-weight: 500;
-  padding-right: 5px;
-}
-
-.support::before{
-  content: "\f025";
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Font Awesome";
-  font-weight: 500;
-  padding-right: 5px;
-}
-
 
 .hamburger{
   margin: auto;
@@ -258,7 +198,7 @@ body {
   border-radius: 3px;
   padding: 13px;
   margin-right: 20px;
-  color: white
+  color: black;
 }
 
 
@@ -295,7 +235,7 @@ body {
 }
 
 
-.destination-picker{
+/* .destination-picker{
   width: 80vw;
   background-color: rgba(255, 255, 255, 0.775);
   height: 15rem;
@@ -304,11 +244,4 @@ body {
   top: 7vh;
   border-radius: 20px;
 
-}
-
-
-.destination-picker:hover{
-   box-shadow: 1px 0px 0px 100vw rgba(0, 0, 0, 0.374);
-   transition: all .3s ease-out;
-   background-color: white;
-}
+} */
