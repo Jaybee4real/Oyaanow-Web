@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oyaanow </title>
     <link rel="stylesheet" href="./assets/css/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/fontawesome.min.css" integrity="sha256-CuUPKpitgFmSNQuPDL5cEfPOOJT/+bwUlhfumDJ9CI4=" crossorigin="anonymous" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/fontawesome.min.js" integrity="sha256-NP9NujdEzS5m4ZxvNqkcbxyHB0dTRy9hG13RwTVBGwo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/fontawesome.min.css"
+        integrity="sha256-CuUPKpitgFmSNQuPDL5cEfPOOJT/+bwUlhfumDJ9CI4=" crossorigin="anonymous" />
+        <script src="./assets/js/custom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/fontawesome.min.js"
+        integrity="sha256-NP9NujdEzS5m4ZxvNqkcbxyHB0dTRy9hG13RwTVBGwo=" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/27fba2f7f0.js"></script>
 </head>
 
@@ -23,38 +26,49 @@
     </div>
     <!-- /End Preloader  -->
 
-<!------------------Navbar-------------------->
-<div class="wrapper header">
-    <div class="navbar">
-        <a class="logo">OyaaNow</a>
-        <div class="options">
-            <a class="nav-item about">About</a>
-            <a class="nav-item contact">Contact</a>
-            <a class="nav-item login">Login/Create Account</a>
-            <div class="hamburger fa fa-bars "></div>
+    <!------------------Navbar-------------------->
+    <div class="wrapper header">
+        <div id="navbar" class="navbar">
+            <a class="logo">OyaaNow</a>
+            <div class="options">
+                <a class="nav-item about">About</a>
+                <a class="nav-item contact">Contact</a>
+                <a class="nav-item login">Login/Create Account</a>
+                <div class="hamburger fa fa-bars "></div>
+            </div>
+
+            <div class="mobile-menu">
+                <a class="logo">Oyaanow</a>
+                <div class="options">
+                    <a class="mobile-nav-item about">About</a>
+                    <a class="mobile-nav-item contact">Contact</a>
+                    <a class="mobile-nav-item login">Login/Create Account</a>
+                </div>
+            </div>
+
+
+
         </div>
 
-
-
-        
-    </div>
-
-
-    <div class="destination-picker">
-        
-    </div>
-</div>
-
-
-
     <script>
-        
+
         window.setTimeout(function clear() {
             document.querySelector(".loader").classList.add("loaded")
         }, 2000
         )
+
+
+        let navButton = document.querySelector(".hamburger")
+
+        navButton.addEventListener("click", ()=> {
+            document.querySelector(".mobile-menu").classList.toggle("open");
+            navButton.classList.toggle("fa-bars")
+            navButton.classList.toggle("fa-times","fa-2x")
+        })
+
+
     </script>
- 
+
 </body>
 
 </html>
