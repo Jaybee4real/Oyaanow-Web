@@ -159,7 +159,7 @@ body {
   padding: 1.5rem;
   position: relative;
   padding-bottom: .5rem;
-  left: 3.5rem
+  cursor: pointer;
 }
 /* 
 .logo::before {
@@ -196,6 +196,7 @@ body {
   margin-top: 0;
   color: white;
   font-size: 1.3rem;
+  cursor: pointer;
 }
 
 .nav-item.login{
@@ -229,10 +230,10 @@ body {
   margin: auto;
   border-radius: 3px;
   padding: 13px;
-  margin-right: 20px;
-  color: white;
-  font-size: 1.3rem !important;
+  color: white !important;
+  font-size: 1.6rem !important;
   z-index: 10;
+  transition: all .5s ease-out;
 }
 
 .fa-times{
@@ -242,7 +243,7 @@ body {
 
 
 .mobile-menu {
-  background-color: #e67817;
+  background-color: white;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -260,6 +261,7 @@ body {
 .mobile-menu .logo{
   color: #e67817;
   margin-top: 10px;
+  cursor: pointer;
 }
 
 .mobile-menu .options {
@@ -273,6 +275,7 @@ body {
   color: black;
   font-weight: 500;
   font-size: 1.2rem;
+  cursor: pointer;
 }
 
 /* //////////////////////Media Queries/////////////////////////// */
@@ -326,4 +329,26 @@ body {
   font-size: 2rem;
   color: orange;
   font-family: "Baloo Tammudu 2", cursive;
+}
+
+
+.booking-container{
+  background-color: white;
+  height: 20rem;
+  position: relative;
+  top: 40vh;
+  margin: auto;
+  width: 85vw;
+  border-radius: 20px;
+  border: .5px solid orange;
+}
+
+.booking{
+  height: 80%;
+  width: 90%;
+  position: relative;
+  top: 10%;
+  margin: auto;
+  background-color: rgba(128, 128, 128, 0.513);
+  border-radius: 10px;
 }
