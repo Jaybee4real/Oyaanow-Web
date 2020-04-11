@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./assets/css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/fontawesome.min.css"
         integrity="sha256-CuUPKpitgFmSNQuPDL5cEfPOOJT/+bwUlhfumDJ9CI4=" crossorigin="anonymous" />
-    <script src="./assets/js/custom.js"></script>
+   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/fontawesome.min.js"
         integrity="sha256-NP9NujdEzS5m4ZxvNqkcbxyHB0dTRy9hG13RwTVBGwo=" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/27fba2f7f0.js"></script>
@@ -31,18 +31,18 @@
         <div id="navbar" class="navbar">
             <a class="logo">OyaaNow</a>
             <div class="options">
-                <a class="nav-item about">About</a>
-                <a class="nav-item contact">Contact</a>
-                <a class="nav-item login">Login/Create Account</a>
-                <div class="hamburger fa fa-bars "></div>
+                <a class="nav-item about btn">About</a>
+                <a class="nav-item contact btn">Contact</a>
+                <a class="nav-item login btn">Login/Create Account</a>
+                <div class="hamburger fa fa-bars  btn"></div>
             </div>
 
             <div class="mobile-menu">
                 <a class="logo">Oyaanow</a>
                 <div class="options">
-                    <a class="mobile-nav-item about">About</a>
-                    <a class="mobile-nav-item contact">Contact</a>
-                    <a class="mobile-nav-item login">Login/Create Account</a>
+                    <a class="mobile-nav-item about btn">About</a>
+                    <a class="mobile-nav-item contact btn">Contact</a>
+                    <a class="mobile-nav-item login btn">Login/Create Account</a>
                 </div>
             </div>
 
@@ -59,17 +59,17 @@
                     <div class="input-container">
                         <input class="departure" placeholder="Departure">
                         <input class="destination" placeholder="Destination">
-                        <input class="date" placeholder="Date" type="text" onclick="(this.type='date')" onblur="(this.type='text')">
-                        <input class="time" placeholder="Time" type="text" onclick="(this.type='time')" onblur="(this.type='text')">
+                        <input class="date" placeholder="Date" type="text" onclick="(this.type='date')"
+                            onblur="(this.type='text')">
+                        <input class="time" placeholder="Time" type="text" onclick="(this.type='time')"
+                            onblur="(this.type='text')">
                         <input type="submit" class="btn" value="Book Now">
                     </div>
                 </div>
             </div>
         </div>
 
-
-
-        <section class="main-content-1">
+        <section class="main-content-1 slide-up">
             <div class="left-side">
                 <h1>Oyaa Now....</h1>
                 <h5>Revolutionizing the transport sector...</h5>
@@ -78,9 +78,8 @@
                     <br>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore voluptatibus suscipit modi alias
                     quis facilis saepe fugit reprehenderit ipsum dolorem repudiandae cupiditate sit aliquam veniam
-                    possimus, voluptates nulla dolores voluptas! Dolor non natus aliquid alias dolores adipisci
-                    dignissimos eaque exercitationem ipsam fugit cumque odit sunt numquam nesciunt, obcaecati.
-        
+                    possimus, voluptates nulla dolores voluptas! Dolor non natus aliquid alias dolores adipisci.
+
                 </p>
             </div>
 
@@ -99,13 +98,15 @@
                         <div class="top answer-item">
                             <div class="icon fast"></div>
                             <h4>Fast Booking</h4>
-                            <p>Enjoy buying tickets or ordering a bus online from home or on-the-go, with our mobile freindy site or via the oyaanow app</p>
+                            <p>Enjoy buying tickets or ordering a bus online from home or on-the-go, with our mobile
+                                freindy site or via the oyaanow app</p>
                         </div>
 
                         <div class="bottom answer-item">
                             <div class="icon convienient"></div>
                             <h4>Convienience</h4>
-                            <p>Enjoy buying tickets or ordering a bus online from home or on-the-go, with our mobile freindy site or via the oyaanow app</p>
+                            <p>Enjoy buying tickets or ordering a bus online from home or on-the-go, with our mobile
+                                freindy site or via the oyaanow app</p>
                         </div>
 
                     </div>
@@ -114,13 +115,15 @@
                         <div class="top answer-item">
                             <div class="icon save"></div>
                             <h4>Spend Less</h4>
-                            <p>We offer a less expensive but efficient fleet busses that will give you maximum comfort but minimum cost.</p>
+                            <p>We offer a less expensive but efficient fleet busses that will give you maximum comfort
+                                and service but minimum cost and stress</p>
                         </div>
 
                         <div class="bottom answer-item">
                             <div class="icon stress"></div>
-                            <h4>Stress</h4>
-                            <p>Unlike like tradditional way of booking tickets, oyaanow offers maximum service with very litle or no stress</p>
+                            <h4>Proffesional personnel</h4>
+                            <p>We offer agents that have been trained to provide satisfactory service with very litle or
+                                no stress</p>
                         </div>
 
                     </div>
@@ -129,21 +132,8 @@
 
         </section>
         <!-- ////////////////////////////////////////////////////////////////// -->
-        <script>
+        <script src="./assets/js/custom.js"></script>
 
-            window.setTimeout(function clear() {
-                document.querySelector(".loader").classList.add("loaded")
-            }, 2000
-            )
-            let navButton = document.querySelector(".hamburger")
-            navButton.addEventListener("click", () => {
-                document.querySelector(".mobile-menu").classList.toggle("open");
-                navButton.classList.toggle("fa-bars")
-                navButton.classList.toggle("fa-times")
-            })
-
-
-        </script>
 
 </body>
 
