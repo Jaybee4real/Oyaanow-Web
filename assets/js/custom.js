@@ -13,3 +13,5 @@ let navbar = document.getElementById("navbar")
 		navbar.classList.remove("scroll")
 	}
 })
+
+

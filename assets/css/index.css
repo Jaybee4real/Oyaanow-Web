@@ -115,18 +115,12 @@
 }
 
 /* /////////////////////End Preloader//////////////////////// */
-html {
-  overflow-x: hidden !important;
-  width: 100vw;
-}
+
 body {
   margin: 0;
   padding: 0;
-  background-repeat: no-repeat;
-  background-size: cover;
   width: 100vw;
-  overflow-x: hidden !important;
-  height: 200vh;
+  overflow-x: hidden;
 }
 
 * {
@@ -158,6 +152,7 @@ body {
   color: white;
   font-weight: 600;
   padding: 1.5rem;
+  padding-left: 3rem;
   position: relative;
   padding-bottom: 0.5rem;
   cursor: pointer;
@@ -184,6 +179,7 @@ body {
   background-position: center;
   background-color: #e67817;
   background-blend-mode: hard-light;
+  border-bottom: 3px solid #e67817;
 }
 
 .options {
@@ -221,7 +217,7 @@ body {
 .scroll {
   position: fixed;
   width: 100vw;
-  background-color: #e67817;
+  background: linear-gradient(15deg, white 5%, #e67817);
   box-shadow: 0px 0px 25px 0.5px rgb(177, 175, 175);
   transition: all 0.7s ease-out;
   transition-delay: 0.3s;
@@ -264,6 +260,7 @@ body {
   color: #e67817;
   margin-top: 10px;
   cursor: pointer;
+  padding-left: 0 !important;
 }
 
 .mobile-menu .options {
@@ -307,9 +304,14 @@ body {
 }
 
 .scroll .nav-item,
-.scroll .hamburger,
-.scroll .logo {
+.scroll .hamburger
+ {
   color: white;
+}
+
+.scroll .logo{
+ 
+  color: #e67817;
 }
 
 .intro-text {
@@ -352,10 +354,6 @@ body {
 
 .one-way {
   margin-top: 5px;
-}
-
-input::-moz-focus-inner {
-  border: none !important;
 }
 
 .call-to-action {
@@ -405,6 +403,7 @@ input:focus {
   margin: 10px;
   border: 1px solid grey;
   border-radius: 2px 50px 10px 50px;
+  text-align: center;
 }
 .input-container input::placeholder {
   font-size: 1.1rem;
@@ -413,12 +412,18 @@ input:focus {
   font-weight: 500;
 }
 
+input[type="time"]{
+  font-size:1.35rem !important;
+  color: grey
+}
+
 .input-container input[type="submit"] {
   background-color: #e67817;
   font-size: 1.1rem;
   color: white;
   font-family: "Baloo Tammudu 2", sans-serif;
   border: 0;
+  border-radius:  50px 2px  50px 10px;
   box-shadow: 0px 5px 45px 0px rgb(168, 164, 164);
   font-weight: 500;
 }
@@ -429,9 +434,9 @@ input:focus {
   font-size: 4rem;
   position: relative;
   color: white;
-  line-height: .7;
+  line-height: 0.7;
 }
-.left-side h5{
+.left-side h5 {
   font-family: "Baloo Tammudu 2", cursive;
   text-align: left;
   font-size: 1.4rem;
@@ -439,13 +444,13 @@ input:focus {
   color: white;
 }
 
-.left-side p{
+.left-side p {
   font-family: "Baloo Tammudu 2", cursive;
   text-align: left;
   font-size: 1rem;
   position: relative;
-  color: white
-
+  color: white;
+  padding-right: 7%;
 }
 
 .main-content-1 {
@@ -458,10 +463,9 @@ input:focus {
 
 .main-content-1 .left-side {
   width: 60vw;
-  background: linear-gradient(to right, #e67817, rgba(255, 255, 255, 0.056));
+  background: linear-gradient(to right, #e67817 60%, rgba(255, 255, 255, 0));
   height: 90vh;
   opacity: 1;
-  z-index: 2;
   display: flex;
   flex-direction: column;
   vertical-align: center;
@@ -470,7 +474,7 @@ input:focus {
   padding-left: 1rem;
 }
 
-.main-content-1 .right-side{
+.main-content-1 .right-side {
   background-image: url(../img/seat_photo.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -490,5 +494,160 @@ input:focus {
 
   .main-content-1 .left-side {
     width: 100vw;
+  }
+}
+
+.main-content-2 {
+  position: relative;
+  top: 45vh;
+  background-color: yellow !important;
+}
+
+.main-content-2 h1 {
+  font-family: "Satisfy", cursive;
+  text-align: center;
+  font-size: 4rem;
+  color: #e67817;
+}
+
+.main-content-2 .answer {
+  font-family: "Baloo Tammudu 2", cursive;
+  text-align: center;
+  font-size: 1.8rem;
+  color: #e67817;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  line-height: 0.7;
+}
+
+.main-content-2 .answer::before {
+  content: "";
+  width: 25vw;
+  display: block;
+  position: absolute;
+  height: 3px;
+  background-color: black;
+  left: 2%;
+}
+.main-content-2 .answer::after {
+  content: "";
+  width: 25vw;
+  display: block;
+  position: absolute;
+  height: 3px;
+  right: 2%;
+  margin-top: -19px;
+  background-color: black;
+}
+
+.main-content-2 .flex-reasons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+
+.flex-reasons .left-side {
+  height: 70vh;
+  width: 100%;
+  margin: 0px 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.left-side .top .icon, .right-side .top .icon, .right-side .bottom .icon , .left-side .bottom .icon{
+  height: 5rem;
+  width: 5rem;
+  margin: auto
+}
+
+.left-side .top .icon{
+  background-image: url("../img/hourglass.svg");
+  background-size: 100%;
+}
+
+.right-side .top .icon{
+  background-image: url("../img/deposit.svg");
+  background-size: 100%;
+}
+
+.left-side .bottom .icon{
+  background-image: url("../img/check.svg");
+  background-size: 100%;
+}
+
+
+
+
+.left-side .top, .right-side .top{
+  margin-bottom: 3rem;
+}
+
+
+.left-side .answer-item h4, .right-side .answer-item h4{
+  font-size: 1.7rem;
+  text-align: center;
+  font-family: "Baloo Tammudu 2", cursive
+}
+
+.left-side .answer-item p, .right-side .answer-item p{
+  font-size: 1.1rem;
+  text-align: center;
+  font-family: "Baloo Tammudu 2", cursive;
+  color: grey;
+  padding:0 10%;
+}
+
+
+
+.flex-reasons .middle {
+  height: 70vh !important;
+  width: 100%;
+  margin-top: 5rem;
+  background-image: url("../img/Phone.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin: 0px 5px;
+}
+
+.flex-reasons .right-side {
+  height: 70vh;
+  width: 100%;
+  margin: 0px 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 767px) {
+  .main-content-2 .flex-reasons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flex-reasons .middle{
+    background-size: 50%
+  }
+
+  .main-content-2 .answer::before, .main-content-2 .answer::after{
+    width: 15vw;
+  }
+
+}
+
+@media(max-width: 560px){
+  .flex-reasons .middle{
+    background-size: 100%;
+    margin-top: 10rem;
+  }
+
+  .main-content-2 .answer{
+    font-size:1.5rem
+  }
+}
+
+@media(max-width:460px){
+  .answer::before, .answer::after{
+    display: none;
   }
 }
