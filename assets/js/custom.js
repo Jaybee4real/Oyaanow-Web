@@ -4,7 +4,7 @@
 var images = ["Hiace.jpg", "bus_side.jpg"];
 $(function () {
 	var i = 0;
-	$(".header").css("background-image", "url(./assets/img/" + images[i] + ")");
+	$(".header").css("background-image", "url(./assets/img/"+ "Hiace.jpg"+ ")");
 
 	setInterval(function () {
 		i++;
