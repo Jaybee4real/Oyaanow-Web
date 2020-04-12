@@ -16,11 +16,15 @@ $(function () {
 });
 
 
+window.addEventListener('DOMContentLoaded', () => {
+	window.setTimeout(function clear() {
+		document.querySelector(".loader").classList.add("loaded")
+	}, 2000
+	)
 
-window.setTimeout(function clear() {
-	document.querySelector(".loader").classList.add("loaded")
-}, 2000
-)
+})
+
+
 let navButton = document.querySelector(".hamburger")
 navButton.addEventListener("click", () => {
 	document.querySelector(".mobile-menu").classList.toggle("open");
