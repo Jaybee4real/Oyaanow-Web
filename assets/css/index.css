@@ -453,6 +453,7 @@ input:focus {
 
   .input-container input {
     width: 80% !important;
+    font-size: 1.1rem;
   }
 
   .input-container input[type="submit"] {
@@ -470,6 +471,7 @@ input:focus {
   width: 100%;
   padding: 15px 20px;
   margin: 10px;
+  font-size: 1.1rem;
   border: 1px solid grey;
   border-radius: 2px 50px 10px 50px;
   text-align: center;
@@ -482,8 +484,12 @@ input:focus {
 }
 
 input[type="time"] {
-  font-size: 1.35rem !important;
+  font-size: 1.1rem !important;
   color: grey;
+}
+
+input[type="time"]::placeholder{
+  font-size: 1.1rem;
 }
 
 .input-container input[type="submit"] {
