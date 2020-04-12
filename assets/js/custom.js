@@ -1,7 +1,7 @@
 
 
 
-var images = ["Hiace.jpg", "Bus_fleet.jpg", "bus_side.jpg"];
+var images = ["Hiace.jpg", "bus_side.jpg"];
 $(function () {
 	var i = 0;
 	$(".header").css("background-image", "url(./assets/img/" + images[i] + ")");
