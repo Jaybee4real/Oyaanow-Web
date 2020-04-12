@@ -20,7 +20,7 @@ $(function () {
 window.addEventListener('DOMContentLoaded', () => {
 	window.setTimeout(function clear() {
 		document.querySelector(".loader").classList.add("loaded")
-	}, 2000
+	}, 3000
 	)
 
 })
