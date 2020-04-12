@@ -130,8 +130,8 @@ body {
 
 .theme-color {
   color: #e67817 !important;
-  transition: all .5s ease-out;
-  transition-delay: .55s;
+  transition: all 0.5s ease-out;
+  transition-delay: 0.55s;
 }
 
 /* ///////////////////////////Carousel FAde/////////////////////////////////// */
@@ -167,7 +167,7 @@ body {
   position: relative;
   padding-bottom: 0.5rem;
   cursor: pointer;
-  transition: all .5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 /* .logo::before {
@@ -511,26 +511,36 @@ input[type="time"] {
   text-align: left;
   font-size: 1.4rem;
   position: relative;
-  color: white;
+  color: black;
   left: 2rem;
+  line-height: 1;
 }
 
-.left-side p {
+.main-content-1 .left-side p {
   font-family: "Baloo Tammudu 2", cursive;
   text-align: left;
   font-size: 1rem;
   position: relative;
-  color: white;
+  color: black;
   padding-right: 40%;
-  text-align: left;
-  left: 2rem;
+  text-align: center;
 }
 
 @media (max-width: 560px) {
-  .left-side p,
-  .left-side h1,
+  .main-content-1 .left-side p,
   .left-side h5 {
-    left: 0;
+    left: 0.5rem;
+    max-width: 70%;
+  }
+
+  .main-content-1 .left-side h5{
+    text-align: center;
+    left: -.5rem;
+  }
+
+
+  .left-side h1 {
+    left: .5rem;
   }
 }
 .main-content-1 {
@@ -543,8 +553,7 @@ input[type="time"] {
 
 .main-content-1 .left-side {
   width: 60vw;
-  background: linear-gradient(to right, #e67817b0 10%, rgba(255, 255, 255, 0)),
-    linear-gradient(to right, #e67817b0 5%, rgba(255, 255, 255, 0.452) 60%, rgba(255, 255, 255, 0));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.739) 60%, rgba(255, 255, 255, 0));
   height: 90vh;
   opacity: 1;
   display: flex;
