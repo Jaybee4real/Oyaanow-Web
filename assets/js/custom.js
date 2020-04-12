@@ -12,6 +12,7 @@ $(function () {
 			i = 0;
 		}
 		$(".header").css("background-image", "url(./assets/img/" + images[i] + ")");
+		document.querySelector(".logo").classList.toggle("theme-color")
 	}, 5000);
 });
 
