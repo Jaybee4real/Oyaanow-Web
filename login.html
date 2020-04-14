@@ -31,7 +31,7 @@
 
     <!------------------Navbar-------------------->
     <div id="navbar" class="navbar">
-        <a href="index.html" class="logo">OyaaNow</a>
+        <a href="index.html" class="logo radial-gradient">OyaaNow</a>
         <div class="options">
             <a href="index.html" class="nav-item login btn">Home</a>
             <a class="nav-item about btn">About</a>
@@ -56,26 +56,75 @@
 
 
 
-        <div class="login-container">
-            <div class="login-box-left-side">
-                <a class="login active">Login</a>
-                <a class="register">Register</a>
-            </div>
-            <div class="login-box-right-side">
-                <a class="logo theme-color">Oyaanow</a>
-                <form>
+    <div class="login-container">
+        <div class="login-box-left-side">
+            <a class="login login-tab active">Login</a>
+            <a class="register register-tab">Register</a>
+        </div>
+        <div class="login-box-right-side login-panel">
+            <a class="logo theme-color">Oyaanow</a>
+            <a class="call-to-action">Login</a>
+            <div class="pointer">Dont have an account?<a class="login-pointer theme-color"> Register Now!</a></div>
+            <form>
+                <label><i class="form-i fa fa-user theme-color"></i>
                     <input type="username" placeholder="Username">
+                </label>
+                <label>
+                    <i class="form-i fa fa-key theme-color"></i>
                     <input type="password" placeholder="Password">
-                    <input type="submit" value="Login">
-                </form>
-                <div class="or">Or</div>
+                </label>
+                <input class="btn" type="submit" value="Login">
+            </form>
+            <div class="or">Or</div>
+            <div style="display: flex; justify-content: center; ">
+                <div class="google"><i class="fa fa-google-plus-official theme-color"></i> Google</div>
+                <div class="google"><i class="fa fa-facebook-official theme-color"></i> Facebook</div>
             </div>
         </div>
 
+        <div class="login-box-right-side register-panel hide">
+            <a class="logo theme-color">Oyaanow</a>
+            <a class="call-to-action">Register</a>
+            <div class="pointer">Have an account?<a class="register-pointer theme-color"> Login</a></div>
+            <form>
+                <div class="side-by-side">
+                    <label>
+                        <i class="form-i fa fa-envelope theme-color"></i>
+                        <input type="email" placeholder="Email">
+                    </label>
+                    <label for="username">
+                        <br class="dissapear-992">
+                        <i class="form-i fa fa-user theme-color" theme-color></i>
+                        <input name="username" type="username" placeholder="Username">
+                    </label>
+                </div>
+                <div class="side-by-side">
+                    <label>
+                        <label>
+                            <i class="form-i fa fa-key theme-color"></i>
+                            <input type="password" placeholder="Password">
+                        </label>
+                        <label>
+                            <br class="dissapear-992">
+                            <i class="form-i fa fa-question theme-color"></i>
+                            <input type="password" placeholder="Confirm Password">
+                        </label>
+                </div>
+                <input class="btn" type="submit" value="Register">
+            </form>
+            <div class="or">Or</div>
+            <div style="display: flex; justify-content: center; margin-top: -1rem;">
+                <div class="google"><i class="fa fa-google-plus-official theme-color"></i> Google</div>
+                <div class="google"><i class="fa fa-facebook-official theme-color"></i> Facebook</div>
+            </div>
+        </div>
+
+    </div>
 
 
-        <!-- ////////////////////////////////////////////////////////////////// -->
-        <script src="./assets/js/custom.js"></script>
+
+    <!-- ////////////////////////////////////////////////////////////////// -->
+    <script src="./assets/js/custom.js"></script>
 
 
 </body>
