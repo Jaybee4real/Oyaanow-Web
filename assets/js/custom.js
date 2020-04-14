@@ -88,4 +88,3 @@ registerPointer.addEventListener("click", () => {
 
 
 
-//////////////////////////////Intersection Observer////////////////

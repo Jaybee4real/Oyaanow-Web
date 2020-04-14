@@ -152,6 +152,23 @@
     <section class="main-content-3">
     </section>
     <!-- ////////////////////////////////////////////////////////////////// -->
+    <script>
+        //////////////////////////////Intersection Observer////////////////
+        let scroll = window.pageYOffset;
+
+        document.addEventListener("scroll", function (e) {
+            let navbar = document.getElementById("navbar")
+            var offset = window.pageYOffset;
+            scroll = offset;
+            if (scroll > 1) {
+                navbar.classList.add("scroll")
+
+            }
+            else {
+                navbar.classList.remove("scroll")
+            }
+        }) 
+    </script>
     <script src="./assets/js/custom.js"></script>
 
 

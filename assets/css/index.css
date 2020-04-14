@@ -240,7 +240,7 @@
   width: 100vw;
   background: linear-gradient(25deg, white 5%, var(--theme-color));
   box-shadow: 0px 0px 25px 0.5px rgb(177, 175, 175);
-  z-index: 2;
+  z-index: 5;
   transition: all 0.7s ease-out;
   transition-delay: 0.3s;
 }
@@ -488,10 +488,11 @@ input:focus {
   transition: all 0.3s ease-out;
 }
 .input-container {
-  margin: 20px auto;
   width: 100%;
   display: flex;
+  margin: 20px auto;
   flex-direction: row;
+ 
 }
 
 @media (max-width: 670px) {
@@ -503,10 +504,12 @@ input:focus {
   .input-container input {
     width: 80% !important;
     font-size: 1.1rem;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%)
   }
 
   .input-container input[type="submit"] {
-    margin: auto;
     width: fit-content !important;
     padding: 15px 40px;
   }
@@ -662,6 +665,7 @@ input[type="time"]::placeholder {
   text-align: center;
   font-size: 3.5rem;
   color: var(--theme-color);
+  margin-top: 1rem;
 }
 
 .main-content-2 .answer {
@@ -841,6 +845,8 @@ input[type="time"]::placeholder {
   top: 13vh;
   display: flex;
   flex-direction: row;
+  min-height: 35rem;
+
 }
 
 .login-box-left-side {
@@ -975,9 +981,6 @@ input[type="time"]::placeholder {
   cursor: pointer;
 }
 
-.register-tab, .login-tab{
-  cursor: pointer;
-}
 
 @media(max-width:460px){
   .login-container {
