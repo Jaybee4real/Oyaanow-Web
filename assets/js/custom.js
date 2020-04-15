@@ -74,34 +74,31 @@ registerButton.forEach((element) => {
 
 
 
+/////////////////Smaller Screen Login Page Layout////////////
 
 
 
-
-
-
+document.querySelectorAll(".panel-2-login-tab").forEach((element) => {
+	element.addEventListener("click", () => {
+		element.classList.add("active");
+		document.querySelector(".register-panel").classList.add("hide")
+		document.querySelector(".login-panel").classList.remove("hide");
+		document.querySelectorAll(".panel-2-register-tab").forEach((element) => {
+			element.classList.remove("active");
+		})
+	})
+})
 
 
 
 document.querySelectorAll(".panel-2-register-tab").forEach((element) => {
 	element.addEventListener("click", () => {
-		document.querySelectorAll(".panel-2-register-tab").forEach((element) => {
-			element.classList.add("active")
-		})
+		element.classList.add("active");
+		document.querySelector(".login-panel").classList.add("hide");
+		document.querySelector(".register-panel").classList.remove("hide")
 		document.querySelectorAll(".panel-2-login-tab").forEach((element) => {
 			element.classList.remove("active");
 		})
 	})
 })
 
-
-document.querySelectorAll(".panel-2-login-tab").forEach((element) => {
-	element.addEventListener("click", () => {
-		document.querySelectorAll(".panel-2-login-tab").forEach((element) => {
-			element.classList.add("active")
-		})
-		document.querySelectorAll(".panel-2-register-tab").forEach((element) => {
-			element.classList.remove("active");
-		})
-	})
-})
