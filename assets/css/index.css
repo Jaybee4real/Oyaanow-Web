@@ -86,7 +86,7 @@
   transition: all 1.2s ease-out;
 }
 
-.loader-2{
+.loader-2 {
   box-sizing: border-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -103,9 +103,9 @@
   -ms-flex-pack: center;
   justify-content: center;
   transition: all 1.2s ease-out;
-
 }
-.loader.loaded, .loader-2.loaded {
+.loader.loaded,
+.loader-2.loaded {
   opacity: 0;
   z-index: -100;
   transition: all 1.2s ease-out;
@@ -158,7 +158,7 @@
   top: 0;
 }
 
-.login-page .navbar{
+.login-page .navbar {
   background: linear-gradient(360deg, rgba(255, 255, 255, 0) 5%, var(--theme-color));
 }
 
@@ -492,7 +492,6 @@ input:focus {
   display: flex;
   margin: 20px auto;
   flex-direction: row;
- 
 }
 
 @media (max-width: 670px) {
@@ -506,7 +505,7 @@ input:focus {
     font-size: 1.1rem;
     position: relative;
     left: 50%;
-    transform: translateX(-50%)
+    transform: translateX(-50%);
   }
 
   .input-container input[type="submit"] {
@@ -846,7 +845,6 @@ input[type="time"]::placeholder {
   display: flex;
   flex-direction: row;
   min-height: 35rem;
-
 }
 
 .login-box-left-side {
@@ -867,20 +865,17 @@ input[type="time"]::placeholder {
   flex-direction: column;
 }
 
-.login-box-right-side .logo{
+.login-box-right-side .logo {
   left: -25px;
   margin-bottom: -1rem;
 }
 
-
-.login-box-right-side .call-to-action{
+.login-box-right-side .call-to-action {
   margin-bottom: -1rem;
 }
 
-
-.pointer{
+.pointer {
   font-family: "Baloo Tammudu 2", cursive;
-  
 }
 
 .login-box-right-side form {
@@ -888,11 +883,9 @@ input[type="time"]::placeholder {
   flex-direction: column;
 }
 
-.register-panel{
-  top: 0
+.register-panel {
+  top: 0;
 }
-
-
 
 .login-box-right-side form input {
   width: 60%;
@@ -938,15 +931,14 @@ input[type="time"]::placeholder {
   color: #e67817;
 }
 
-
-.or{
+.or {
   font-family: "Baloo Tammudu 2", sans-serif;
   font-size: 1.1rem;
   font-weight: 600;
 }
 
-.or::before{
-  content: '';
+.or::before {
+  content: "";
   position: absolute;
   height: 2px;
   display: block;
@@ -955,12 +947,10 @@ input[type="time"]::placeholder {
   width: 30%;
   background-color: grey;
   padding-right: 1rem;
-
 }
 
-
-.or::after{
-  content: '';
+.or::after {
+  content: "";
   position: absolute;
   height: 2px;
   display: block;
@@ -970,26 +960,22 @@ input[type="time"]::placeholder {
   padding-right: 1rem;
   margin-right: 5vw;
   background-color: grey;
-
 }
 
-
-.google,.facebook{
+.google,
+.facebook {
   margin-right: 1rem;
   font-family: "Baloo Tammudu 2", sans-serif;
   font-weight: 500;
   cursor: pointer;
 }
 
-
-@media(max-width:460px){
+@media (max-width: 460px) {
   .login-container {
     height: 80vh;
     width: 95vw;
   }
 }
-
-
 
 body {
   width: 100vw !important;
@@ -1016,22 +1002,75 @@ a {
   transition-delay: 0.55s;
 }
 
-.form-i{
+.form-i {
   position: relative;
-  left: 1.1rem
+  left: 1.1rem;
 }
 
-@media(min-width: 1200px ){
-
-  .dissapear-992{
+@media (min-width: 1200px) {
+  .dissapear-992 {
     display: none !important;
   }
 }
-.hide{
+.hide {
   display: none;
 }
 
-.pointer{
+.pointer {
   cursor: pointer;
 }
 
+.options-panel-2 {
+  background-color: var(--theme-color);
+  height: 13%;
+  position: absolute;
+  top: -13.2%;
+  width: 111%;
+  left: -5%;
+  margin: 0;
+  padding: 0;
+  border-top-left-radius: 100px;
+  border-left: 10px;
+  display: none;
+}
+
+.options-panel-2 .login,
+.options-panel-2 .register {
+  font-size: 1.4rem;
+  position: relative;
+  text-align: center;
+  font-family: "Baloo Tammudu 2", sans-serif;
+  padding: 0.3rem;
+  padding-top: 7%;
+  color: white;
+  font-weight: 500;
+  width: 50%;
+}
+
+.options-panel-2 .login {
+  border-top-left-radius: 100px;
+}
+
+.options-panel-2 div.active {
+  background-color: white;
+  color: orange;
+}
+
+@media (max-width: 410px) {
+  .options-panel-2 {
+    display: flex;
+  }
+
+  .login-box-left-side {
+    display: none;
+  }
+  .login-container {
+    background: white;
+    justify-content: center;
+  }
+  .login-box-right-side {
+    max-width: 100%;
+    width: 90%;
+    top: 13%;
+  }
+}

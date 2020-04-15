@@ -167,7 +167,35 @@
             else {
                 navbar.classList.remove("scroll")
             }
-        }) 
+        })
+
+    //////////////////////////////////////////Picture Sider/////////////////
+
+        var images = ["bus_side.jpg", "Hiace.jpg"];
+        $(function () {
+            var i = 0;
+            $(".header").css("background-image", "url(./assets/img/" + "Hiace.jpg" + ")");
+
+            setInterval(function () {
+                i++;
+                if (i == images.length) {
+                    i = 0;
+                }
+                $(".header").css("background-image", "url(./assets/img/" + images[i] + ")");
+                document.querySelector(".logo-animated").classList.toggle("theme-color")
+            }, 5000);
+        });
+
+
+/////////////////////////////////////////Picture Loader///////////////////
+        window.addEventListener('DOMContentLoaded', () => {
+            window.setTimeout(function clear() {
+                document.querySelector(".loader-2").classList.add("loaded")
+            }, 6100
+            )
+        })
+
+
     </script>
     <script src="./assets/js/custom.js"></script>
 
