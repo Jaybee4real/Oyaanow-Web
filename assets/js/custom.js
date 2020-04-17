@@ -9,7 +9,7 @@
 window.addEventListener('DOMContentLoaded', () => {
 	window.setTimeout(function clear() {
 		document.querySelector(".loader").classList.add("loaded")
-	}, 3000
+	}, 1
 	)
 })
 
@@ -30,6 +30,10 @@ navButton.addEventListener("click", () => {
 ////////////////////////////Register/Login Switcher Function////////////////////////////////
 var loginButton = document.querySelectorAll(".login-tab")
 var registerButton = document.querySelectorAll(".register-tab")
+// var loginButtonOne = document.querySelectorAll(".panel-2-login-tab-1")
+// var loginButtonTwo = document.querySelectorAll(".panel-2-login-tab-2")
+// var registerButtonOne = document.querySelectorAll(".panel-2-register-tab-1")
+// var registerButtonTwo = document.querySelectorAll(".panel-2-register-tab-2")
 var registerPanel = document.querySelector(".register-panel")
 var loginPanel = document.querySelector(".login-panel")
 
@@ -46,6 +50,7 @@ loginButton.forEach((element) => {
 
 
 
+
 registerButton.forEach((element) => {
 	element.addEventListener("click", () => {
 		element.classList.add("active");
@@ -58,47 +63,4 @@ registerButton.forEach((element) => {
 })
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/////////////////Smaller Screen Login Page Layout////////////
-
-
-
-document.querySelectorAll(".panel-2-login-tab").forEach((element) => {
-	element.addEventListener("click", () => {
-		element.classList.add("active");
-		document.querySelector(".register-panel").classList.add("hide")
-		document.querySelector(".login-panel").classList.remove("hide");
-		document.querySelectorAll(".panel-2-register-tab").forEach((element) => {
-			element.classList.remove("active");
-		})
-	})
-})
-
-
-
-document.querySelectorAll(".panel-2-register-tab").forEach((element) => {
-	element.addEventListener("click", () => {
-		element.classList.add("active");
-		document.querySelector(".login-panel").classList.add("hide");
-		document.querySelector(".register-panel").classList.remove("hide")
-		document.querySelectorAll(".panel-2-login-tab").forEach((element) => {
-			element.classList.remove("active");
-		})
-	})
-})
 

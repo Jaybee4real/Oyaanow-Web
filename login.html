@@ -61,15 +61,16 @@
             <a class="login login-tab active pointer">Login</a>
             <a class="register register-tab pointer">Register</a>
         </div>
-        
+
         <div class="login-box-right-side login-panel">
             <div class="options-panel-2">
-                <div class="login panel-2-login-tab active">Login</div>
-                <div class="register panel-2-register-tab" >Register</div>
+                <div class="login panel-2-login-tab-1 active">Login</div>
+                <div class="register panel-2-register-tab-1">Register</div>
             </div>
             <a class="logo theme-color">Oyaanow</a>
             <a class="call-to-action">Login</a>
-            <div class="pointer">Dont have an account?<a class="login-pointer register-tab theme-color"> Register Now!</a></div>
+            <div class="pointer">Dont have an account?<a class="login-pointer register-tab theme-color"> Register
+                    Now!</a></div>
             <form>
                 <label><i class="form-i fa fa-user theme-color"></i>
                     <input type="username" placeholder="Username">
@@ -81,6 +82,7 @@
                 <input class="btn" type="submit" value="Login">
             </form>
             <div class="or">Or</div>
+            <span>Login With</span>
             <div style="display: flex; justify-content: center; ">
                 <div class="google"><i class="fa fa-google-plus-official theme-color"></i> Google</div>
                 <div class="google"><i class="fa fa-facebook-official theme-color"></i> Facebook</div>
@@ -89,8 +91,8 @@
 
         <div class="login-box-right-side register-panel hide">
             <div class="options-panel-2">
-                <div class="login active panel-2-register-tab">Login</div>
-                <div class="register panel-2-register-tab">Register</div>
+                <div class="login active panel-2-login-tab-2">Login</div>
+                <div class="register panel-2-register-tab-2">Register</div>
             </div>
             <a class="logo theme-color">Oyaanow</a>
             <a class="call-to-action">Register</a>
@@ -122,6 +124,7 @@
                 <input class="btn" type="submit" value="Register">
             </form>
             <div class="or">Or</div>
+            <span>Register with</span>
             <div style="display: flex; justify-content: center; margin-top: -1rem;">
                 <div class="google"><i class="fa fa-google-plus-official theme-color"></i> Google</div>
                 <div class="google"><i class="fa fa-facebook-official theme-color"></i> Facebook</div>
@@ -133,6 +136,61 @@
 
 
     <!-- ////////////////////////////////////////////////////////////////// -->
+    <script>
+
+        /////////////////Smaller Screen Login Page Layout////////////
+        var panel2LoginTab1 = document.querySelector(".panel-2-login-tab-1")
+        var panel2LoginTab2 = document.querySelector(".panel-2-login-tab-2")
+        var panel2RegisterTab1 = document.querySelector(".panel-2-register-tab-1")
+        var panel2RegisterTab2 = document.querySelector(".panel-2-register-tab-2")
+
+
+        panel2LoginTab1.addEventListener("click", () => {
+            panel2LoginTab1.classList.add("active");
+            panel2LoginTab2.classList.add("active");
+            document.querySelector(".register-panel").classList.add("hide");
+            document.querySelector(".login-panel").classList.remove("hide");
+            panel2RegisterTab1.classList.remove("active");
+            panel2RegisterTab2.classList.remove("active");
+
+        })
+
+        panel2LoginTab2.addEventListener("click", () => {
+            panel2LoginTab1.classList.add("active");
+            panel2LoginTab2.classList.add("active");
+            document.querySelector(".register-panel").classList.add("hide");
+            document.querySelector(".login-panel").classList.remove("hide");
+            panel2RegisterTab1.classList.remove("active");
+            panel2RegisterTab2.classList.remove("active");
+
+        })
+
+
+        panel2RegisterTab2.addEventListener("click", () => {
+            panel2RegisterTab1.classList.add("active");
+            panel2RegisterTab2.classList.add("active");
+            document.querySelector(".login-panel").classList.add("hide");
+            document.querySelector(".register-panel").classList.remove("hide");
+            panel2LoginTab1.classList.remove("active");
+            panel2LoginTab2.classList.remove("active");
+
+        })
+
+        panel2RegisterTab1.addEventListener("click", () => {
+            panel2RegisterTab1.classList.add("active");
+            panel2RegisterTab2.classList.add("active");
+            document.querySelector(".login-panel").classList.add("hide");
+            document.querySelector(".register-panel").classList.remove("hide");
+            panel2LoginTab1.classList.remove("active");
+            panel2LoginTab2.classList.remove("active");
+
+        })
+
+
+////////////////Breaks DRY rule, to refractor Later//////////////
+
+
+    </script>
     <script src="./assets/js/custom.js"></script>
 
 
