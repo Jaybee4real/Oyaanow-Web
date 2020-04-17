@@ -238,7 +238,7 @@
 .scroll {
   position: fixed;
   width: 100vw;
-  background: linear-gradient(25deg, white 5%, var(--theme-color));
+  background: white;
   box-shadow: 0px 0px 25px 0.5px rgb(177, 175, 175);
   z-index: 5;
   transition: all 0.7s ease-out;
@@ -249,7 +249,7 @@
   margin: auto;
   border-radius: 3px;
   padding: 13px;
-  color: white !important;
+  color: var(--theme-color);
   font-size: 1.6rem !important;
   z-index: 10;
   transition: all 0.5s ease-out;
@@ -261,7 +261,7 @@
 }
 
 .mobile-menu {
-  background-color: white;
+  background-color: var(--theme-color);
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -351,7 +351,7 @@
 }
 
 .mobile-menu .logo {
-  color: var(--theme-color);
+  color: white !important;
   margin-top: 10px;
   cursor: pointer;
   padding-left: 0 !important;
@@ -380,12 +380,12 @@
 }
 
 .mobile-nav-item:hover {
-  color: var(--theme-color) !important;
+  color: black!important;
   transition: color 0.6s ease-out;
 }
 
 .mobile-nav-item {
-  color: black;
+  color: white;
   font-weight: 500;
   font-size: 1.2rem;
   cursor: pointer;
@@ -416,7 +416,7 @@
 
 .scroll .nav-item,
 .scroll .hamburger {
-  color: white;
+  color: var(--theme-color);
 }
 
 .scroll .logo {
@@ -467,11 +467,9 @@
   transition: all 0.5s ease-out;
   z-index: 4;
   box-shadow: 2px 2px 15px 7px rgba(27, 27, 27, 0.411);
-
 }
 
-
-.login-container span{
+.login-container span {
   font-family: "Baloo Tammudu 2", cursive;
   position: relative;
   top: -1rem;
@@ -496,7 +494,8 @@ input:focus {
   outline: none;
   border-color: var(--theme-color) !important;
   border-width: 2px !important;
-  transition: all 0.3s ease-out;
+  transition: all 0.2s ease-out;
+  transition-delay: -0.1s;
 }
 .input-container {
   width: 100%;
@@ -623,7 +622,7 @@ input[type="time"]::placeholder {
 }
 .main-content-1 {
   position: relative;
-  top: -15vh;
+  top: 0;
   padding: 0;
   display: flex;
   flex-direction: row;
@@ -643,7 +642,7 @@ input[type="time"]::placeholder {
 }
 
 .main-content-1 .right-side {
-  background-image: url(../img/seat_photo.jpg);
+  background-image: url(../img/Seat_image.jpeg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -667,7 +666,7 @@ input[type="time"]::placeholder {
 
 .main-content-2 {
   position: relative;
-  top: -15vh;
+  display: block;
 }
 
 .main-content-2 h1 {
@@ -830,8 +829,8 @@ input[type="time"]::placeholder {
   }
 
   .scroll {
-    background: linear-gradient(45deg, white 35%, var(--theme-color));
-    padding: 2.5% 0;
+    background: white;
+    padding: 2% 0;
   }
 }
 
@@ -1080,11 +1079,11 @@ a {
     justify-content: center;
   }
 
-  .login-container .call-to-action{
+  .login-container .call-to-action {
     display: none;
   }
 
-  .login-container .logo{
+  .login-container .logo {
     margin-bottom: 1rem;
   }
   .login-box-right-side {
@@ -1093,3 +1092,133 @@ a {
     top: 13%;
   }
 }
+
+/* /////////////////// */
+
+.services-section {
+  min-height: fit-content !important;
+  position: relative;
+  top: -5vh;
+  margin-bottom: 3.5rem;
+}
+.services-section h2 {
+  text-align: center;
+  font-family: "Baloo Tammudu 2", sans-serif;
+  font-size: 2.7rem;
+  margin-bottom: 2.5rem;
+}
+
+.services-section .logo {
+  margin: 0;
+  padding: 0;
+  font-size: 2.7rem;
+}
+.flex-section {
+  display: flex;
+  justify-content: center;
+  margin: 0 5vw;
+  margin-bottom: 2rem;
+}
+
+.box {
+  margin: 25px;
+  text-align: center;
+  font-family: "Baloo Tammudu 2", sans-serif;
+  box-shadow: 2px 0px 15px 7px rgba(128, 128, 128, 0.363);
+  padding-bottom: 2rem;
+  margin-bottom: 3rem;
+}
+
+.box h3 {
+  font-size: 1.7rem;
+}
+
+.box p {
+  font-family: "Baloo Tammudu 2", sans-serif;
+  line-height: 1.2;
+  text-align: left;
+  padding: 0 4%;
+}
+
+@media (max-width: 560px) {
+  .flex-section {
+    flex-direction: column;
+  }
+}
+
+.box .icon {
+  height: 5.5rem;
+  width: 5.5rem;
+  background-position: center;
+  background-size: 100%;
+  margin: 1rem auto;
+  margin-bottom: 2rem;
+}
+
+.card-1 .icon {
+  background-image: url(../img/triple-arrow-merging-to-one.svg);
+}
+
+.card-2 .icon {
+  background-image: url(../img/deposit.svg);
+}
+
+.card-3 .icon {
+  background-image: url(../img/shield.svg);
+}
+
+.showcase-section {
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+  top: -12vh;
+}
+
+.showcase-section .left-side {
+  background-image: url(../img/black_phone.jpg);
+  background-position: center;
+  background-size: 100%;
+  width: 50vw;
+  background-repeat: no-repeat;
+}
+
+.showcase-section .right-side {
+  height: 100%;
+  width: 50vw;
+  margin: auto;
+  text-align: center;
+  top: 30%;
+  position: relative;
+  padding-right: 5%;
+  font-family: "Baloo Tammudu 2", sans-serif;
+  font-weight: 600;
+}
+
+.showcase-section .right-side h1 {
+  font-size: 2.2rem;
+  color: var(--theme-color);
+  line-height: 1.1;
+  font-family: "Satisfy", sans-serif;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 560px) {
+  .showcase-section {
+    flex-direction: column;
+  }
+
+  .showcase-section .left-side,
+  .showcase-section .right-side {
+    width: 100vw;
+    padding: 5vw;
+    top: 0;
+  }
+
+
+  .showcase-section .left-side{
+    height: 70vh;
+  }
+}
+
+
+
