@@ -249,7 +249,7 @@
   margin: auto;
   border-radius: 3px;
   padding: 13px;
-  color: var(--theme-color);
+  color: white;
   font-size: 1.6rem !important;
   z-index: 10;
   transition: all 0.5s ease-out;
@@ -1262,7 +1262,6 @@ a {
 .links a svg {
   box-shadow: 0 8px 15px -3px gray;
   border-radius: 0px 0px 20px 15px ;
-  
 }
 
 .showcase-section .right-side {
@@ -1291,6 +1290,11 @@ a {
     flex-direction: column;
   }
 
+
+  .faq-section h4{
+    line-height: 1;
+    margin: 1rem auto;
+  }
   .showcase-section .left-side,
   .showcase-section .right-side {
     width: 100vw;
@@ -1302,6 +1306,81 @@ a {
     height: 70vh;
   }
 }
+
+
+
+/* ///////////////////////////Faq-section//////////////////////////// */
+.faq-section{
+  min-height: fit-content;
+}
+
+.faq-section .left-side, .faq-section .right-side{
+  min-height: fit-content;
+}
+
+
+.faq-section .left-side{
+  margin-bottom: 1.5rem;
+}
+
+/* /////////////////////////Testimonies Slider//////////////////////////////// */
+
+
+
+.testimonies-section{
+  height: 70vw;
+  width: 90vw;
+}
+
+.slides{
+  height: 10rem;
+  width: 80vw;
+  background-color: yellow;
+  
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+
+.slider-1{
+  background-color: blue;
+}
+
+.slider-2{
+  background-color: brown;
+}
+
+.slider-3{
+  background-color: cornflowerblue;
+}
+
+.slides .showing {
+  opacity: 1;
+  z-index: 2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* //////////////////////////////Footer Container//////////////////////////////////////// */
 
@@ -1383,7 +1462,7 @@ footer {
 }
 
 .copyright {
-  height: 3rem;
+  min-height: 3rem;
   width: 100vw;
   display: flex;
   padding: 0 5%;
@@ -1393,11 +1472,28 @@ footer {
   line-height: 1;
 }
 
+
+.copyright .text{
+  max-width: 60%;
+}
+
+.footer-icons-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: center ;
+  width: 100%
+}
+
 @media (max-width: 560px) {
   .footer-container {
     flex-direction: column;
   }
 
+
+  .footer-icons-wrapper{
+    display: flex;
+   
+  }
   .footer-container .left-side {
     width: 100%;
     text-align: center;
@@ -1416,21 +1512,14 @@ footer {
   .footer-container .middle {
     width: 100%;
     display: flex;
-    margin: 2rem auto !important;
   }
 
-  .footer-container .middle a {
-    text-align: center;
-  }
 
   .footer-container .right-side {
     width: 100%;
     display: flex;
-    justify-content: center !important;
-    margin: 0 !important;
+   
   }
 
-  .footer-container .right-side a {
-    text-align: center;
-  }
+
 }
