@@ -537,6 +537,7 @@ select {
   width: 100%;
   color: black;
   font-weight: 500;
+  background-color: white !important;
 }
 
 select option {
@@ -547,7 +548,7 @@ select option {
   font-weight: 600;
   margin: auto;
   padding-left: 30px;
-  
+  background-color: white !important;
 }
 
 .booking {
@@ -624,7 +625,7 @@ select {
   }
 
   select{
-    text-indent: 37%;
+    text-indent: 35%;
   }
 
   .input-container input[type="submit"] {
