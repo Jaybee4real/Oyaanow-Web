@@ -380,7 +380,7 @@
 }
 
 .mobile-nav-item:hover {
-  color: black!important;
+  color: black !important;
   transition: color 0.6s ease-out;
 }
 
@@ -830,7 +830,7 @@ input[type="time"]::placeholder {
 
   .scroll {
     background: white;
-    padding: 2% 0;
+    padding: 1% 0;
   }
 }
 
@@ -1214,11 +1214,137 @@ a {
     top: 0;
   }
 
-
-  .showcase-section .left-side{
+  .showcase-section .left-side {
     height: 70vh;
   }
 }
 
+/* //////////////////////////////Footer Container//////////////////////////////////////// */
+
+footer {
+  padding: 20px auto;
+  margin-top: 3rem;
+  box-shadow: -1px 0px 15px 7px rgba(128, 128, 128, 0.356);
+}
+
+.footer-container {
+  display: flex;
+  padding: 3rem 0;
+  margin: auto 5%;
+}
+
+.footer-container .logo {
+  font-size: 2rem;
+  font-family: "Satisfy", sans-serif;
+  text-align: left;
+  color: white;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+.footer-container a {
+  font-family: "Baloo Tammudu 2", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1;
+  text-align: left;
+  margin: 7px 0;
+  color: grey;
+  font-style: normal !important;
+}
+
+.footer-container .left-side {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  position: relative;
+  top: 10%;
+}
+
+.footer-container .left-side p {
+  font-family: "Baloo Tammudu 2", sans-serif;
+  font-size: 1rem;
+  line-height: 1.1;
+  padding-right: 15%;
+  padding-left: 5%;
+}
+
+.footer-container .fa,
+.footer-container .fas {
+  margin-right: 5px;
+  color: var(--theme-color);
+  font-size: 1rem;
+}
+
+.footer-container .middle {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin-top: 2%;
+  justify-content: center;
+  margin-left: 10% !important;
+}
+
+.footer-container .right-side {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin-top: 2%;
+  justify-content: center;
+  margin-left: 10% !important;
+}
+
+.copyright {
+  height: 3rem;
+  width: 100vw;
+  display: flex;
+  padding: 0 5%;
+  justify-content: space-between;
+  font-family: "Baloo Tammudu 2", sans-serif;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+@media (max-width: 560px) {
+  .footer-container {
+    flex-direction: column;
+  }
+  
+  .footer-container .left-side {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-container .left-side .logo{
+    text-align: center;
+    padding: 0 !important;
+    margin: 1rem auto;
+  }
+
+  .footer-container .middle {
+    width: 100%;
+    display: flex;
+    margin: 2rem auto !important;
+  }
+
+  .footer-container .middle a{
+    text-align: center;
+  }
+
+  .footer-container .right-side {
+    width: 100%;
+    display: flex;
+    justify-content: center !important;
+    margin: 0 !important;
 
 
+  }
+
+  .footer-container .right-side a{
+    text-align: center;
+  }
+}
