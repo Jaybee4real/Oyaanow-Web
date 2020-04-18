@@ -279,14 +279,6 @@
   z-index: 9;
 }
 
-/* .mobile-menu.open::after{
-  content: "";
-  position: fixed;
-  height: 100vh;
-  left: 0;
-  width: 100vw !important;
-  background-color: yellow;
-} */
 
 @keyframes slide-left {
   0% {
@@ -300,9 +292,24 @@
   }
 }
 
-@keyframes slide-up {
+@keyframes slide-right {
   0% {
     opacity: 0.2;
+    transform: translateX(-20%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
     transform: translateY(60%);
   }
 
@@ -311,6 +318,50 @@
     transform: translateY(0);
   }
 }
+
+@keyframes slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-60%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.slide-up, .slide-right, .slide-left, .slide-down{
+  opacity: 0;
+}
+
+
+.sliding-up{
+  animation : slide-up 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) ;
+  opacity: 1
+}
+
+
+
+.sliding-left{
+  animation : slide-left 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) ;
+  opacity: 1
+}
+
+
+
+.sliding-right{
+  animation : slide-right 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) ;
+  opacity: 1
+}
+
+.sliding-down{
+  animation : slide-down 2s cubic-bezier(0.445, 0.05, 0.55, 0.95) ;
+  opacity: 1
+}
+
+
 
 .mobile-menu.open .mobile-nav-item.home {
   animation: slide-left 1s cubic-bezier(0.1, -0.78, 0.335, 2.55);
@@ -599,7 +650,7 @@ input[type="time"]::placeholder {
     padding-right: 10%;
   }
 }
-@media (max-width: 560px) {
+@media (max-width: 570px) {
   .main-content-1 .left-side p,
   .left-side h5 {
     left: 0.5rem;
@@ -667,6 +718,7 @@ input[type="time"]::placeholder {
 .main-content-2 {
   position: relative;
   display: block;
+  margin-bottom: 10rem;
 }
 
 .main-content-2 h1 {
@@ -754,7 +806,14 @@ input[type="time"]::placeholder {
 .left-side .top,
 .right-side .top {
   margin-bottom: 3rem;
+  animation-delay: -.2s;
 }
+
+.left-side .bototm,
+.right-side .bototm {
+  animation-delay: .6s;
+}
+
 
 .left-side .answer-item h4,
 .right-side .answer-item h4 {
@@ -1140,7 +1199,7 @@ a {
   padding: 0 4%;
 }
 
-@media (max-width: 560px) {
+@media (max-width: 670px) {
   .flex-section {
     flex-direction: column;
   }
@@ -1154,6 +1213,18 @@ a {
   margin: 1rem auto;
   margin-bottom: 2rem;
 }
+
+.card-1{
+  animation-delay: -.3s;
+}
+.card-2{
+  animation-delay: 0s;
+}
+
+.card-3{
+  animation-delay: .1s;
+}
+
 
 .card-1 .icon {
   background-image: url(../img/triple-arrow-merging-to-one.svg);
@@ -1319,6 +1390,10 @@ footer {
     text-align: center;
   }
 
+  .footer-container .left-side p{
+    padding: 0;
+    margin: 0;
+  }
   .footer-container .left-side .logo{
     text-align: center;
     padding: 0 !important;

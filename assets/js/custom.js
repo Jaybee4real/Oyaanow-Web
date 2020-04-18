@@ -64,3 +64,95 @@ registerButton.forEach((element) => {
 
 
 
+/////////////////////////////////////////////////////
+
+
+let options = {
+	rootMargin : "200px"
+}
+
+let slideUpElements = document.querySelectorAll(".slide-up")
+let slideRightElements = document.querySelectorAll(".slide-right")
+let slideLeftElements = document.querySelectorAll(".slide-left")
+let slideDownElements = document.querySelectorAll(".slide-down")
+
+let slideUp = new IntersectionObserver((entries) => {
+
+	entries.forEach(entry => {
+		if (entry.intersectionRatio > 0){
+			console.log("The element is intersecting")
+			entry.target.classList.add("sliding-up")
+		}
+
+		else{
+			entry.target.classList.remove("sliding-up")
+		}
+	})
+}, options)
+
+
+
+
+let slideRight = new IntersectionObserver((entries) => {
+
+	entries.forEach(entry => {
+		if (entry.intersectionRatio > 0){
+			console.log("The element is intersecting")
+			entry.target.classList.add("sliding-right")
+		}
+		
+		else{
+			entry.target.classList.remove("sliding-right")
+		}
+	})
+}, options)
+
+
+let slideLeft = new IntersectionObserver((entries) => {
+
+	entries.forEach(entry => {
+		if (entry.intersectionRatio > 0){
+			console.log("The element is intersecting")
+			entry.target.classList.add("sliding-left")
+		}
+
+		else{
+			entry.target.classList.remove("sliding-left")
+		}
+	})
+}, options)
+
+
+
+let slideDown = new IntersectionObserver((entries) => {
+
+	entries.forEach(entry => {
+		if (entry.intersectionRatio > 0){
+			console.log("The element is intersecting")
+			entry.target.classList.add("sliding-down")
+		}
+
+		else{
+			entry.target.classList.remove("sliding-down")
+		}
+	})
+}, options)
+
+
+
+
+slideUpElements.forEach(element => {
+	slideUp.observe(element)
+})
+
+slideRightElements.forEach(element => {
+	slideRight.observe(element)
+})
+
+slideLeftElements.forEach(element => {
+	slideLeft.observe(element)
+})
+
+slideDownElements.forEach(element => {
+	slideDown.observe(element)
+})
