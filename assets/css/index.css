@@ -899,7 +899,7 @@ input[type="time"]::placeholder {
 .flex-reasons .middle {
   height: 70vh !important;
   width: 100%;
-  background-image: url("../img/Phone1.svg");
+  background-image: url(../img/Phone1.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
