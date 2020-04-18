@@ -244,6 +244,20 @@
   transition: all 0.7s ease-out;
   transition-delay: 0.3s;
 }
+.book-scroll {
+  position: relative;
+  top: 0.1rem;
+}
+
+.scroll .book-scroll {
+  background-color: var(--theme-color);
+  color: white !important;
+  position: relative;
+  padding: 0 10px;
+  padding-top: 0.5rem;
+  top: -0.5rem;
+  border-radius: 30px 2px 30px 2px;
+}
 
 .hamburger {
   margin: auto;
@@ -257,7 +271,7 @@
 
 .fa-times {
   font-size: 1.8rem !important;
-  color: black !important;
+  color: white !important;
 }
 
 .mobile-menu {
@@ -327,10 +341,21 @@
   }
 }
 
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .slide-up,
 .slide-right,
 .slide-left,
-.slide-down {
+.slide-down,
+.appear {
   opacity: 0;
 }
 
@@ -351,6 +376,11 @@
 
 .sliding-down {
   animation: slide-down 2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  opacity: 1;
+}
+
+.appearing {
+  animation: appear 2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   opacity: 1;
 }
 
@@ -496,6 +526,30 @@
   transition: all 0.5s ease-out;
 }
 
+select {
+  padding: 6px 10px;
+  margin: 10px;
+  font-size: 1.1rem;
+  border: 1px solid grey;
+  border-radius: 2px 50px 10px 50px;
+  text-align: center;
+  font-family: "Baloo Tammudu 2", cursive;
+  width: 100%;
+  color: black;
+  font-weight: 500;
+}
+
+select option {
+  padding: 5px 20px !important;
+  font-size: 1.1rem;
+  text-align: center;
+  font-family: "Baloo Tammudu 2", sans-serif;
+  font-weight: 600;
+  margin: auto;
+  padding-left: 30px;
+  
+}
+
 .booking {
   height: 80%;
   width: 90%;
@@ -532,7 +586,8 @@
   position: relative;
 }
 
-input:focus {
+input:focus,
+select:focus {
   outline: none;
   border-color: var(--theme-color) !important;
   border-width: 2px !important;
@@ -546,13 +601,21 @@ input:focus {
   flex-direction: row;
 }
 
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 25%;
+  text-overflow: "";
+}
+
 @media (max-width: 670px) {
   .input-container {
     display: flex;
     flex-direction: column;
   }
 
-  .input-container input {
+  .input-container input .input-container select,
+  .input-container option {
     width: 80% !important;
     font-size: 1.1rem;
     position: relative;
@@ -560,14 +623,24 @@ input:focus {
     transform: translateX(-50%);
   }
 
+  select{
+    text-indent: 37%;
+  }
+
   .input-container input[type="submit"] {
     width: fit-content !important;
     padding: 15px 40px;
+    margin: auto;
   }
 }
+
+
+.btn {
+  transition: all 0.5s ease-out;
+}
 .btn:hover {
-  filter: brightness(80%);
-  transition: all 0.5s ease-out !important;
+  filter: brightness(130%);
+  transition: all 0.6s ease-out !important;
 }
 
 .input-container input {
@@ -584,11 +657,11 @@ input:focus {
   text-align: center;
   font-family: "Baloo Tammudu 2", sans-serif;
   font-weight: 500;
+  color: black;
 }
 
 input[type="time"] {
   font-size: 1.1rem !important;
-  color: grey;
 }
 
 input[type="time"]::placeholder {
@@ -825,7 +898,7 @@ input[type="time"]::placeholder {
 .flex-reasons .middle {
   height: 70vh !important;
   width: 100%;
-  background-image: url("../img/Phone.jpg");
+  background-image: url("../img/Phone1.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -1144,24 +1217,48 @@ a {
 
 /* /////////////////// */
 
-.services-section {
+.features-section {
   min-height: fit-content !important;
   position: relative;
   top: -5vh;
   margin-bottom: 3.5rem;
+  display: flex;
+  flex-direction: column;
 }
-.services-section h2 {
+
+.features-section h2 {
   text-align: center;
   font-family: "Baloo Tammudu 2", sans-serif;
   font-size: 2.7rem;
   margin-bottom: 2.5rem;
 }
 
-.services-section .logo {
+.features-section .logo {
   margin: 0;
   padding: 0;
   font-size: 2.7rem;
 }
+
+.features-section .learn-more {
+  margin: auto;
+  font-family: "Baloo Tammudu 2", sans-serif;
+  font-size: 1.1rem;
+  text-align: center;
+  background-color: var(--theme-color);
+  color: white;
+  padding: 0px 10px;
+  padding-top: 0.5rem;
+  border-radius: 30px 2px 30px 2px;
+  position: relative;
+  top: -3rem;
+}
+
+.learn-more .fa,
+.contact-us .fa {
+  font-size: 0.7rem;
+  margin-top: 0.5rem;
+}
+
 .flex-section {
   display: flex;
   justify-content: center;
@@ -1256,12 +1353,17 @@ a {
   width: 50%;
   margin-left: 5px;
   margin-top: 1rem;
+  transition: all 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
 
+.links a:hover {
+  transform: translateY(-15%);
+  transition: all 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
 .links a svg {
   box-shadow: 0 8px 15px -3px gray;
-  border-radius: 0px 0px 20px 15px ;
+  border-radius: 0px 0px 20px 15px;
 }
 
 .showcase-section .right-side {
@@ -1290,8 +1392,7 @@ a {
     flex-direction: column;
   }
 
-
-  .faq-section h4{
+  .faq-section h4 {
     line-height: 1;
     margin: 1rem auto;
   }
@@ -1307,80 +1408,78 @@ a {
   }
 }
 
-
-
 /* ///////////////////////////Faq-section//////////////////////////// */
-.faq-section{
+.faq-section {
   min-height: fit-content;
 }
 
-.faq-section .left-side, .faq-section .right-side{
+.faq-section h4 {
+  line-height: 1;
+  margin: 1.5rem auto;
+}
+
+.faq-section .left-side,
+.faq-section .right-side {
   min-height: fit-content;
 }
 
+.faq-section .middle {
+  width: 50%;
+  background-image: url(../img/question.svg);
+  font-size: 1rem;
+  margin: auto;
+}
 
-.faq-section .left-side{
+.faq-section .left-side {
   margin-bottom: 1.5rem;
 }
 
+.faq-section .endnote {
+  font-family: "Baloo Tammudu 2", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  margin: auto;
+  font-size: 1.2rem;
+  margin-top: 3rem;
+}
+
+.faq-section .learn-more {
+  margin: auto;
+  font-family: "Baloo Tammudu 2", sans-serif;
+  font-size: 1.1rem;
+  text-align: center;
+  background-color: var(--theme-color);
+  color: white;
+  padding: 0px 10px;
+  padding-top: 0.5rem;
+  border-radius: 30px 2px 30px 2px;
+  position: relative;
+  margin-right: 5px;
+}
+
+.faq-section .contact-us {
+  margin: auto;
+  font-family: "Baloo Tammudu 2", sans-serif;
+  font-size: 1.1rem;
+  text-align: center;
+  background-color: var(--theme-color);
+  color: white;
+  padding: 0px 10px;
+  padding-top: 0.5rem;
+  border-radius: 30px 2px 30px 2px;
+  position: relative;
+  top: -0.1rem;
+  margin-left: 5px;
+}
+
+@media (max-width: 560px) {
+  .faq-section .endnote {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 /* /////////////////////////Testimonies Slider//////////////////////////////// */
-
-
-
-.testimonies-section{
-  height: 70vw;
-  width: 90vw;
-}
-
-.slides{
-  height: 10rem;
-  width: 80vw;
-  background-color: yellow;
-  
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  z-index: 1;
-
-  -webkit-transition: opacity 1s;
-  -moz-transition: opacity 1s;
-  -o-transition: opacity 1s;
-  transition: opacity 1s;
-}
-
-
-.slider-1{
-  background-color: blue;
-}
-
-.slider-2{
-  background-color: brown;
-}
-
-.slider-3{
-  background-color: cornflowerblue;
-}
-
-.slides .showing {
-  opacity: 1;
-  z-index: 2;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* //////////////////////////////Footer Container//////////////////////////////////////// */
 
@@ -1472,16 +1571,15 @@ footer {
   line-height: 1;
 }
 
-
-.copyright .text{
+.copyright .text {
   max-width: 60%;
 }
 
-.footer-icons-wrapper{
+.footer-icons-wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: center ;
-  width: 100%
+  justify-content: center;
+  width: 100%;
 }
 
 @media (max-width: 560px) {
@@ -1489,10 +1587,8 @@ footer {
     flex-direction: column;
   }
 
-
-  .footer-icons-wrapper{
+  .footer-icons-wrapper {
     display: flex;
-   
   }
   .footer-container .left-side {
     width: 100%;
@@ -1514,12 +1610,8 @@ footer {
     display: flex;
   }
 
-
   .footer-container .right-side {
     width: 100%;
     display: flex;
-   
   }
-
-
 }

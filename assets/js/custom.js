@@ -75,6 +75,7 @@ let slideUpElements = document.querySelectorAll(".slide-up")
 let slideRightElements = document.querySelectorAll(".slide-right")
 let slideLeftElements = document.querySelectorAll(".slide-left")
 let slideDownElements = document.querySelectorAll(".slide-down")
+let appearing = document.querySelectorAll(".appear")
 
 let slideUp = new IntersectionObserver((entries) => {
 
@@ -140,6 +141,21 @@ let slideDown = new IntersectionObserver((entries) => {
 
 
 
+let appear = new IntersectionObserver((entries) => {
+
+	entries.forEach(entry => {
+		if (entry.intersectionRatio > 0){
+			console.log("The element is intersecting")
+			entry.target.classList.add("appearing")
+		}
+
+		else{
+			entry.target.classList.remove("appearing")
+		}
+	})
+}, options)
+
+
 
 slideUpElements.forEach(element => {
 	slideUp.observe(element)
@@ -157,15 +173,21 @@ slideDownElements.forEach(element => {
 	slideDown.observe(element)
 })
 
+
+
+appearing.forEach(element => {
+	appear.observe(element)
+})
+
 ////////////////////////////////Testimonies Slider////////////////////
 
 
-var slides = document.querySelectorAll('.slide');
-var currentSlide = 0;
-var slideInterval = setInterval(nextSlide,2000);
+// var slides = document.querySelectorAll('.slide');
+// var currentSlide = 0;
+// var slideInterval = setInterval(nextSlide,2000);
 
-function nextSlide() {
-    slides[currentSlide].className = 'slide';
-    currentSlide = (currentSlide+1)%slides.length;
-    slides[currentSlide].className = 'slide showing';
-}
+// function nextSlide() {
+//     slides[currentSlide].className = 'slide';
+//     currentSlide = (currentSlide+1)%slides.length;
+//     slides[currentSlide].className = 'slide showing';
+// }

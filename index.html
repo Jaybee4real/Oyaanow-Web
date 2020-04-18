@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="theme-color" content="#292828">
+    <meta name="theme-color" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oyaanow </title>
     <link rel="stylesheet" href="./assets/css/index.css">
@@ -41,10 +41,10 @@
         <div id="navbar" class="navbar">
             <a href="#" class="logo logo-animated">OyaaNow</a>
             <div class="options">
-                <a class="nav-item about btn">About</a>
+                <a class="nav-item about btn">About Company</a>
                 <a class="nav-item contact btn">Contact</a>
                 <a href="login.html" class="nav-item login btn">Login/Create Account</a>
-
+                <a href="login.html" class="nav-item book-scroll btn">Book Now</a>
                 <div class="hamburger fa fa-bars  btn"></div>
             </div>
 
@@ -70,8 +70,18 @@
                     <div class=" call-to-action">Book Now</div>
 
                     <div class="input-container">
-                        <input class="departure" placeholder="Departure">
-                        <input class="destination" placeholder="Destination">
+                        <select id="departure">
+                            <option value="" class="disabled" disabled selected>Departure</option>
+                            <option value="saab">Lagos</option>
+                            <option value="mercedes">Abuja</option>
+                            <option value="audi">Maiduguri</option>
+                          </select>
+                          <select id="destination">
+                            <option value="" class="disabled" disabled selected>Destination</option>
+                            <option value="saab">Lagos</option>
+                            <option value="mercedes">Abuja</option>
+                            <option value="audi">Maiduguri</option>
+                          </select>
                         <input class="date" placeholder="Date" type="text" onclick="(this.type='date')"
                             onblur="(this.type='text')">
                         <input class="time" placeholder="Time" type="text" onclick="(this.type='time')"
@@ -88,10 +98,7 @@
             <div class="left-side">
                 <h1 class="slide-up">Oyaa Now....</h1>
                 <h5 class="slide-right">Revolutionizing the transport sector...</h5>
-                <p class="slide-right">oyaanow app and web delivers a fast and reliable service to be able to book
-                    tickets and order
-                    hotel
-                    and other services we provide..
+                <p class="slide-right">oyaanow app and web is service that allows users to book tickets online and to check their arrival times, and more
                     <br>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore voluptatibus suscipit modi
                     alias
@@ -103,7 +110,7 @@
             <div class="right-side"></div>
         </section>
 
-        <section class="services-section">
+        <section class="features-section">
             <h2><a class="logo theme-color">Oyaanow </a>Features</h2>
             <div class="flex-section">
                 <div class="card-1 box slide-up">
@@ -130,6 +137,8 @@
                 </div>
 
             </div>
+
+            <a href="about.html" class="btn learn-more appear">Learn More <i class="fa fa-chevron-right"></i></a>
         </section>
 
 
@@ -138,8 +147,10 @@
             <div class="left-side slide-down"></div>
             <div class="right-side">
                 <h1>Have You Tried The OyaaNow App?</h1>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit possimus facere
-                necessitatibus dolorum consectetur minima temporibus amet? Eveniet earum animi in impedit error aut
+                oyaanow app and web delivers a fast and reliable service to be able to book
+                tickets and order
+                hotel
+                and other services we provide..
                 tempora quibusdam? Quaerat debitis voluptatum ipsam modi aut quos omnis praesentium hic illum,
                 necessitatibus,
                 <div class="links">
@@ -237,7 +248,7 @@
                         </div>
 
                     </div>
-
+                    <div class="middle"></div>
                     <div class="right-side">
                         <div class="top answer-item slide-up">
                             <h4>What happens if i dont want to book a bus anymore?</h4>
@@ -258,8 +269,22 @@
                     </div>
                 </div>
             </div>
-
+           <div class="endnote appear">Still Got Questions? <span class="buttons"><a href="about.html" class="btn learn-more">Learn More <i class="fa fa-chevron-right"></i></a> Or <a href="contact.html" class="btn contact-us">Contact Us <i class="fa fa-chevron-right"></i></a></div>
+           </span>
         </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
         <footer>
             <div class="footer-container">
                 <div class="left-side">
@@ -292,10 +317,24 @@
             <div class="copyright">
                 <p class="text">&copy; 2020 OyaaNow - Travel Now and tours Limited</p>
                 <div class="designer">
-                    <p>Designed By <span class="theme-color">Jaybee</span></p>
+                    <p>Designed By <a href="https://jaybee.000webhostapp.com" target="blank" class="theme-color">Jaybee</a></p>
                 </div>
             </div>
         </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
