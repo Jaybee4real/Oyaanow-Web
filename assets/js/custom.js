@@ -30,10 +30,6 @@ navButton.addEventListener("click", () => {
 ////////////////////////////Register/Login Switcher Function////////////////////////////////
 var loginButton = document.querySelectorAll(".login-tab")
 var registerButton = document.querySelectorAll(".register-tab")
-// var loginButtonOne = document.querySelectorAll(".panel-2-login-tab-1")
-// var loginButtonTwo = document.querySelectorAll(".panel-2-login-tab-2")
-// var registerButtonOne = document.querySelectorAll(".panel-2-register-tab-1")
-// var registerButtonTwo = document.querySelectorAll(".panel-2-register-tab-2")
 var registerPanel = document.querySelector(".register-panel")
 var loginPanel = document.querySelector(".login-panel")
 
@@ -81,7 +77,6 @@ let slideUp = new IntersectionObserver((entries) => {
 
 	entries.forEach(entry => {
 		if (entry.intersectionRatio > 0){
-			console.log("The element is intersecting")
 			entry.target.classList.add("sliding-up")
 		}
 
@@ -98,7 +93,6 @@ let slideRight = new IntersectionObserver((entries) => {
 
 	entries.forEach(entry => {
 		if (entry.intersectionRatio > 0){
-			console.log("The element is intersecting")
 			entry.target.classList.add("sliding-right")
 		}
 		
@@ -113,7 +107,6 @@ let slideLeft = new IntersectionObserver((entries) => {
 
 	entries.forEach(entry => {
 		if (entry.intersectionRatio > 0){
-			console.log("The element is intersecting")
 			entry.target.classList.add("sliding-left")
 		}
 
@@ -129,7 +122,6 @@ let slideDown = new IntersectionObserver((entries) => {
 
 	entries.forEach(entry => {
 		if (entry.intersectionRatio > 0){
-			console.log("The element is intersecting")
 			entry.target.classList.add("sliding-down")
 		}
 
@@ -145,7 +137,6 @@ let appear = new IntersectionObserver((entries) => {
 
 	entries.forEach(entry => {
 		if (entry.intersectionRatio > 0){
-			console.log("The element is intersecting")
 			entry.target.classList.add("appearing")
 		}
 
@@ -179,15 +170,3 @@ appearing.forEach(element => {
 	appear.observe(element)
 })
 
-////////////////////////////////Testimonies Slider////////////////////
-
-
-// var slides = document.querySelectorAll('.slide');
-// var currentSlide = 0;
-// var slideInterval = setInterval(nextSlide,2000);
-
-// function nextSlide() {
-//     slides[currentSlide].className = 'slide';
-//     currentSlide = (currentSlide+1)%slides.length;
-//     slides[currentSlide].className = 'slide showing';
-// }
