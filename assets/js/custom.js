@@ -164,8 +164,6 @@ slideDownElements.forEach(element => {
 	slideDown.observe(element)
 })
 
-
-
 appearing.forEach(element => {
 	appear.observe(element)
 })
