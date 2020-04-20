@@ -236,14 +236,14 @@
             <div class="testimonials-box">
                 <div class="left-quote"></div>
                 <div class="fancy-container">
-                    <i class="btn fa fa-chevron-left"></i>
+                    <i class="btn test-left fa fa-chevron-left"></i>
                     <div class="testimonials-image"></div>
                     <h3 class="testimonials-title">Mohammandu Buhari, President of the federal republic of nigeria.</h3>
                     <p class="testimonials-text">
                         yarz, yarz eh.. ze oyeenow aph is a bery good aph, i personally have used the service, it is
                         bery reliable, and the option to cancel trips is vorking perfectly
                     </p>
-                    <i class=" btn fa fa-chevron-right"></i>
+                    <i class=" btn test-right fa fa-chevron-right"></i>
                 </div>
                 <div class="right-quote"></div>
             </div>
@@ -391,7 +391,6 @@
                 $(".header").css("background-image", "url(./assets/img/" + "Hiace.jpg" + ")");
 
                 setInterval(function () {
-                    i++;
                     if (i == images.length) {
                         i = 0;
                     }
@@ -421,13 +420,45 @@
                 "2face Idibia, Successful Musician",
                 "Tiwa Savage, Succesful Musician"
             ]
+
+
+
+
             $(function () {
+                var slideTimer = setInterval(changeSlider, 7000);
                 var i = 0;
+
+
+
+
+
+
                 $(".testimonial-text").text(`${testimonies[0]}`);
                 $(".testimonials-image").css("background-image", "url(./assets/img/" + "Buhari.jpg" + ")");
                 $(".testimonial-title").text(`${testimonialsTitles[0]}`);
-                setInterval(function () {
-                    i++;
+                $(".test-left").click(function () {
+                    if (i == testimonies.length) {
+                        i = 0;
+                    }
+                    i++
+                    console.log(i)
+                    changeSlider()
+                })
+
+                $(".test-right").click(function () {
+                    if (i == testimonies.length) {
+                        i = 0;
+                    }
+                    i++
+                    console.log(i)
+                    changeSlider()
+
+
+                })
+
+
+                function changeSlider() {
+                    i++
                     if (i == testimonies.length) {
                         i = 0;
                     }
@@ -442,8 +473,11 @@
                         $(".testimonials-text").text(testimonies[i]);
 
                     }, 700)
-                }, 7000);
+                }
             });
+
+
+
 
 
 
