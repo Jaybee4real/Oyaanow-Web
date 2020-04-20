@@ -389,11 +389,12 @@
             $(function () {
                 var i = 0;
                 $(".header").css("background-image", "url(./assets/img/" + "Hiace.jpg" + ")");
-
                 setInterval(function () {
+                    i++
                     if (i == images.length) {
                         i = 0;
                     }
+                
                     $(".header").css("background-image", "url(./assets/img/" + images[i] + ")");
                     document.querySelector(".logo-animated").classList.toggle("theme-color")
                 }, 6000);
@@ -437,10 +438,11 @@
                 $(".testimonials-image").css("background-image", "url(./assets/img/" + "Buhari.jpg" + ")");
                 $(".testimonial-title").text(`${testimonialsTitles[0]}`);
                 $(".test-left").click(function () {
-                    if (i == testimonies.length) {
-                        i = 0;
+                    i--
+                    if (i == 0) {
+                        i = testimonies.length;
                     }
-                    i++
+            
                     console.log(i)
                     changeSlider()
                 })
@@ -462,6 +464,11 @@
                     if (i == testimonies.length) {
                         i = 0;
                     }
+
+                    if(i == -1 ){
+                        i = testimonies.length
+                    }
+
                     $(".testimonials-text, .testimonials-title,.testimonials-image").animate({ opacity: 0 })
                     setTimeout(function () {
                         $(".testimonials-text, .testimonials-title,.testimonials-image").animate({ opacity: 1 })

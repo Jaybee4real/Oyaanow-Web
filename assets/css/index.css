@@ -1109,7 +1109,7 @@ input[type="time"]::placeholder {
 
 @media (max-width: 460px) {
   .login-container {
-    height: 80vh;
+    min-height: 80vh;
     width: 95vw;
   }
 }
@@ -1169,16 +1169,17 @@ a {
 
 .options-panel-2 {
   background-color: var(--theme-color);
-  height: 13%;
+  height: 12%;
   position: absolute;
-  top: -13.2%;
-  width: 111%;
-  left: -5%;
+  top: -12%;
+  width: 109.5%;
+  left: -3.9%;
   margin: 0;
   padding: 0;
   border-top-left-radius: 100px;
   border-left: 10px;
   display: none;
+
 }
 
 .options-panel-2 .login,
@@ -1195,7 +1196,7 @@ a {
 }
 
 .options-panel-2 .login {
-  border-top-left-radius: 100px;
+  border-top-left-radius: 80px;
 }
 
 .options-panel-2 div.active {
@@ -1203,9 +1204,13 @@ a {
   color: orange;
 }
 
-@media (max-width: 410px) {
+@media (max-width: 560px) {
   .options-panel-2 {
     display: flex;
+  }
+
+  .login-container {
+    border-radius: 90px 2px 100px 2px;
   }
 
   .login-box-left-side {
@@ -1220,13 +1225,11 @@ a {
     display: none;
   }
 
-  .login-container .logo {
-    margin-bottom: 1rem;
-  }
+
   .login-box-right-side {
     max-width: 100%;
     width: 90%;
-    top: 13%;
+    top: 12%;
   }
 }
 
