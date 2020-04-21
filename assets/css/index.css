@@ -176,23 +176,21 @@
   transition: all 0.5s ease-out;
 }
 
-/* .logo::before {
-  content: "";
-  height: 3rem !important;
-  width: 3rem !important;
-  background-image: url('../img/logo2.jpg') !important;
+.logo-icon {
+  height: 2.5rem !important;
+  width: 2.5rem !important;
+  background-image: url('../img/logo-.png') !important;
   background-position: center;
-  background-size: 120%;
+  background-size: 100%;
   background-repeat: no-repeat;
-  background-color: grey;
-  background-blend-mode: lighten;
-  left: .5rem;
-  background-blend-mode: hard-light;
-  background-color: var(--theme-color);
+  left: 1.7rem;
   position: absolute;
-  z-index: 100;
-  border-radius: 40%;
-} */
+  margin-top: .2rem;
+}
+
+.inverted{
+  color: white;
+}
 
 .header {
   background-size: 100%;
@@ -271,11 +269,11 @@
 
 .fa-times {
   font-size: 1.8rem !important;
-  color: white !important;
+  color: var(--theme-color) !important;
 }
 
 .mobile-menu {
-  background-color: var(--theme-color);
+  background-color:white;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -425,11 +423,11 @@
 }
 
 .mobile-menu .logo {
-  color: white !important;
+  color:var(--theme-color);
   margin-top: 10px;
   cursor: pointer;
   padding-left: 0 !important;
-  left: -25px;
+  left: -5px;
 }
 
 .mobile-menu .logo::before {
@@ -459,7 +457,7 @@
 }
 
 .mobile-nav-item {
-  color: white;
+  color: var(--theme-color);
   font-weight: 500;
   font-size: 1.2rem;
   cursor: pointer;
