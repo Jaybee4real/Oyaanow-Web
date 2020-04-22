@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="theme-color" content="">
+    <meta name="theme-color" content="#292828">
+    <link rel="icon" href="./assets/img/logo-.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oyaanow </title>
     <link rel="stylesheet" href="./assets/css/index.css">
@@ -118,7 +119,7 @@
                     <div class="icon"></div>
                     <h3>Flexible</h3>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis doloremque dolorem nulla debitis
-                        quibusdam consequatur mollitia pariatur deserunt, doloribus, dolore aut dolores sequi ad iusto
+                        quibusdam consequatur mollitia pariatur deserunt, doloribus, dolore aut dolores sequj ad iusto
                         magnam! </p>
                 </div>
                 <div class="card-2 box slide-up">
@@ -394,7 +395,7 @@
                     if (i == images.length) {
                         i = 0;
                     }
-                
+
                     $(".header").css("background-image", "url(./assets/img/" + images[i] + ")");
                     document.querySelector(".logo-animated").classList.toggle("theme-color")
                 }, 6000);
@@ -427,32 +428,38 @@
 
             $(function () {
                 var slideTimer = setInterval(changeSlider, 7000);
-                var i = 0;
+                var j = 0;
 
-
-
-
-
+                setInterval(()=>{
+                    j++;
+                    console.log(j)
+                }, 6998)
 
                 $(".testimonial-text").text(`${testimonies[0]}`);
                 $(".testimonials-image").css("background-image", "url(./assets/img/" + "Buhari.jpg" + ")");
                 $(".testimonial-title").text(`${testimonialsTitles[0]}`);
                 $(".test-left").click(function () {
-                    i--
-                    if (i == 0) {
-                        i = testimonies.length;
+                    --j % testimonies.length
+                    if (j < 0) {
+                        j = 2
                     }
-            
-                    console.log(i)
-                    changeSlider()
+
+                    if (j == testimonies.length) {
+                        j = 0
+                    }
+                    changeSlider();
+                    console.log(j)
                 })
 
                 $(".test-right").click(function () {
-                    if (i == testimonies.length) {
-                        i = 0;
+                    ++j % testimonies.length
+                    if (j == 0) {
+                        j = 2
                     }
-                    i++
-                    console.log(i)
+                    if (j == testimonies.length) {
+                        j = 0
+                    } 
+                    console.log(j)
                     changeSlider()
 
 
@@ -460,6 +467,13 @@
 
 
                 function changeSlider() {
+                    if (j < 0) {
+                        j = testimonies.length
+                    }
+
+                    if (j > testimonies.length) {
+                        j = 0
+                    }
 
                     $(".testimonials-text, .testimonials-title,.testimonials-image").animate({ opacity: 0 })
                     setTimeout(function () {
@@ -467,9 +481,9 @@
                     }, 700)
 
                     setTimeout(function () {
-                        $(".testimonials-image").css("background-image", "url(./assets/img/" + testimonialsImages[i] + ")");
-                        $(".testimonials-title").text(testimonialsTitles[i]);
-                        $(".testimonials-text").text(testimonies[i]);
+                        $(".testimonials-image").css("background-image", "url(./assets/img/" + testimonialsImages[j] + ")");
+                        $(".testimonials-title").text(testimonialsTitles[j]);
+                        $(".testimonials-text").text(testimonies[j]);
 
                     }, 700)
                 }
