@@ -315,7 +315,7 @@
         <footer>
             <div class="footer-container">
                 <div class="left-side">
-                    <a class="logo theme-color">Oyaanow</a>
+                    <a class="logo theme-color"><span class="logo-icon footer"></span>Oyaanow</a>
                     <p>OyaaNow Is a Subsidiary of Travel Now And Tours Limited, Provider of Tech Logistics and all the
                         rest blah blah. Lorem ipsum dolor sit amet.</p>
 
@@ -427,13 +427,13 @@
 
 
             $(function () {
-                var slideTimer = setInterval(changeSlider, 7000);
                 var j = 0;
 
                 setInterval(()=>{
                     j++;
                     console.log(j)
-                }, 6998)
+                }, 6900)
+                var slideTimer = setInterval(changeSlider, 7000); 
 
                 $(".testimonial-text").text(`${testimonies[0]}`);
                 $(".testimonials-image").css("background-image", "url(./assets/img/" + "Buhari.jpg" + ")");
@@ -468,7 +468,7 @@
 
                 function changeSlider() {
                     if (j < 0) {
-                        j = testimonies.length
+                        j = 2
                     }
 
                     if (j > testimonies.length) {
