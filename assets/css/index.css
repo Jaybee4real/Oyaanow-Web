@@ -140,6 +140,13 @@
 /* ///////////////////////////Carousel FAde/////////////////////////////////// */
 /* /////////////////////////////////////////////////// */
 
+
+@media(max-width:560px){
+  html{
+    font-size: 14px;
+  }
+}
+
 .wrapper {
   height: 65vh;
   width: 100vw;
@@ -979,10 +986,10 @@ input[type="time"]::placeholder {
   background: -webkit-linear-gradient(360deg, #e67817 33%, white 33%);
   margin: auto;
   position: relative;
-  top: 13vh;
+  top: 6rem;
   display: flex;
   flex-direction: row;
-  min-height: 35rem;
+  min-height: 37rem !important;
 }
 
 .login-box-left-side {
@@ -1205,7 +1212,7 @@ a {
   color: orange;
 }
 
-@media (max-width: 560px) {
+@media (max-width: 420px) {
   .options-panel-2 {
     display: flex;
   }
