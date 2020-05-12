@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="theme-color" content="#292828">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oyaanow </title>
+    <title>Oyaanow - Login/Register</title>
     <link rel="icon" href="./assets/img/logo-.png">
     <link rel="stylesheet" href="./assets/css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/fontawesome.min.css"
@@ -16,6 +16,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"
         integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/27fba2f7f0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js" integrity="sha256-FEqEelWI3WouFOo2VWP/uJfs1y8KJ++FLh2Lbqc8SJk=" crossorigin="anonymous"></script>
 </head>
 
 <body class="login-page">
@@ -37,7 +38,7 @@
             <a href="index.html" class="nav-item login btn">Home</a>
             <a class="nav-item about btn">About</a>
             <a class="nav-item contact btn">Contact</a>
-            <a href="login.html" class="nav-item book-scroll btn">Book Now</a>
+            <a href="booking.html" class="nav-item book-scroll btn">Book Now</a>
 
             <div class="hamburger fa fa-bars  btn"></div>
         </div>
@@ -48,7 +49,7 @@
                 <a href="index.html" class="mobile-nav-item home btn">home</a>
                 <a class="mobile-nav-item about btn">About</a>
                 <a class="mobile-nav-item contact btn">Contact</a>
-                <a class="mobile-nav-item book-now btn">Book Now</a>
+                <a href="booking.html" class="mobile-nav-item book-now btn">Book Now</a>
                 <a class="mobile-nav-item services btn">Services</a>
                 <a class="mobile-nav-item blog btn">Oyaanow Blog</a>
             </div>
@@ -81,7 +82,6 @@
                 <label>
                     <i class="form-i fa fa-key theme-color"></i>
                     <input type="password" placeholder="Password">
-                    <i class="form-i-right fa fa-eye "></i>
                 </label>
                 <input class="btn" type="submit" value="Login">
             </form>
@@ -118,13 +118,12 @@
                         <label>
                             <i class="form-i fa fa-key theme-color"></i>
                             <input type="password" placeholder="Password">
-                            <i class="form-i-right fa fa-eye "></i>
+
                         </label>
                         <label>
                             <br class="dissapear-992">
                             <i class="form-i fa fa-question theme-color"></i>
                             <input type="password" placeholder="Confirm Password">
-                            <i class="form-i-right fa fa-eye "></i>
                         </label>
                 </div>
                 <input class="btn" type="submit" value="Register">
@@ -173,63 +172,8 @@
         </div>
     </footer>
 
-    <!-- ////////////////////////////////////////////////////////////////// -->
-    <script>
-
-        /////////////////Smaller Screen Login Page Layout////////////
-        var panel2LoginTab1 = document.querySelector(".panel-2-login-tab-1")
-        var panel2LoginTab2 = document.querySelector(".panel-2-login-tab-2")
-        var panel2RegisterTab1 = document.querySelector(".panel-2-register-tab-1")
-        var panel2RegisterTab2 = document.querySelector(".panel-2-register-tab-2")
-
-
-        panel2LoginTab1.addEventListener("click", () => {
-            panel2LoginTab1.classList.add("active");
-            panel2LoginTab2.classList.add("active");
-            document.querySelector(".register-panel").classList.add("hide");
-            document.querySelector(".login-panel").classList.remove("hide");
-            panel2RegisterTab1.classList.remove("active");
-            panel2RegisterTab2.classList.remove("active");
-
-        })
-
-        panel2LoginTab2.addEventListener("click", () => {
-            panel2LoginTab1.classList.add("active");
-            panel2LoginTab2.classList.add("active");
-            document.querySelector(".register-panel").classList.add("hide");
-            document.querySelector(".login-panel").classList.remove("hide");
-            panel2RegisterTab1.classList.remove("active");
-            panel2RegisterTab2.classList.remove("active");
-
-        })
-
-
-        panel2RegisterTab2.addEventListener("click", () => {
-            panel2RegisterTab1.classList.add("active");
-            panel2RegisterTab2.classList.add("active");
-            document.querySelector(".login-panel").classList.add("hide");
-            document.querySelector(".register-panel").classList.remove("hide");
-            panel2LoginTab1.classList.remove("active");
-            panel2LoginTab2.classList.remove("active");
-
-        })
-
-        panel2RegisterTab1.addEventListener("click", () => {
-            panel2RegisterTab1.classList.add("active");
-            panel2RegisterTab2.classList.add("active");
-            document.querySelector(".login-panel").classList.add("hide");
-            document.querySelector(".register-panel").classList.remove("hide");
-            panel2LoginTab1.classList.remove("active");
-            panel2LoginTab2.classList.remove("active");
-
-        })
-
-
-////////////////Breaks DRY rule, to refractor Later//////////////
-
-
-    </script>
-    <script src="./assets/js/custom.js"></script>
+ 
+    <script src="./assets/js/login.js"></script>
 
 
 </body>

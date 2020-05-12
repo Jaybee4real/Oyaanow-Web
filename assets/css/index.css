@@ -69,7 +69,7 @@
 /* /////////////////////////////////// */
 .loader {
   position: fixed;
-  z-index: 1200;
+  z-index: 11;
   box-sizing: border-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -107,7 +107,7 @@
 .loader.loaded,
 .loader-2.loaded {
   opacity: 0;
-  z-index: -100;
+  z-index: -11;
   transition: all 1.2s ease-out;
 }
 .fade-out.loader {
@@ -139,6 +139,13 @@
 
 /* ///////////////////////////Carousel FAde/////////////////////////////////// */
 /* /////////////////////////////////////////////////// */
+
+
+@media(max-width:560px){
+  html{
+    font-size: 14px;
+  }
+}
 
 .wrapper {
   height: 65vh;
@@ -522,7 +529,7 @@
   position: relative;
   display: flex;
   top: -15vh;
-  margin: auto;
+  margin: auto !important;
   width: 85vw;
   border-radius: 20px 20px 0px 0px;
   border: 0.5px solid orange;
@@ -530,7 +537,6 @@
 }
 
 select {
-  padding: 6px 10px;
   margin: 10px;
   font-size: 1.1rem;
   border: 1px solid grey;
@@ -543,8 +549,8 @@ select {
   background-color: white !important;
 }
 
+
 select option {
-  padding: 5px 20px !important;
   font-size: 1.1rem;
   text-align: center;
   font-family: "Baloo Tammudu 2", sans-serif;
@@ -564,7 +570,7 @@ select option {
 
 .booking-container:hover {
   transition: all 0.5s ease-out;
-  z-index: 4;
+  z-index: 2;
   box-shadow: 2px 2px 15px 7px rgba(27, 27, 27, 0.411);
 }
 
@@ -602,24 +608,28 @@ select:focus {
   display: flex;
   margin: 20px auto;
   flex-direction: row;
+  justify-content: center !important;
+  padding-right: 3%;
 }
 
-select {
+.input-container select {
   -webkit-appearance: none;
   -moz-appearance: none;
-  text-indent: 25%;
-  text-overflow: "";
+  text-indent: 30% !important;
 }
+
 
 @media (max-width: 670px) {
   .input-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .input-container input .input-container select,
   .input-container option {
-    width: 80% !important;
+    width: 75% !important;
     font-size: 1.1rem;
     position: relative;
     left: 50%;
@@ -646,13 +656,13 @@ select {
   transition: all 0.6s ease-out !important;
 }
 
-.input-container input {
-  width: 100%;
-  padding: 15px 20px;
+.input-container input, select {
+  width: 80%;
   margin: 10px;
+  padding: 9px 15px;
   font-size: 1.1rem;
   border: 1px solid grey;
-  border-radius: 2px 50px 10px 50px;
+  border-radius: 30px 2px 30px 2px;
   text-align: center;
 }
 .input-container input::placeholder {
@@ -662,6 +672,8 @@ select {
   font-weight: 500;
   color: black;
 }
+
+
 
 input[type="time"] {
   font-size: 1.1rem !important;
@@ -677,7 +689,7 @@ input[type="time"]::placeholder {
   color: white;
   font-family: "Baloo Tammudu 2", sans-serif;
   border: 0;
-  border-radius: 50px 2px 50px 10px;
+  border-radius: 30px 2px 30px 2px;
   box-shadow: 0px 5px 45px 0px rgb(168, 164, 164);
   font-weight: 500;
 }
@@ -979,10 +991,10 @@ input[type="time"]::placeholder {
   background: -webkit-linear-gradient(360deg, #e67817 33%, white 33%);
   margin: auto;
   position: relative;
-  top: 13vh;
+  top: 6rem;
   display: flex;
   flex-direction: row;
-  min-height: 35rem;
+  min-height: 37rem !important;
 }
 
 .login-box-left-side {
@@ -1043,8 +1055,9 @@ input[type="time"]::placeholder {
   color: white;
   font-size: 1.3rem;
   padding: 0;
+  padding-top: .5rem;
   text-align: center;
-  border-radius: 7px 50px 7px 50px;
+  border-radius: 2px 30px 2px 30px;
 }
 
 .login-box-left-side a {
@@ -1205,7 +1218,7 @@ a {
   color: orange;
 }
 
-@media (max-width: 560px) {
+@media (max-width: 420px) {
   .options-panel-2 {
     display: flex;
   }
@@ -1740,4 +1753,142 @@ footer {
     width: 100%;
     display: flex;
   }
+}
+
+
+
+/* ////////////////////////////////////////////////Booking Page//////////////////////////////////////// */
+
+
+.booking-page-booking-container{
+  width: 30vw;
+  position: relative;
+  left: 2rem;
+  top: -10rem;
+  background-color: white;
+  min-width: 25rem;
+  display: flex;
+  justify-content : space-around;
+  border: 1.5px solid var(--theme-color);
+  border-radius: 30px 2px 30px 2px;
+  flex-direction: column;
+}
+
+
+
+.switcher-container{
+  margin-bottom: 2px;
+  display: flex;
+  flex-direction: row;
+}
+.booking-switcher{
+font-size: 1.1rem;
+font-family: var(--font-family-one);
+line-height: 1.1;
+background-color: var(--theme-color);
+height: 3rem;
+display: flex;
+align-items: center;
+justify-content: center;
+flex: 1;
+margin-right: .05rem;
+padding-top: 2.1%;
+cursor: pointer;
+}
+
+
+.booking-switcher.active {
+  background-color: white !important;
+  border-bottom: 2px solid var(--theme-color);
+  margin-right: 0;
+}
+.one-way-tab{
+  border-top-left-radius: 31px;
+}
+
+.inner-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%
+}
+
+.booking-input-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-switcher{
+  font-family: "Baloo Tammudu 2", sans-serif;
+  font-size: 1.3rem;
+}
+
+.booking-page-booking-container input:not([type="submit"]) ,.booking-page-booking-container select {
+  position: relative;
+  left: 1rem;
+  width: 70%;
+  border: none;
+  border-bottom: 1px solid black;
+  border-radius: 5px !important;
+  margin: .5rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.booking-page-booking-container input[type="submit"]{
+  background-color: var(--theme-color) !important;
+  max-width: 10rem;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+.booking-input-container input, select{
+  border-radius: 30px 2px 30px 2px;
+  padding: .5rem 0;
+}
+
+.booking-input {
+  position: absolute;
+  display: none;
+}
+
+.booking-input select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 25% !important;
+}
+
+.booking-input select#destination{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 33% !important;
+}
+
+.ui-datepicker-calender, .ui-datepicker-header, .ui-widget-header, .ui-helper-clearfix .ui-corner-all{
+  background-color:var(--theme-color) !important;
+  font-family: "Baloo Tammudu 2", sans-serif !important;
+  z-index: 100;
+}
+
+.booking-input.active{
+  display: contents;
+}
+.booking-page-booking-container input{
+  padding: 1rem;
+}
+
+.booking-page-booking-container .inner-container{
+  padding-top: 2rem;
+}
+@media(max-width: 520px){
+  .booking-page-booking-container{
+    width: 85vw;
+    margin: auto;
+    left: 0;
+  }
+
+
 }

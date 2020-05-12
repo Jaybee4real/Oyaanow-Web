@@ -14,7 +14,11 @@
         integrity="sha256-NP9NujdEzS5m4ZxvNqkcbxyHB0dTRy9hG13RwTVBGwo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"
         integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
-    <script src="https://use.fontawesome.com/27fba2f7f0.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha256-KM512VNnjElC30ehFwehXjx1YCHPiQkOPmqnrWtpccM=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha256-rByPlHULObEjJ6XQxW/flG2r+22R5dKiAoef+aXWfik=" crossorigin="anonymous" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js" integrity="sha256-+jmym6PChFok5u02khNcYDy5AdfiIN7Y/QCbBqiNgeE=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css" integrity="sha256-DVV5cU9pxHH2Rofop3XD3b3rbfrOSIy2nU61DEbYy1Q=" crossorigin="anonymous" />
+        <script src="https://use.fontawesome.com/27fba2f7f0.js"></script>
 </head>
 
 <body class="index-page">
@@ -40,13 +44,13 @@
             </div>
         </div>
         <div id="navbar" class="navbar">
-            <a href="#" class="logo logo-animated "><span class="logo-icon"></span>OyaaNow</a>
+            <a href="index.html" class="logo logo-animated "><span class="logo-icon"></span>OyaaNow</a>
             <div class="options">
                 <a class="nav-item about btn">About Company</a>
                 <a class="nav-item contact btn">Contact</a>
                 <a href="login.html" class="nav-item login btn">Login/Create Account</a>
-                <a href="login.html" class="nav-item book-scroll btn">Book Now</a>
-                <div class="hamburger fa fa-bars  btn"></div>
+                <a href="booking.html" class="nav-item book-scroll btn">Book Now</a>
+                <div class="hamburger fa fa-bars btn"></div>
             </div>
 
             <div class="mobile-menu">
@@ -55,7 +59,7 @@
                     <a class="mobile-nav-item about btn">About</a>
                     <a class="mobile-nav-item contact btn">Contact</a>
                     <a href="login.html" class="mobile-nav-item login btn">Login/Create Account</a>
-                    <a class="mobile-nav-item book-now btn">Book Now</a>
+                    <a href="booking.html" class="mobile-nav-item book-now btn">Book Now</a>
                     <a class="mobile-nav-item services btn">Services</a>
                     <a class="mobile-nav-item blog btn">Blog</a>
                 </div>
@@ -64,36 +68,78 @@
 
         </div>
 
-
-        <div class="booking-container">
-            <div class="booking">
-                <div class="one-way">
-                    <div class=" call-to-action">Book Now</div>
-
-                    <div class="input-container">
-                        <select id="departure">
-                            <option value="" class="disabled" disabled selected>Departure</option>
-                            <option value="saab">Lagos</option>
-                            <option value="mercedes">Abuja</option>
-                            <option value="audi">Maiduguri</option>
-                        </select>
-                        <select id="destination">
-                            <option value="" class="disabled" disabled selected>Destination</option>
-                            <option value="saab">Lagos</option>
-                            <option value="mercedes">Abuja</option>
-                            <option value="audi">Maiduguri</option>
-                        </select>
-                        <input class="date" placeholder="Date" type="text" onclick="(this.type='date')"
-                            onblur="(this.type='text')">
-                        <input class="time" placeholder="Time" type="text" onclick="(this.type='time')"
-                            onblur="(this.type='text')">
-                        <input type="submit" class="btn" value="Book Now">
-                    </div>
-                </div>
+        <div class="booking-page-booking-container">
+            <div class="switcher-container">
+              <a class="booking-switcher one-way-tab active">
+                One Way
+              </a>
+              <a class="booking-switcher round-trip-tab">
+                Round Trip
+              </a>
+              <a class="booking-switcher">
+              </a>
             </div>
-        </div>
-
-
+      
+            <div class="inner-container">
+              <div class="booking-input-container">
+                <div class="input-container booking-input one-way active" style="flex-direction:column;">
+                  <select id="departure">
+                    From
+                    <option value="" class="disabled">Departure Terminal</option>
+                    <option value="saab">Lagos</option>
+                    <option value="mercedes">Abuja</option>
+                    <option value="audi">Maiduguri</option>
+                  </select>
+                  <select id="destination">
+                    <option value="" class="disabled">Destination</option>
+                    <option value="saab">Lagos</option>
+                    <option value="mercedes">Abuja</option>
+                    <option value="audi">Maiduguri</option>
+                  </select>
+                  <input id="datepicker" class="date" placeholder="Date" type="text" onclick="(this.type='date')"
+                    onblur="(this.type='text')">
+                  <input id="timepicker" class="time" placeholder="Time" type="text" onclick="(this.type='time')"
+                    onblur="(this.type='text')">
+                  <input type="submit" class="btn" Value="Book Now">
+                </div>
+      
+                <div class="input-container booking-input round-trip" style="flex-direction:column;">
+                  <select id="departure">
+                    From
+                    <option value="" class="disabled">Departure Terminal</option>
+                    <option value="saab">Lagos</option>
+                    <option value="mercedes">Abuja</option>
+                    <option value="audi">Maiduguri</option>
+                  </select>
+                  <select id="destination">
+                    <option value="" class="disabled">Destination</option>
+                    <option value="saab">Lagos</option>
+                    <option value="mercedes">Abuja</option>
+                    <option value="audi">Maiduguri</option>
+                  </select>
+                  <input id="datepicker" class="date" placeholder="Date" type="text" onclick="(this.type='date')"
+                    onblur="(this.type='text')">
+                  <input id="timepicker" class="time" placeholder="Time" type="text" onclick="(this.type='time')"
+                    onblur="(this.type='text')">
+                  <br>
+                  <hr>
+                  <br>
+      
+                  <select id="departure" style="text-indent: 32% !important;">
+                    <option value="" class="disabled">Return Terminal</option>
+                    <option value="saab">Lagos</option>
+                    <option value="mercedes">Abuja</option>
+                    <option value="audi">Maiduguri</option>
+                  </select>
+                  <input id="datepicker" class="date" placeholder="Date" type="text" onclick="(this.type='date')"
+                    onblur="(this.type='text')">
+                  <input id="timepicker" class="time" placeholder="Time" type="text" onclick="(this.type='time')"
+                    onblur="(this.type='text')">
+                  <input type="submit" class="btn" Value="Book Now">
+                </div>
+              </div>
+            </div>
+          </div>
 
         <section class="main-content-1" style="top: -15vh;">
             <div class="left-side">
@@ -367,143 +413,7 @@
 
 
         <!-- ////////////////////////////////////////////////////////////////// -->
-        <script>
-            //////////////////////////////Intersection Observer////////////////
-            let scroll = window.pageYOffset;
-
-            document.addEventListener("scroll", function (e) {
-                let navbar = document.getElementById("navbar")
-                var offset = window.pageYOffset;
-                scroll = offset;
-                if (scroll > 1) {
-                    navbar.classList.add("scroll")
-
-                }
-                else {
-                    navbar.classList.remove("scroll")
-                }
-            })
-
-            //////////////////////////////////////////Picture Sider/////////////////
-
-            var images = ["Hiace.jpg", "bus_side.jpg"];
-            $(function () {
-                var i = 0;
-                $(".header").css("background-image", "url(./assets/img/" + "Hiace.jpg" + ")");
-                setInterval(function () {
-                    i++
-                    if (i == images.length) {
-                        i = 0;
-                    }
-
-                    $(".header").css("background-image", "url(./assets/img/" + images[i] + ")");
-                    document.querySelector(".logo-animated").classList.toggle("theme-color")
-                }, 6000);
-            });
-
-
-
-
-
-
-            ////////////////////////////////Testimonies Slider//////////////////////////
-
-            var testimonies = [`
-            yarz, yarz eh.. ze oyeenow aph is a bery good aph, i personally have used the service, it is bery reliable, and the option to cancel trips is vorking perfectly`,
-
-                `
-             yes o, my people..one love, my name is 2face a.k.a idibia and im chilling with jaybee from oyaanow, oyaanow is the big deal, u guys should download the app now..peace out.
-             `,
-
-                `its tiwa saaavaaavage ..yeah, okay people its your girl tiwa savage and im telling you to get the oyaanow app..i promis you the app is very fast and reliable, you guys should try it out , thank you`
-            ];
-            var testimonialsImages = ["Buhari.jpg", "2face.jpg", "Tiwa_savage.jpg"];
-            var testimonialsTitles = ["Mohammadu Buhari,President Of The Federal Republic of Nigeria",
-                "2face Idibia, Successful Musician",
-                "Tiwa Savage, Succesful Musician"
-            ]
-
-
-
-
-            $(function () {
-                var j = 0;
-
-                setInterval(()=>{
-                    j++;
-                    console.log(j)
-                }, 6900)
-                var slideTimer = setInterval(changeSlider, 7000); 
-
-                $(".testimonial-text").text(`${testimonies[0]}`);
-                $(".testimonials-image").css("background-image", "url(./assets/img/" + "Buhari.jpg" + ")");
-                $(".testimonial-title").text(`${testimonialsTitles[0]}`);
-                $(".test-left").click(function () {
-                    --j % testimonies.length
-                    if (j < 0) {
-                        j = 2
-                    }
-
-                    if (j == testimonies.length) {
-                        j = 0
-                    }
-                    changeSlider();
-                    console.log(j)
-                })
-
-                $(".test-right").click(function () {
-                    ++j % testimonies.length
-                    if (j == 0) {
-                        j = 2
-                    }
-                    if (j == testimonies.length) {
-                        j = 0
-                    } 
-                    console.log(j)
-                    changeSlider()
-
-
-                })
-
-
-                function changeSlider() {
-                    if (j < 0) {
-                        j = 2
-                    }
-
-                    if (j > testimonies.length) {
-                        j = 0
-                    }
-
-                    $(".testimonials-text, .testimonials-title,.testimonials-image").animate({ opacity: 0 })
-                    setTimeout(function () {
-                        $(".testimonials-text, .testimonials-title,.testimonials-image").animate({ opacity: 1 })
-                    }, 700)
-
-                    setTimeout(function () {
-                        $(".testimonials-image").css("background-image", "url(./assets/img/" + testimonialsImages[j] + ")");
-                        $(".testimonials-title").text(testimonialsTitles[j]);
-                        $(".testimonials-text").text(testimonies[j]);
-
-                    }, 700)
-                }
-            });
-
-
-
-
-
-
-            /////////////////////////////////////////Picture Loader///////////////////
-            window.addEventListener('DOMContentLoaded', () => {
-                window.setTimeout(function clear() {
-                    document.querySelector(".loader-2").classList.add("loaded")
-                }, 6100
-                )
-            })
-
-
-        </script>
+        <script src="./assets/js/index.js"></script>
         <script src="./assets/js/custom.js"></script>
 
     </div>

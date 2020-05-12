@@ -28,37 +28,10 @@ navButton.addEventListener("click", () => {
 
 
 ////////////////////////////Register/Login Switcher Function////////////////////////////////
-var loginButton = document.querySelectorAll(".login-tab")
-var registerButton = document.querySelectorAll(".register-tab")
-var registerPanel = document.querySelector(".register-panel")
-var loginPanel = document.querySelector(".login-panel")
-
-loginButton.forEach((element) => {
-	element.addEventListener("click", () => {
-		element.classList.add("active");
-		registerButton.forEach((element) => {
-			element.classList.remove("active");
-		})
-		registerPanel.classList.add("hide");
-		loginPanel.classList.remove("hide")
-	})
-})
 
 
 
-
-registerButton.forEach((element) => {
-	element.addEventListener("click", () => {
-		element.classList.add("active");
-		loginButton.forEach((element) => {
-			element.classList.remove("active");
-		})
-		loginPanel.classList.add("hide");
-		registerPanel.classList.remove("hide")
-	})
-})
-
-
+/////////////////////////////////////////////
 
 /////////////////////////////////////////////////////
 
@@ -168,3 +141,19 @@ appearing.forEach(element => {
 	appear.observe(element)
 })
 
+
+//////////////////////////Booking Switcher///////////////////////////////
+
+document.querySelector(".one-way-tab").addEventListener("click",() => {
+	document.querySelector(".one-way-tab").classList.add("active")
+	document.querySelector(".round-trip-tab").classList.remove("active")
+	document.querySelector(".one-way").classList.add("active")
+	document.querySelector(".round-trip").classList.remove("active")
+  })
+
+  document.querySelector(".round-trip-tab").addEventListener("click",() => {
+	document.querySelector(".one-way-tab").classList.remove("active")
+	document.querySelector(".round-trip-tab").classList.add("active")
+	document.querySelector(".one-way").classList.remove("active")
+	document.querySelector(".round-trip").classList.add("active")
+  })
