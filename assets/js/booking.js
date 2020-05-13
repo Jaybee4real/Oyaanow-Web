@@ -48,9 +48,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
 //////////////////////////////////Date Picker///////////////////////
 $( function() {
-    $( "#datepicker").datepicker();
-  } );
+  $( "#datepicker, #datepicker2").datepicker();
+} );
 
-  $( function() {
-    $( "#timepicker").timepicker();
-  } );
+$( function() {
+  $( "#timepicker, #timepicker2").timepicker();
+} );
+

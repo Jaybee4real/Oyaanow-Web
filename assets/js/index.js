@@ -123,13 +123,14 @@ $(function () {
 
 ////////////////////////////////////////Date Picker//////////////////////
 $( function() {
-    $( "#datepicker").datepicker();
+    $( "#datepicker, #datepicker2").datepicker();
   } );
 
   $( function() {
-    $( "#timepicker").timepicker();
+    $( "#timepicker, #timepicker2").timepicker();
   } );
 
+  
 
 
 /////////////////////////////////////////Picture Loader///////////////////

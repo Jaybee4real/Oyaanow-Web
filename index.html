@@ -68,6 +68,7 @@
 
         </div>
 
+        <div class="services-container" >
         <div class="booking-page-booking-container">
             <div class="switcher-container">
               <a class="booking-switcher one-way-tab active">
@@ -76,7 +77,8 @@
               <a class="booking-switcher round-trip-tab">
                 Round Trip
               </a>
-              <a class="booking-switcher">
+              <a href="./booking.html" class="booking-switcher">
+                  Check Status
               </a>
             </div>
       
@@ -84,7 +86,6 @@
               <div class="booking-input-container">
                 <div class="input-container booking-input one-way active" style="flex-direction:column;">
                   <select id="departure">
-                    From
                     <option value="" class="disabled">Departure Terminal</option>
                     <option value="saab">Lagos</option>
                     <option value="mercedes">Abuja</option>
@@ -105,7 +106,6 @@
       
                 <div class="input-container booking-input round-trip" style="flex-direction:column;">
                   <select id="departure">
-                    From
                     <option value="" class="disabled">Departure Terminal</option>
                     <option value="saab">Lagos</option>
                     <option value="mercedes">Abuja</option>
@@ -131,16 +131,43 @@
                     <option value="mercedes">Abuja</option>
                     <option value="audi">Maiduguri</option>
                   </select>
-                  <input id="datepicker" class="date" placeholder="Date" type="text" onclick="(this.type='date')"
+                  <input id="datepicker2" class="date" placeholder="Date" type="text" onclick="(this.type='date')"
                     onblur="(this.type='text')">
-                  <input id="timepicker" class="time" placeholder="Time" type="text" onclick="(this.type='time')"
+                  <input id="timepicker2" class="time" placeholder="Time" type="text" onclick="(this.type='time')"
                     onblur="(this.type='text')">
                   <input type="submit" class="btn" Value="Book Now">
                 </div>
               </div>
             </div>
           </div>
-
+          <div class="other-services">
+            <h2 class="">Oyaanow Other Services</h2>
+            <div class="other-services-container">
+                <div class="item item-1">
+                    <a class="item-desc ">
+                        Book Flights
+                    </a>
+                </div>
+                <div class="item item-2">
+                    <a class="item-desc ">
+                        Book Hotels
+                    </a>
+                </div>
+                <div class="item item-3">
+                    <a class="item-desc">
+                        Charter Buses
+                    </a>
+                </div>
+                <div class="item">
+                    <a class="item-desc other">
+                        Other Services
+                    </a>
+                </div>
+                <br>
+                <div class="view-more btn">View Other Services <i style="position: relative; top: .15rem;" class="fa fa-chevron-right"></i></div>
+            </div>
+          </div>
+        </div>
         <section class="main-content-1" style="top: -15vh;">
             <div class="left-side">
                 <h1 class="slide-up">Oyaa Now....</h1>
@@ -378,10 +405,10 @@
 
 
                     <div class="right-side">
-                        <a class="social-link"><i class="fa fa-facebook"></i>Facebook</a>
-                        <a class="social-link"><i class="fa fa-google"></i>Google</a>
-                        <a class="social-link"><i class="fa fa-whatsapp"></i>Whatsapp</a>
-                        <a class="social-link"><i class="fa fa-twitter"></i>Twitter</a>
+                        <a href="#" class="social-link"><i class="fa fa-facebook"></i>Facebook</a>
+                        <a href="#" class="social-link"><i class="fa fa-google"></i>Google</a>
+                        <a href="#" class="social-link"><i class="fa fa-whatsapp"></i>Whatsapp</a>
+                        <a href="#" class="social-link"><i class="fa fa-twitter"></i>Twitter</a>
                     </div>
                 </div>
 
