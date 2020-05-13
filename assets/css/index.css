@@ -592,8 +592,11 @@
   }
 
   .other-services-container{
-    flex-direction: column;
+    min-height: fit-content;
+  }
 
+  .other-services-container .item .other{
+    background-color: var(--theme-color) !important;
   }
 
   .other-services-container input:not([type="submit"]){
@@ -667,7 +670,7 @@
 }
 
 .other-services-container .item, .terminals-container .item{
-  height: 10rem;
+  min-height: 10rem;
   margin: .5rem;
   min-width: 10rem;
   flex: 1;

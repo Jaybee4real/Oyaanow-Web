@@ -1,3 +1,11 @@
+let navButton = document.querySelector(".hamburger")
+navButton.addEventListener("click", () => {
+	document.querySelector(".mobile-menu").classList.toggle("open");
+	navButton.classList.toggle("fa-bars")
+	navButton.classList.toggle("fa-times")
+})
+
+
 ////////////////////////////////////////////////////////////////// -->
 window.addEventListener('DOMContentLoaded', () => {
 	window.setTimeout(function clear() {
