@@ -669,9 +669,6 @@
   background-image: url("../img/flight.jpeg");
 }
 
-.lagos{
-  background-image: url("../img/flight.jpeg");
-}
 .item-2{
   background-image: url("../img/hotel.jpg");
 }
@@ -680,10 +677,47 @@
   background-image: url("../img/charter.jpg");
 }
 
+
+.lagos{
+  background-image: url("../img/lagos.jpeg");
+}
+
+.enugu{
+  background-image: url("../img/enugu.jpeg");
+}
+
+.delta{
+  background-image: url("../img/delta.jpeg");
+}
+
+.abia{
+  background-image: url("../img/abia.jpeg");
+}
+
+.abuja{
+  background-image: url("../img/abuja.jpg");
+}
+
+
+.imo{
+  background-image: url("../img/imo.jpeg");
+}
+
+.katsina{
+  background-image: url("../img/katsina.jpg");
+}
+
+.kano{
+  background-image: url("../img/kano.jpg");
+}
+
+
+
+
 .other-services-container .item .item-desc, .terminals-container .item .item-desc{
   height: 20%;
   width: 100%;
-  opacity: 0;
+  opacity: 1;
   background-color: #e26b02bb;
   border-radius: 30px 2px 30px 2px;
   transition: all .5s ease-out;
@@ -712,7 +746,9 @@
   background-size: 130%;
 }
 .other-services-container .item:hover .item-desc, .terminals-container .item:hover .item-desc{
-  opacity: 1;
+  height: 100%;
+  top: 0;
+  background-color: #e26b0269;
 
 }
 
