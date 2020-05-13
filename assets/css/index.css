@@ -1723,11 +1723,17 @@ a {
   box-shadow: 0px 0px 45px 5px rgba(128, 128, 128, 0.568);
   display: flex;
   margin: auto;
-  border-radius: 200px 2px 200px 2px;
+  border-radius: 170px 2px 170px 2px;
   max-width: 60rem;
   position: relative;
   margin-bottom: 10rem;
   transition: all 0.6s ease-out;
+}
+
+@media(max-width:560px){
+  .testimonials-box{
+    border-radius: 100px 2px 100px 2px;
+  }
 }
 
 .testimonials-text {
