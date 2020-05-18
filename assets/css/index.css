@@ -1494,6 +1494,7 @@ a {
   text-align: center;
   font-family: "Baloo Tammudu 2", sans-serif;
   padding: 0.3rem;
+  padding-top: .6rem;
   color: white;
   font-weight: 500;
   width: 50%;
@@ -1523,9 +1524,6 @@ a {
     justify-content: center;
   }
 
-  .login-container .call-to-action {
-    display: none;
-  }
 
   .login-box-right-side {
     max-width: 100%;
