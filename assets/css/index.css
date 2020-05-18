@@ -1257,7 +1257,6 @@ input[type="time"]::placeholder {
 /* ////////////////////////////Login Page/////////////////////////////// */
 
 .login-page {
-  height: 95vh;
   width: 100vw;
   background: white;
   overflow-x: hidden;
@@ -1275,7 +1274,7 @@ input[type="time"]::placeholder {
   background: -webkit-linear-gradient(360deg, #e67817 33%, white 33%);
   margin: auto;
   position: relative;
-  top: 6rem;
+  top: 8rem;
   display: flex;
   flex-direction: row;
   min-height: 37rem !important;
@@ -1359,7 +1358,7 @@ input[type="time"]::placeholder {
   width: 7rem;
   padding-top: 0.6rem;
   color: white;
-  margin-bottom: 0.1rem;
+  margin-bottom: 0.6rem;
   margin-left: auto;
   font-weight: 500;
   left: 1.1rem;
@@ -1415,8 +1414,10 @@ input[type="time"]::placeholder {
 
 @media (max-width: 460px) {
   .login-container {
-    min-height: 80vh;
+    padding: 2rem 0;
     width: 95vw;
+    height: fit-content;
+    min-height: 90vh;
   }
 }
 
@@ -1493,7 +1494,6 @@ a {
   text-align: center;
   font-family: "Baloo Tammudu 2", sans-serif;
   padding: 0.3rem;
-  padding-top: 7%;
   color: white;
   font-weight: 500;
   width: 50%;
