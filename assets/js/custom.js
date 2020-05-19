@@ -1,8 +1,12 @@
 
 
 
-////////////////////////Home Page Slider Function///////////////////////////
-
+////////////////////////Page Redirect Function///////////////////////////
+document.querySelectorAll("#to-search").forEach(element => {
+	element.addEventListener("click", () => {
+		window.location.href= "results.html"
+	})
+})
 
 /////////////////////////Preloader Function//////////////////////////////////
 

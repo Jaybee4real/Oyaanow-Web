@@ -15,33 +15,10 @@ document.addEventListener("scroll", function () {
 
 ////////////////////////////////////////// /////////////////
 
-var images = ["Hiace.jpg", "bus_side.jpg"];
-$(function () {
-  var i = 0;
-  $(".header").css(
-    "background-image",
-    "url(./assets/img/" + "Hiace.jpg" + ")"
-  );
-  setInterval(function () {
-    i++;
-    if (i == images.length) {
-      i = 0;
-    }
-
-    $(".header").css(
-      "background-image",
-      "url(./assets/img/" + images[i] + ")"
-    );
-
-    document.querySelector(".logo-animated")
-      .classList.toggle("theme-color");
-  }, 6000);
-});
-
 window.addEventListener('DOMContentLoaded', () => {
   window.setTimeout(function clear() {
     document.querySelector(".loader-2").classList.add("loaded")
-  }, 6100
+  }, 1000
   )
 })
 
