@@ -160,4 +160,5 @@ document.querySelector(".one-way-tab").addEventListener("click",() => {
 	document.querySelector(".round-trip-tab").classList.add("active")
 	document.querySelector(".one-way").classList.remove("active")
 	document.querySelector(".round-trip").classList.add("active")
+
   })

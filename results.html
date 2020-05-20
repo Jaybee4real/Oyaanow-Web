@@ -25,7 +25,7 @@
   <script src="https://use.fontawesome.com/27fba2f7f0.js"></script>
 </head>
 
-<body class="">
+<body class="body">
   <!-- Preloader  -->
   <div class="cover">
     <div class="loader">
@@ -71,8 +71,6 @@
       </div>
     </div>
 
-
-
     <div id="check-status" class="booking-status-container" style="margin:0 5vw; margin-top: -9vh;">
       <h2 class="">Check Booking Status</h2>
       <div class="other-services-container">
@@ -90,76 +88,164 @@
 
 
 
-  <div class="card-container">
-    <div class="left-side">
-      <img src="./assets/img/Hiace.jpg" height="100%" width="100%" style="height: 100%; width: 100%;">
+  <div class="results-container">
+
+    <div class="booking-container-toggle">
+      <i class="fa fa-search" style="padding-top: 8%; padding-right: 5%;"></i> Search
     </div>
-    <div class="card-right-side">
-      <div class="info">
-        <span class="item-desc">Bus Service Provider:</span>
-        <span class="item-desc">Bus Type Available: </span>
-        <span class="item-desc">Bus Departure Time</span>
-        <span class="item-desc">Bus Departure Date</span>
+    <div class="results-left-side">
+      <div id="holding"
+        style="transition: all .6s ease-out; width: 26%; min-width: 10rem !important; position: fixed; left: 0; top: 10rem;">
+        <div class="booking-page-booking-container" id="booking-container"
+          style="width: 100% !important; min-width: 20rem; top: 11rem; left: .5rem;">
+          <div class="switcher-container">
+            <a class="booking-switcher one-way-tab active">
+              One Way
+            </a>
+            <a class="booking-switcher round-trip-tab">
+              Round Trip
+            </a>
+
+            <a class="close-btn" >
+              X
+            </a>
+
+          </div>
+
+          <div class="inner-container">
+            <div class="booking-input-container">
+              <div class="input-container booking-input one-way active" style="flex-direction:column;">
+                <select required id="departure">
+                  <option value="" class="disabled">Departure Terminal</option>
+                  <option value="saab">Lagos</option>
+                  <option value="mercedes">Abuja</option>
+                  <option value="audi">Maiduguri</option>
+                </select>
+                <select required id="destination">
+                  <option value="" class="disabled">Destination</option>
+                  <option value="saab">Lagos</option>
+                  <option value="mercedes">Abuja</option>
+                  <option value="audi">Maiduguri</option>
+                </select>
+                <input required id="datepicker" class="date" placeholder="Date" type="text" onclick="(this.type='date')"
+                  onblur="(this.type='text')">
+                <input required id="timepicker" class="time" placeholder="Time" type="text" onclick="(this.type='time')"
+                  onblur="(this.type='text')">
+                <input type="submit" class="btn" id="to-search" action="./results.html" Value="Search">
+              </div>
+
+              <div class="input-container booking-input round-trip" style="flex-direction:column;">
+                <select required id="departure">
+                  <option value="" class="disabled">Departure Terminal</option>
+                  <option value="saab">Lagos</option>
+                  <option value="mercedes">Abuja</option>
+                  <option value="audi">Maiduguri</option>
+                </select>
+                <select required id="destination">
+                  <option value="" class="disabled">Destination</option>
+                  <option value="saab">Lagos</option>
+                  <option value="mercedes">Abuja</option>
+                  <option value="audi">Maiduguri</option>
+                </select>
+                <input required id="datepicker" class="date" placeholder="Date" type="text" onclick="(this.type='date')"
+                  onblur="(this.type='text')">
+                <input required id="timepicker" class="time" placeholder="Time" type="text" onclick="(this.type='time')"
+                  onblur="(this.type='text')">
+                <br>
+                <hr>
+                <br>
+
+                <select required id="departure" style="text-indent: 32% !important;">
+                  <option value="" class="disabled">Return Terminal</option>
+                  <option value="saab">Lagos</option>
+                  <option value="mercedes">Abuja</option>
+                  <option value="audi">Maiduguri</option>
+                </select>
+                <input required id="datepicker2" class="date" placeholder="Date" type="text"
+                  onclick="(this.type='date')" onblur="(this.type='text')">
+                <input required id="timepicker2" class="time" placeholder="Time" type="text"
+                  onclick="(this.type='time')" onblur="(this.type='text')">
+                <input type="submit" id="to-search" class="btn" Value="Search">
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="data">
-        <span class="data-piece">God Is Good</span>
-        <span class="data-piece">Toyota Hiace</span>
-        <span class="data-piece">7am</span>
-        <span class="data-piece">21<sup>st</sup> May 2020</span>
+    </div>
+    <div class="results-right-side">
+
+      <div class="card-container">
+        <div class="left-side">
+          <img src="./assets/img/Hiace.jpg" height="100%" width="100%" style="height: 100%; width: 100%;">
+        </div>
+        <div class="card-right-side">
+          <div class="info">
+            <span class="item-desc">Bus Service Provider:</span>
+            <span class="item-desc">Bus Type Available: </span>
+            <span class="item-desc">Bus Departure Time</span>
+            <span class="item-desc">Bus Departure Date</span>
+          </div>
+
+          <div class="data">
+            <span class="data-piece">God Is Good</span>
+            <span class="data-piece">Toyota Hiace</span>
+            <span class="data-piece">7am</span>
+            <span class="data-piece">21<sup>st</sup> May 2020</span>
+          </div>
+
+        </div>
+      </div>
+
+
+
+      <div class="card-container">
+        <div class="left-side">
+          <img src="./assets/img/Hiace.jpg" height="100%" width="100%" style="height: 100%; width: 100%;">
+        </div>
+        <div class="card-right-side">
+          <div class="info">
+            <span class="item-desc">Bus Service Provider:</span>
+            <span class="item-desc">Bus Type Available: </span>
+            <span class="item-desc">Bus Departure Time</span>
+            <span class="item-desc">Bus Departure Date</span>
+          </div>
+
+          <div class="data">
+            <span class="data-piece">God Is Good</span>
+            <span class="data-piece">Toyota Hiace</span>
+            <span class="data-piece">7am</span>
+            <span class="data-piece">21<sup>st</sup> May 2020</span>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="card-container">
+        <div class="left-side">
+          <img src="./assets/img/Hiace.jpg" height="100%" width="100%" style="height: 100%; width: 100%;">
+        </div>
+        <div class="card-right-side">
+          <div class="info">
+            <span class="item-desc">Bus Service Provider:</span>
+            <span class="item-desc">Bus Type Available: </span>
+            <span class="item-desc">Bus Departure Time</span>
+            <span class="item-desc">Bus Departure Date</span>
+          </div>
+
+          <div class="data">
+            <span class="data-piece">God Is Good</span>
+            <span class="data-piece">Toyota Hiace</span>
+            <span class="data-piece">7am</span>
+            <span class="data-piece">21<sup>st</sup> May 2020</span>
+          </div>
+
+        </div>
       </div>
 
     </div>
   </div>
-
-
-
-  <div class="card-container">
-    <div class="left-side">
-      <img src="./assets/img/Hiace.jpg" height="100%" width="100%" style="height: 100%; width: 100%;">
-    </div>
-    <div class="card-right-side">
-      <div class="info">
-        <span class="item-desc">Bus Service Provider:</span>
-        <span class="item-desc">Bus Type Available: </span>
-        <span class="item-desc">Bus Departure Time</span>
-        <span class="item-desc">Bus Departure Date</span>
-      </div>
-
-      <div class="data">
-        <span class="data-piece">God Is Good</span>
-        <span class="data-piece">Toyota Hiace</span>
-        <span class="data-piece">7am</span>
-        <span class="data-piece">21<sup>st</sup> May 2020</span>
-      </div>
-
-    </div>
-  </div>
-
-
-  <div class="card-container">
-    <div class="left-side">
-      <img src="./assets/img/Hiace.jpg" height="100%" width="100%" style="height: 100%; width: 100%;">
-    </div>
-    <div class="card-right-side">
-      <div class="info">
-        <span class="item-desc">Bus Service Provider:</span>
-        <span class="item-desc">Bus Type Available: </span>
-        <span class="item-desc">Bus Departure Time</span>
-        <span class="item-desc">Bus Departure Date</span>
-      </div>
-
-      <div class="data">
-        <span class="data-piece">God Is Good</span>
-        <span class="data-piece">Toyota Hiace</span>
-        <span class="data-piece">7am</span>
-        <span class="data-piece">21<sup>st</sup> May 2020</span>
-      </div>
-
-    </div>
-  </div>
-
-  
 </body>
 <script>
 
@@ -178,6 +264,61 @@
     }, 1100
     )
   })
+
+
+
+
+
+
+
+  document.querySelector(".one-way-tab").addEventListener("click", () => {
+    document.querySelector(".one-way-tab").classList.add("active")
+    document.querySelector(".round-trip-tab").classList.remove("active")
+    document.querySelector(".one-way").classList.add("active")
+    document.querySelector(".round-trip").classList.remove("active")
+    document.querySelector("#holding").style.top = "10rem"
+
+  })
+
+  document.querySelector(".round-trip-tab").addEventListener("click", () => {
+    document.querySelector(".one-way-tab").classList.remove("active")
+    document.querySelector(".round-trip-tab").classList.add("active")
+    document.querySelector(".one-way").classList.remove("active")
+    document.querySelector(".round-trip").classList.add("active")
+    document.querySelector("#holding").style.top = "-4.5em"
+    document.querySelector("#booking-container").style.boxShadow = `2px 2px 15px 7px rgba(27, 27, 27, 0.411)`
+  })
+
+  document.querySelector(".results-right-side").addEventListener("click", () => {
+    document.querySelector(".one-way-tab").classList.add("active")
+    document.querySelector(".round-trip-tab").classList.remove("active")
+    document.querySelector(".one-way").classList.add("active")
+    document.querySelector(".round-trip").classList.remove("active")
+    document.querySelector("#holding").style.top = "10rem"
+    document.querySelector("#holding").classList.remove("booking-show")
+
+  })
+
+ 
+
+
+
+  document.querySelector(".booking-container-toggle").addEventListener("click", () => {
+    document.querySelector("#holding").classList.toggle("booking-show")
+  })
+
+   
+  document.querySelector(".close-btn").addEventListener("click", () => {
+    document.querySelector(".one-way-tab").classList.add("active")
+    document.querySelector(".round-trip-tab").classList.remove("active")
+    document.querySelector(".one-way").classList.add("active")
+    document.querySelector(".round-trip").classList.remove("active")
+    document.querySelector("#holding").style.top = "10rem"
+    document.querySelector("#holding").classList.remove("booking-show")
+
+  })
+
+
 
 </script>
 </body>
