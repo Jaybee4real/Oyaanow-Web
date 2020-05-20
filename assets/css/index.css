@@ -584,10 +584,11 @@
 
 @media (max-width: 420px) {
   .booking-status-container {
-    margin: 0 !important;
     flex-direction: column;
     left: 0;
   }
+
+
 
   .other-services-container {
     min-height: fit-content;
@@ -935,10 +936,6 @@ select:focus {
 
 .link {
   transition: all 0.4s ease-out;
-}
-
-.link:hover {
-  color: ;
 }
 
 .input-container input,
@@ -2228,6 +2225,10 @@ select {
     min-height: 30rem;
   }
 
+  .results-check{
+    margin-left: 40% !important;
+  }
+
   .card-container .left-side,
   .card-container .card-right-side {
     width: 100% !important;
@@ -2355,6 +2356,9 @@ select {
     top: -13vh !important;
   }
 
+  .results-check{
+    margin-left: 32% !important;
+  }
 
   .search-input input, .search-input select{
     margin: .2rem auto !important;
