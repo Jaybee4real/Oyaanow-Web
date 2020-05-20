@@ -106,14 +106,14 @@
               Round Trip
             </a>
 
-            <a class="close-btn" >
+            <a class="close-btn">
               X
             </a>
 
           </div>
 
           <div class="inner-container">
-            <div class="booking-input-container">
+            <div class="booking-input-container search-input">
               <div class="input-container booking-input one-way active" style="flex-direction:column;">
                 <select required id="departure">
                   <option value="" class="disabled">Departure Terminal</option>
@@ -275,8 +275,8 @@
     document.querySelector(".one-way-tab").classList.add("active")
     document.querySelector(".round-trip-tab").classList.remove("active")
     document.querySelector(".one-way").classList.add("active")
-    document.querySelector(".round-trip").classList.remove("active")
     document.querySelector("#holding").style.top = "10rem"
+    document.querySelector(".round-trip").classList.remove("active")
 
   })
 
@@ -285,7 +285,7 @@
     document.querySelector(".round-trip-tab").classList.add("active")
     document.querySelector(".one-way").classList.remove("active")
     document.querySelector(".round-trip").classList.add("active")
-    document.querySelector("#holding").style.top = "-4.5em"
+    document.querySelector("#holding").style.top = "-10rem"
     document.querySelector("#booking-container").style.boxShadow = `2px 2px 15px 7px rgba(27, 27, 27, 0.411)`
   })
 
@@ -297,9 +297,10 @@
     document.querySelector("#holding").style.top = "10rem"
     document.querySelector("#holding").classList.remove("booking-show")
 
+
   })
 
- 
+
 
 
 
@@ -307,15 +308,21 @@
     document.querySelector("#holding").classList.toggle("booking-show")
   })
 
-   
+
   document.querySelector(".close-btn").addEventListener("click", () => {
     document.querySelector(".one-way-tab").classList.add("active")
     document.querySelector(".round-trip-tab").classList.remove("active")
     document.querySelector(".one-way").classList.add("active")
     document.querySelector(".round-trip").classList.remove("active")
-    document.querySelector("#holding").style.top = "10rem"
     document.querySelector("#holding").classList.remove("booking-show")
 
+  })
+
+  let navButton = document.querySelector(".hamburger")
+  navButton.addEventListener("click", () => {
+    document.querySelector(".mobile-menu").classList.toggle("open");
+    navButton.classList.toggle("fa-bars")
+    navButton.classList.toggle("fa-times")
   })
 
 

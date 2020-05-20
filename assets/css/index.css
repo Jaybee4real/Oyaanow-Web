@@ -2319,6 +2319,8 @@ select {
     width: 90% !important;
     left: 4% !important;
     display: none;
+    top: -12vh;
+    z-index: 11 !important;
   }
 
   .booking-container-toggle {
@@ -2327,6 +2329,7 @@ select {
 
   .booking-show {
     display: flex !important;
+    z-index: 11 !important;
   }
 
   .close-btn {
@@ -2337,8 +2340,23 @@ select {
     font-family: "Baloo Tammudu 2", sans-serif !important;
     font-size: 1.4rem;
     line-height: 1;
-    padding-top: 4%;
+    padding-top: 2vw;
     display: flex !important;
     justify-content: center;
+    cursor: pointer;
+    z-index: 11 !important;
+    border-bottom: 1px solid white;
+  }
+}
+
+
+@media(max-width: 420px){
+  #holding{
+    top: -13vh !important;
+  }
+
+
+  .search-input input, .search-input select{
+    margin: .2rem auto !important;
   }
 }
