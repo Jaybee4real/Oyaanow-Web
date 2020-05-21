@@ -1343,9 +1343,11 @@ input[type="time"]::placeholder {
   color: white;
   font-size: 1.3rem;
   padding: 0;
-  padding-top: 0.5rem;
+  padding-top: .5rem;
+  line-height: 1.5;
   text-align: center;
   border-radius: 2px 30px 2px 30px;
+  width: 25%;
 }
 
 .login-box-left-side a {
@@ -2219,6 +2221,21 @@ select {
   object-fit: contain;
 }
 
+
+@media (max-width: 767px) {
+  .card-container {
+    flex-direction: column;
+    min-height: 30rem;
+  }
+  .card-container .left-side,
+  .card-container .card-right-side {
+    width: 100% !important;
+    height: 15rem;
+    margin-right: 0 !important;
+  }
+}
+
+
 @media (max-width: 560px) {
   .card-container {
     flex-direction: column;
@@ -2316,6 +2333,10 @@ select {
     justify-content: center;
   }
 
+  .results-right-side{
+    width: 100% !important;
+  }
+
   #holding {
     width: 90% !important;
     left: 4% !important;
@@ -2363,4 +2384,12 @@ select {
   .search-input input, .search-input select{
     margin: .2rem auto !important;
   }
+}
+
+
+/* //////////////////DashBoard Container/////////////////////////////////////// */
+
+
+.dashboard-container{
+  
 }

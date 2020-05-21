@@ -95,4 +95,12 @@ element.addEventListener("click", () => {
     })
 
 
+
+
+    document.querySelectorAll("#dashboard").forEach(element => {
+        element.addEventListener("click", () => {
+            window.location.href = "dashboard.html"
+        })
+    })
+
 ////////////////Breaks DRY rule, to refractor Later//////////////
