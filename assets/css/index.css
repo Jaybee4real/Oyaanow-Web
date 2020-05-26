@@ -469,7 +469,7 @@
 }
 
 .mobile-nav-item:hover {
-  color: black !important;
+  color: rgba(0, 0, 0, 0.8); !important;
   transition: color 0.6s ease-out;
 }
 
@@ -640,7 +640,7 @@
   left: 0;
   flex: 1;
   border: none;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.8);;
   border-radius: 5px !important;
   display: flex;
   justify-content: center;
@@ -824,7 +824,7 @@ select {
   text-align: center;
   font-family: "Baloo Tammudu 2", cursive;
   width: 100%;
-  color: black;
+  color: rgba(0, 0, 0, 0.8);;
   font-weight: 500;
   background-color: white !important;
 }
@@ -953,7 +953,7 @@ select {
   text-align: center;
   font-family: "Baloo Tammudu 2", sans-serif;
   font-weight: 500;
-  color: black;
+  color: rgba(0, 0, 0, 0.8);;
 }
 
 input[type="time"] {
@@ -990,7 +990,7 @@ input[type="time"]::placeholder {
   text-align: left;
   font-size: 1.4rem;
   position: relative;
-  color: black;
+  color: rgba(0, 0, 0, 0.8);;
   left: 2rem;
   line-height: 1;
 }
@@ -1000,7 +1000,7 @@ input[type="time"]::placeholder {
   text-align: left;
   font-size: 1rem;
   position: relative;
-  color: black;
+  color: rgba(0, 0, 0, 0.8);;
   text-align: center;
   padding-right: 40%;
 }
@@ -1097,7 +1097,7 @@ input[type="time"]::placeholder {
   font-family: "Baloo Tammudu 2", cursive;
   text-align: center;
   font-size: 1.5rem;
-  color: black;
+  color: rgba(0, 0, 0, 0.8);;
   margin-top: 1rem;
   line-height: 0.7;
 }
@@ -1108,7 +1108,7 @@ input[type="time"]::placeholder {
   display: block;
   position: absolute;
   height: 3px;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.8);;
   left: 2%;
 }
 .main-content-2 .answer::after {
@@ -1119,7 +1119,7 @@ input[type="time"]::placeholder {
   height: 3px;
   right: 2%;
   margin-top: -19px;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.8);;
 } */
 
 .main-content-2 .flex-reasons {
@@ -1610,6 +1610,7 @@ a {
 
 .box h3 {
   font-size: 1.7rem;
+  color: rgba(0, 0, 0, 0.8);
 }
 
 .box p {
@@ -1617,6 +1618,7 @@ a {
   line-height: 1.2;
   text-align: left;
   padding: 0 4%;
+  color: grey;
 }
 
 @media (max-width: 670px) {
@@ -1822,6 +1824,7 @@ a {
   top: 3rem;
 }
 
+
 .right-quote {
   height: 5rem;
   position: absolute;
@@ -1966,8 +1969,13 @@ footer {
   margin: 7px 0;
   color: grey;
   font-style: normal !important;
+  transition: all .5s ease-out;
 }
 
+footer a:hover{
+  color: var(--theme-color) !important;
+
+}
 .footer-container .left-side {
   display: flex;
   flex-direction: column;
@@ -2139,7 +2147,7 @@ footer {
   left: 1rem;
   width: 70%;
   border: none;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.8);;
   border-radius: 5px !important;
   margin: 0.5rem auto;
   display: flex;
@@ -2359,7 +2367,7 @@ select {
     background-color: red;
     text-align: center;
     color: white;
-    font-family: "Baloo Tammudu 2", sans-serif !important;
+    font-family: "Baloo Tammudu 2", sans-serif;
     font-size: 1.4rem;
     line-height: 1;
     padding-top: 2vw;
@@ -2389,7 +2397,257 @@ select {
 
 /* //////////////////DashBoard Container/////////////////////////////////////// */
 
+.dashboard-page{
+  background-color: rgba(128, 128, 128, 0.108);
+  overflow: scroll !important;
+  width: fit-content !important;
+  min-width: 100vw;
+}
+
+.dashboard-page .scroll{
+  box-shadow: none;
+  height: 6rem !important;
+}
 
 .dashboard-container{
-  
+  display: flex;
+  flex-direction: row;
+}
+
+.left-sidebar .logo{
+  margin-bottom: 6vh;
+  padding-left: 1rem !important;
+}
+
+.left-sidebar .logo .logo-icon{
+  left: 2rem;
+}
+
+
+.left-sidebar{
+  width : 16rem;
+  padding-top: 10vh;
+  position: relative;
+  top: 6.6rem;
+  height: calc(100vh - 7rem);
+  display: flex;
+  flex-direction: column;
+  margin-left: .7rem;
+  border-radius: 10px 0px 0px 10px;
+  background-color: white;
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.137);
+}
+
+.left-sidebar .dashboard-item{
+  font-size: 1.1rem;
+  font-family: "Baloo Tammudu 2", sans-serif !important;
+  text-align: left;
+  padding-left: 1.5rem;
+  width: 85%;
+  color: var(--theme-color);
+  margin-left: 0;
+  padding-top: .5rem;
+  margin-left: .1rem;
+  border-radius: 0px 50px 50px 0px;
+  cursor: pointer;
+  transition: all .5s ease-out
+}
+
+.dashboard-item:hover{
+  color:  black
+}
+
+.dashboard-item .fa{
+  margin-right: .6rem;
+}
+
+.dashboard-item.active {
+  background-color: var(--theme-color);
+  color: white;
+}
+
+.dashboard-middle{
+  flex: 1;
+  position: relative;
+  top: 6.6rem;
+  height: calc(100vh - 7rem);
+  padding-left: 1rem;
+}
+
+
+.middle-content .page-title{
+  font-size: 1.8rem;
+  font-family: "Baloo Tammudu 2", sans-serif !important;
+  color: var(--theme-color)
+
+}
+
+
+
+.dashboard-right-side{
+  width : 20rem;
+  padding-top: 1vh;
+  position: relative;
+  top: 6.6rem;
+  height: calc(100vh - 7rem);
+  display: flex;
+  flex-direction: column;
+  border-radius: 0px 10px 10px 0px;
+  margin-left: auto;
+}
+
+.dashboard-right-side .owner-detail{
+  width: 100%;
+  height: 5rem;
+  background-color: white;
+  margin-left: auto;
+  border-radius: 50px 0px 0px 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-width: 20rem;
+}
+
+.owner-image{
+  height: 4rem;
+  width: 4rem !important;
+  margin: .5rem;
+  margin-left: 0 !important;
+}
+
+.owner-image img{
+  height: 100%;
+  border-radius: 50%;
+  width: 100% !important;
+  object-fit: cover;
+}
+
+.owner-text h2{
+  font-family: "Baloo Tammudu 2", sans-serif !important;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: var(--theme-color)
+}
+
+.owner-text p{
+  font-family: "Baloo Tammudu 2", sans-serif !important;
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--theme-color);
+}
+
+
+.activity-area{
+  display: flex;
+  flex-direction: row;
+}
+
+
+.dashboard-card h2{
+  line-height: 1;
+  font-size: 1.3rem;
+}
+
+.dashboard-card{
+  margin: 10px;
+  flex: 1;
+  padding: .5rem;
+  padding-top:1.5rem;
+  text-align: center;
+  font-family: "Baloo Tammudu 2", sans-serif;
+  box-shadow: 2px 0px 15px 7px rgba(128, 128, 128, 0.163);
+  margin-bottom: 3rem;
+  border-radius: 5px;
+  transition: transform 0.5s ease-out;
+  cursor: pointer;
+  background-color: white;
+  width: 100%;
+  min-width: 12rem;
+}
+
+.dashboard-card .info{
+  font-size: 2.2rem;
+  color: var(--theme-color);
+}
+
+.dashboard-toggle{
+  height: 3rem;
+  z-index: 100;
+  width: 3rem;
+  border-radius: 5px 20px 2px 20px ;
+  background-color: white;
+  transform: rotate(-45deg);
+  position: fixed;
+  top: calc(40vh);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.dashboard-toggle .fa{
+  transform: rotate(45deg);
+  font-size: 1.6rem;
+  text-align: center;
+  color: var(--theme-color);
+  cursor: pointer;
+}
+
+.dashboard-toggle{
+  display: none;
+}
+
+/* //////////////////////Mobile Version//////////////////////////// */
+
+.dashboard-page.mobile .left-side{
+  position: absolute;
+  width: 20rem;
+}
+
+@media(max-width: 560px){
+  .dashboard-container{
+   flex-direction: column;
+  }
+
+
+  .dashboard-page{
+    overflow-x: hidden !important;
+  }
+
+ .dashboard-middle, .dashboard-right-side{
+  width: 100vw;
+ }
+
+ .dashboard-toggle{
+   display: flex !important;
+ }
+ .left-sidebar{
+   position: fixed;
+   z-index: 10;
+   transform: translateX(-100vw);
+   transition: all .7s ease-in-out;
+ }
+
+ .left-sidebar.active{
+  transform: translateX(0);
+ }
+
+ .owner-detail{
+   display: none !important;
+ }
+
+  .activity-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dashboard-card{
+    flex: 1;
+    width: 90%;
+    margin-bottom: .3rem;
+    
+  }
 }

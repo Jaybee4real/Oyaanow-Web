@@ -25,7 +25,7 @@
     <script src="https://use.fontawesome.com/27fba2f7f0.js"></script>
 </head>
 
-<body>
+<body class="dashboard-page">
     <div id="navbar" class="navbar scroll">
         <a href="index.html" class="logo logo-animated theme-color"><span class="logo-icon"></span>OyaaNow</a>
         <div class="options">
@@ -51,11 +51,87 @@
 
 
     <div class="dashboard-container">
+        <div class="dashboard-toggle"><i class="fa fa-align-left"></i></div>
         <div class="left-sidebar">
+            <a href="index.html" class="logo theme-color "><span class="logo-icon"></span>OyaaNow</a>
+
+            <a class="dashboard-item"></a>
+            <a class="dashboard-item active"><i class="fa fa-home"></i>Dashboard</a>
+            <a class="dashboard-item"><i class="fa fa-history"></i>View History</a>
+            <a class="dashboard-item"><i class="fa fa-ticket"></i>Book For A Friend</a>
+            <a class="dashboard-item"><i class="fa fa-gear"></i>Settings</a>
+            <a class="dashboard-item"></a>
+        </div>
+
+        <div class="dashboard-middle">
+            <div class="middle-content dashboard">
+                <a class="page-title">DashBoard</a>
+
+                <div class="activity-area">
+                    <div class="dashboard-card">
+                        <h2>Booked Trips</h2>
+                        <div class="info">32</div>
+                    </div>
+                    <div class="dashboard-card">
+                        <h2>Departure</h2>
+                        <div class="info">25</div>
+                    </div>
+                    <div class="dashboard-card">
+                        <h2>Return</h2>
+                        <div class="info">7</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="middle-content settings hide">
+                <a class="page-title">Settings</a>
+            </div>
+
+        </div>
+
+        <div class="dashboard-right-side">
+            <div class="owner-detail">
+                <div class="owner-image">
+                    <img src="./assets/img/2face.jpg">
+                </div>
+                <div class="owner-text">
+                    <h2>2face Idibia</h2>
+                    <p>useremail@usercompany.com</p>
+                </div>
+            </div>
         </div>
     </div>
 
 
+    <script>
+        function checkWidth() {
+            if ($(window).width() < 560) {
+                $('.dashboard-page').addClass('mobile');
+                console.log("small")
+            }
+            else {
+                $('.dashboard-page').removeClass('mobile');
+            }
+        }
+        $(window).ready(checkWidth)
+        $(window).resize(checkWidth);
+    </script>
+
+
+    <script>
+        document.querySelector(".dashboard-toggle").addEventListener("click", () => {
+            document.querySelector(".left-sidebar").classList.toggle("active")
+        })
+
+
+        let navButton = document.querySelector(".hamburger")
+        navButton.addEventListener("click", () => {
+            document.querySelector(".mobile-menu").classList.toggle("open");
+            navButton.classList.toggle("fa-bars")
+            navButton.classList.toggle("fa-times")
+        })
+
+    </script>
 </body>
 
 </html>
