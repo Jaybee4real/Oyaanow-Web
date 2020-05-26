@@ -56,10 +56,9 @@
             <a href="index.html" class="logo theme-color "><span class="logo-icon"></span>OyaaNow</a>
 
             <a class="dashboard-item"></a>
-            <a class="dashboard-item active"><i class="fa fa-home"></i>Dashboard</a>
-            <a class="dashboard-item"><i class="fa fa-history"></i>View History</a>
-            <a class="dashboard-item"><i class="fa fa-ticket"></i>Book For A Friend</a>
-            <a class="dashboard-item"><i class="fa fa-gear"></i>Settings</a>
+            <a class="dashboard-item dashboard-tab active"><i class="fa fa-home"></i>Dashboard</a>
+            <a class="dashboard-item history-tab "><i class="fa fa-history"></i>View History</a>
+            <a class="dashboard-item settings-tab"><i class="fa fa-gear"></i>Settings</a>
             <a class="dashboard-item"></a>
         </div>
 
@@ -70,7 +69,7 @@
                 <div class="activity-area">
                     <div class="dashboard-card">
                         <h2>Booked Trips</h2>
-                        <div class="info">32</div>
+                        <div class="info">27</div>
                     </div>
                     <div class="dashboard-card">
                         <h2>Departure</h2>
@@ -78,13 +77,216 @@
                     </div>
                     <div class="dashboard-card">
                         <h2>Return</h2>
-                        <div class="info">7</div>
+                        <div class="info">2</div>
                     </div>
+                </div>
+
+                <div class="search">
+                    <h2 class="section-header">Recent Bookings</h2>
+                    <div class="search-box">
+                        <i class="fa fa-search"></i>
+                        <input placeholder="search">
+                    </div>
+                </div>
+
+                <div class="recent-bookings-container">
+
+                    <table class="table-container">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <h1>Destination</h1>
+                                </th>
+                                <th>
+                                    <h1>Departure</h1>
+                                </th>
+                                <th>
+                                    <h1>Return</h1>
+                                </th>
+                                <th>
+                                    <h1>Service Provider</h1>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Enugu</td>
+                                <td class="departure">Berger, Lagos <span>(9: am)</span></td>
+                                <td class="return">No return<span>--: --</span></td>
+                                <td>Abc Transport</td>
+                            </tr>
+                            <tr>
+                                <td>Benin</td>
+                                <td class="departure">lekki, Lagos<span>(6:am)</span></td>
+                                <td class="return">No return<span>--: --</span></td>
+                                <td>God Is Good</td>
+                            </tr>
+                            <tr>
+                                <td>Katsina</td>
+                                <td class="departure">Oshodi, Lagos<span>(12:pm)</span></td>
+                                <td class="return">No return<span>--: --</span></td>
+                                <td>Guo Motors</td>
+                            </tr>
+                            <tr>
+                                <td>Kaduna</td>
+                                <td class="departure">Berger,Ojodu <span>(9: am)</span></td>
+                                <td class="return">No return<span>--: --</span></td>
+                                <td>Ifesinachi</td>
+                            </tr>
+                            <tr>
+                                <td>Abuja</td>
+                                <td class="departure">Kara, Lagos<span>(11: am)</span></td>
+                                <td class="return">Ikeja, Lagos<span>--: --</span></td>
+                                <td>God Is Good</td>
+                            </tr>
+                            <tr>
+                                <td>Kano</td>
+                                <td class="departure">lekki, Lagos<span>(6:pm)</span></td>
+                                <td class="return">No return<span>--: --</span></td>
+                                <td>Guo Motors</td>
+                            </tr>
+                            <tr>
+                                <td>Jigawa</td>
+                                <td class="departure">Berger,Ojodu <span>(9: am)</span></td>
+                                <td class="return">No return<span>--: --</span></td>
+                                <td>God Is Good</td>
+                            </tr>
+                            <tr>
+                                <td>Lagos</td>
+                                <td class="departure">Laspark,Abuja<span>(10: am)</span></td>
+                                <td class="return">No return<span>--: --</span></td>
+                                <td>Abc Transport</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
 
             <div class="middle-content settings hide">
                 <a class="page-title">Settings</a>
+            </div>
+
+
+            <div class="middle-content history hide">
+                <a class="page-title">History</a>
+                <table class="table-container">
+                    <thead>
+                        <tr>
+                            <th>
+                                <h1>Destination</h1>
+                            </th>
+                            <th>
+                                <h1>Departure</h1>
+                            </th>
+                            <th>
+                                <h1>Return</h1>
+                            </th>
+                            <th>
+                                <h1>Service Provider</h1>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Enugu</td>
+                            <td class="departure">Berger, Lagos <span>(9: am)</span></td>
+                            <td class="return">No return<span>--: --</span></td>
+                            <td>Abc Transport</td>
+                        </tr>
+                        <tr>
+                            <td>Kano</td>
+                            <td class="departure">lekki, Lagos<span>(6:pm)</span></td>
+                            <td class="return">No return<span>--: --</span></td>
+                            <td>Guo Motors</td>
+                        </tr>
+                        <tr>
+                            <td>Benin</td>
+                            <td class="departure">lekki, Lagos<span>(6:am)</span></td>
+                            <td class="return">No return<span>--: --</span></td>
+                            <td>God Is Good</td>
+                        </tr>
+                        <tr>
+                            <td>Katsina</td>
+                            <td class="departure">Oshodi, Lagos<span>(12:pm)</span></td>
+                            <td class="return">No return<span>--: --</span></td>
+                            <td>Guo Motors</td>
+                        </tr>
+                        <tr>
+                            <td>Benin</td>
+                            <td class="departure">lekki, Lagos<span>(6:am)</span></td>
+                            <td class="return">No return<span>--: --</span></td>
+                            <td>God Is Good</td>
+                        </tr>
+                        <tr>
+                            <td>Kaduna</td>
+                            <td class="departure">Berger,Ojodu <span>(9: am)</span></td>
+                            <td class="return">No return<span>--: --</span></td>
+                            <td>Ifesinachi</td>
+                        </tr>
+                        <tr>
+                            <td>Jigawa</td>
+                            <td class="departure">Berger,Ojodu <span>(9: am)</span></td>
+                            <td class="return">No return<span>--: --</span></td>
+                            <td>God Is Good</td>
+                        </tr>
+                        <tr>
+                            <td>Abuja</td>
+                            <td class="departure">Kara, Lagos<span>(11: am)</span></td>
+                            <td class="return">Ikeja, Lagos<span>--: --</span></td>
+                            <td>God Is Good</td>
+                        </tr>
+                        <tr>
+                            <td>Kano</td>
+                            <td class="departure">lekki, Lagos<span>(6:pm)</span></td>
+                            <td class="return">No return<span>--: --</span></td>
+                            <td>Guo Motors</td>
+                        </tr>
+                        <tr>
+                            <td>Jigawa</td>
+                            <td class="departure">Berger,Ojodu <span>(9: am)</span></td>
+                            <td class="return">No return<span>--: --</span></td>
+                            <td>God Is Good</td>
+                        </tr>
+                        <tr>
+                            <td>Abuja</td>
+                            <td class="departure">Kara, Lagos<span>(11: am)</span></td>
+                            <td class="return">Ikeja, Lagos<span>--: --</span></td>
+                            <td>God Is Good</td>
+                        </tr>
+                        <tr>
+                            <td>Lagos</td>
+                            <td class="departure">Laspark,Abuja<span>(10: am)</span></td>
+                            <td class="return">No return<span>--: --</span></td>
+                            <td>Abc Transport</td>
+                        </tr>
+                        <tr>
+                            <td>Kaduna</td>
+                            <td class="departure">Berger,Ojodu <span>(9: am)</span></td>
+                            <td class="return">No return<span>--: --</span></td>
+                            <td>Ifesinachi</td>
+                        </tr>
+
+                        <tr>
+                            <td>Jigawa</td>
+                            <td class="departure">Berger,Ojodu <span>(9: am)</span></td>
+                            <td class="return">No return<span>--: --</span></td>
+                            <td>God Is Good</td>
+                        </tr>
+                        <tr>
+                            <td>Lagos</td>
+                            <td class="departure">Laspark,Abuja<span>(10: am)</span></td>
+                            <td class="return">No return<span>--: --</span></td>
+                            <td>Abc Transport</td>
+                        </tr>
+                        <tr>
+                            <td>Kaduna</td>
+                            <td class="departure">Berger,Ojodu <span>(9: am)</span></td>
+                            <td class="return">No return<span>--: --</span></td>
+                            <td>Ifesinachi</td>
+                        </tr>
+
+                    </tbody>
+                </table>
             </div>
 
         </div>
@@ -131,6 +333,38 @@
             navButton.classList.toggle("fa-times")
         })
 
+        let dashboardTab = document.querySelector(".dashboard-tab")
+        let historyTab = document.querySelector(".history-tab")
+        let settingsTab = document.querySelector(".settings-tab")
+
+
+
+        dashboardTab.addEventListener("click", () => {
+            document.querySelector(".dashboard").classList.remove("hide")
+            document.querySelector(".settings").classList.add("hide")
+            document.querySelector(".history").classList.add("hide")
+            dashboardTab.classList.add("active")
+            historyTab.classList.remove("active")
+            settingsTab.classList.remove("active")
+        })
+
+        settingsTab.addEventListener("click", () => {
+            document.querySelector(".settings").classList.remove("hide")
+            document.querySelector(".dashboard").classList.add("hide")
+            document.querySelector(".history").classList.add("hide")
+            settingsTab.classList.add("active")
+            dashboardTab.classList.remove("active")
+            historyTab.classList.remove("active")
+        })
+
+        historyTab.addEventListener("click", () => {
+            document.querySelector(".history").classList.remove("hide")
+            document.querySelector(".settings").classList.add("hide")
+            document.querySelector(".dashboard").classList.add("hide")
+            historyTab.classList.add("active")
+            dashboardTab.classList.remove("active")
+            settingsTab.classList.remove("active")
+        })
     </script>
 </body>
 
