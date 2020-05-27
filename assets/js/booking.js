@@ -1,5 +1,6 @@
 //////////////////////////////Intersection ////////////////
-let scroll = window.pageYOffset;
+const NavbarScrollingFunction = () => {
+  let scroll = window.pageYOffset;
 
 document.addEventListener("scroll", function () {
   let navbar = document.getElementById("navbar");
@@ -12,27 +13,18 @@ document.addEventListener("scroll", function () {
     navbar.classList.remove("scroll");
   }
 
-  if (scroll > 50) {
-    bookingComntainer.style.position = "fixed";
-    console.log("changed");
-  } 
-  else if (scroll > 260) {
-    bookingComntainer.style.backgroundColor = "white";
-    bookingComntainer.style.display = "none";
-    alert("reached")
-    console.log("not changed");
-
-
-  }
 });
 
-////////////////////////////////////////// /////////////////
-
-window.addEventListener("DOMContentLoaded", () => {
-  window.setTimeout(function clear() {
-    document.querySelector(".loader-2").classList.add("loaded");
-  }, 1000);
-});
+}
+//////////////////////////////////Wallpaper Loader Function//////// /////////////////
+const loader2function = () => {
+  window.addEventListener("DOMContentLoaded", () => {
+    window.setTimeout(function clear() {
+      document.querySelector(".loader-2").classList.add("loaded");
+    }, 1000);
+  });
+}
+  
 
 //////////////////////////////////Date Picker///////////////////////
 $(function () {
@@ -42,3 +34,7 @@ $(function () {
 $(function () {
   $("#timepicker, #timepicker2").timepicker();
 });
+
+////////////////?Function Calls////////////////
+NavbarScrollingFunction()
+loader2function()
