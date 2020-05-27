@@ -94,7 +94,7 @@ const removeLoader= () => {
 
 ////////////////////Redirect Page FUnction///////////?//////
 
-
+openMobileMenu()
 removeLoader()    
 selectSideBarItem()
 openSidebar()

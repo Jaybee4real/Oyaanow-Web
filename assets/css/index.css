@@ -316,7 +316,7 @@
 
 @keyframes slide-left {
   0% {
-    opacity: 0.2;
+    opacity: 0;
     transform: translateX(20%);
   }
 
@@ -328,7 +328,7 @@
 
 @keyframes slide-right {
   0% {
-    opacity: 0.2;
+    opacity: 0;
     transform: translateX(-20%);
   }
 
@@ -410,34 +410,34 @@
   animation-delay: 0.1s;
 }
 
-.mobile-menu.open .mobile-nav-item.about {
+.mobile-menu.open .mobile-nav-item.first {
   animation: slide-left 0.5s cubic-bezier(0.1, -0.78, 0.335, 2.55);
   animation-delay: 0.2s;
 }
-.mobile-menu.open .mobile-nav-item.contact {
+.mobile-menu.open .mobile-nav-item.second {
   animation: slide-left 0.5s cubic-bezier(0.1, -0.78, 0.335, 2.55);
   animation-delay: 0.3s;
 }
 
-.mobile-menu.open .mobile-nav-item.login {
+.mobile-menu.open .mobile-nav-item.third {
   animation: 0.5s cubic-bezier(0.1, -0.78, 0.335, 2.55);
   animation-name: slide-left;
   animation-delay: 0.4s;
 }
 
-.mobile-menu.open .mobile-nav-item.book-now {
+.mobile-menu.open .mobile-nav-item.fourth {
   animation: 0.5s cubic-bezier(0.1, -0.78, 0.335, 2.55);
   animation-name: slide-left;
   animation-delay: 0.5s;
 }
 
-.mobile-menu.open .mobile-nav-item.services {
+.mobile-menu.open .mobile-nav-item.fifth {
   animation: 0.5s cubic-bezier(0.1, -0.78, 0.335, 2.55);
   animation-name: slide-left;
   animation-delay: 0.6s;
 }
 
-.mobile-menu.open .mobile-nav-item.blog {
+.mobile-menu.open .mobile-nav-item.sixth {
   animation: 0.5s cubic-bezier(0.1, -0.78, 0.335, 2.55);
   animation-name: slide-left;
   animation-delay: 0.7s;
@@ -464,12 +464,12 @@
 
 .mobile-menu.open .mobile-nav-item {
   opacity: 1;
-  transition: opacity 0.5s;
+  transition: opacity 0s;
   transition-delay: 0.5s;
 }
 
 .mobile-nav-item:hover {
-  color: rgba(0, 0, 0, 0.8); !important;
+  color: rgba(0, 0, 0, 0.8) !important;
   transition: color 0.6s ease-out;
 }
 
