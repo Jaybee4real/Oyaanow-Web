@@ -14,14 +14,6 @@
         integrity="sha256-NP9NujdEzS5m4ZxvNqkcbxyHB0dTRy9hG13RwTVBGwo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"
         integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
-        integrity="sha256-KM512VNnjElC30ehFwehXjx1YCHPiQkOPmqnrWtpccM=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"
-        integrity="sha256-rByPlHULObEjJ6XQxW/flG2r+22R5dKiAoef+aXWfik=" crossorigin="anonymous" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"
-        integrity="sha256-+jmym6PChFok5u02khNcYDy5AdfiIN7Y/QCbBqiNgeE=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css"
-        integrity="sha256-DVV5cU9pxHH2Rofop3XD3b3rbfrOSIy2nU61DEbYy1Q=" crossorigin="anonymous" />
     <script src="https://use.fontawesome.com/27fba2f7f0.js"></script>
 </head>
 
@@ -65,12 +57,16 @@
 
             <a class="dashboard-item"></a>
             <a class="dashboard-item dashboard-tab active"><i class="fa fa-home"></i>Dashboard</a>
-            <a class="dashboard-item history-tab "><i class="fa fa-history"></i>View History</a>
+            <a class="dashboard-item history-tab "><i class="fa fa-history"></i>Booking History</a>
             <a class="dashboard-item settings-tab"><i class="fa fa-gear"></i>Settings</a>
             <a class="dashboard-item"></a>
         </div>
 
         <div class="dashboard-middle">
+            <div class="owner-detail-mobile">
+                <img src="./assets/img/2face.jpg">  
+              </div>
+
             <div class="middle-content dashboard">
                 <a class="page-title">DashBoard</a>
 
@@ -119,50 +115,50 @@
                         <tbody>
                             <tr>
                                 <td>Enugu</td>
-                                <td class="departure">Berger, Lagos <span>(9: am)</span></td>
-                                <td class="return">No return<span>--: --</span></td>
+                                <td class="departure">Berger, Lagos  <br/> <span>(9: am)</span></td>
+                                <td class="return">No return <br/> <span>--: --</span></td>
                                 <td>Abc Transport</td>
                             </tr>
                             <tr>
                                 <td>Benin</td>
-                                <td class="departure">lekki, Lagos<span>(6:am)</span></td>
-                                <td class="return">No return<span>--: --</span></td>
+                                <td class="departure">lekki, Lagos <br/> <span>(6:am)</span></td>
+                                <td class="return">No return <br/> <span>--: --</span></td>
                                 <td>God Is Good</td>
                             </tr>
                             <tr>
                                 <td>Katsina</td>
-                                <td class="departure">Oshodi, Lagos<span>(12:pm)</span></td>
-                                <td class="return">No return<span>--: --</span></td>
+                                <td class="departure">Oshodi, Lagos <br/> <span>(12:pm)</span></td>
+                                <td class="return">No return <br/> <span>--: --</span></td>
                                 <td>Guo Motors</td>
                             </tr>
                             <tr>
                                 <td>Kaduna</td>
-                                <td class="departure">Berger,Ojodu <span>(9: am)</span></td>
-                                <td class="return">No return<span>--: --</span></td>
+                                <td class="departure">Berger,Ojodu  <br/> <span>(9: am)</span></td>
+                                <td class="return">No return <br/> <span>--: --</span></td>
                                 <td>Ifesinachi</td>
                             </tr>
                             <tr>
                                 <td>Abuja</td>
-                                <td class="departure">Kara, Lagos<span>(11: am)</span></td>
-                                <td class="return">Ikeja, Lagos<span>--: --</span></td>
+                                <td class="departure">Kara, Lagos <br/> <span>(11: am)</span></td>
+                                <td class="return">Ikeja, Lagos <br/> <span>--: --</span></td>
                                 <td>God Is Good</td>
                             </tr>
                             <tr>
                                 <td>Kano</td>
-                                <td class="departure">lekki, Lagos<span>(6:pm)</span></td>
-                                <td class="return">No return<span>--: --</span></td>
+                                <td class="departure">lekki, Lagos <br/> <span>(6:pm)</span></td>
+                                <td class="return">No return <br/> <span>--: --</span></td>
                                 <td>Guo Motors</td>
                             </tr>
                             <tr>
                                 <td>Jigawa</td>
-                                <td class="departure">Berger,Ojodu <span>(9: am)</span></td>
-                                <td class="return">No return<span>--: --</span></td>
+                                <td class="departure">Berger,Ojodu  <br/> <span>(9: am)</span></td>
+                                <td class="return">No return <br/> <span>--: --</span></td>
                                 <td>God Is Good</td>
                             </tr>
                             <tr>
                                 <td>Lagos</td>
-                                <td class="departure">Laspark,Abuja<span>(10: am)</span></td>
-                                <td class="return">No return<span>--: --</span></td>
+                                <td class="departure">Laspark,Abuja <br/> <span>(10: am)</span></td>
+                                <td class="return">No return <br/> <span>--: --</span></td>
                                 <td>Abc Transport</td>
                             </tr>
                         </tbody>
@@ -245,7 +241,7 @@
                         </tr>
                         <tr>
                             <td>Kano</td>
-                            <td class="departure">lekki, Lagos<span>(6:pm)</span></td>
+                            <td class="departure">lekki, Lagos<br<<span>(6:pm)</span></td>
                             <td class="return">No return<span>--: --</span></td>
                             <td>Guo Motors</td>
                         </tr>
@@ -312,77 +308,8 @@
         </div>
     </div>
 
+    <script src="./assets/js/dashboard.js"></script>
 
-    <script>
-        function checkWidth() {
-            if ($(window).width() < 560) {
-                $('.dashboard-page').addClass('mobile');
-                console.log("small")
-            }
-            else {
-                $('.dashboard-page').removeClass('mobile');
-            }
-        }
-        $(window).ready(checkWidth)
-        $(window).resize(checkWidth);
-    </script>
-
-
-    <script>
-        document.querySelector(".dashboard-toggle").addEventListener("click", () => {
-            document.querySelector(".left-sidebar").classList.toggle("active")
-            document.querySelector(".dash-fa").classList.toggle("fa-align-left")
-            document.querySelector(".dash-fa").classList.toggle("fa-times")
-        })
-
-
-        let navButton = document.querySelector(".hamburger")
-        navButton.addEventListener("click", () => {
-            document.querySelector(".mobile-menu").classList.toggle("open");
-            navButton.classList.toggle("fa-bars")
-            navButton.classList.toggle("fa-times")
-        })
-
-        let dashboardTab = document.querySelector(".dashboard-tab")
-        let historyTab = document.querySelector(".history-tab")
-        let settingsTab = document.querySelector(".settings-tab")
-
-
-
-        dashboardTab.addEventListener("click", () => {
-            document.querySelector(".dashboard").classList.remove("hide")
-            document.querySelector(".settings").classList.add("hide")
-            document.querySelector(".history").classList.add("hide")
-            dashboardTab.classList.add("active")
-            historyTab.classList.remove("active")
-            settingsTab.classList.remove("active")
-        })
-
-        settingsTab.addEventListener("click", () => {
-            document.querySelector(".settings").classList.remove("hide")
-            document.querySelector(".dashboard").classList.add("hide")
-            document.querySelector(".history").classList.add("hide")
-            settingsTab.classList.add("active")
-            dashboardTab.classList.remove("active")
-            historyTab.classList.remove("active")
-        })
-
-        historyTab.addEventListener("click", () => {
-            document.querySelector(".history").classList.remove("hide")
-            document.querySelector(".settings").classList.add("hide")
-            document.querySelector(".dashboard").classList.add("hide")
-            historyTab.classList.add("active")
-            dashboardTab.classList.remove("active")
-            settingsTab.classList.remove("active")
-        })
-
-        window.addEventListener('DOMContentLoaded', () => {
-            window.setTimeout(function clear() {
-                document.querySelector(".loader").classList.add("loaded")
-            }, 1000
-            )
-        })
-    </script>
 </body>
 
 </html>
