@@ -26,6 +26,14 @@
 </head>
 
 <body class="dashboard-page">
+    <div class="loader">
+        <div class="loader-inner ball-scale-ripple-multiple ball-scale-ripple-multiple-color">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
     <div id="navbar" class="navbar scroll">
         <a href="index.html" class="logo logo-animated theme-color"><span class="logo-icon"></span>OyaaNow</a>
         <div class="options">
@@ -51,7 +59,7 @@
 
 
     <div class="dashboard-container">
-        <div class="dashboard-toggle"><i class="fa fa-align-left"></i></div>
+        <div class="dashboard-toggle"><i class="dash-fa fa fa-align-left"></i></div>
         <div class="left-sidebar">
             <a href="index.html" class="logo theme-color "><span class="logo-icon"></span>OyaaNow</a>
 
@@ -323,6 +331,8 @@
     <script>
         document.querySelector(".dashboard-toggle").addEventListener("click", () => {
             document.querySelector(".left-sidebar").classList.toggle("active")
+            document.querySelector(".dash-fa").classList.toggle("fa-align-left")
+            document.querySelector(".dash-fa").classList.toggle("fa-times")
         })
 
 
@@ -364,6 +374,13 @@
             historyTab.classList.add("active")
             dashboardTab.classList.remove("active")
             settingsTab.classList.remove("active")
+        })
+
+        window.addEventListener('DOMContentLoaded', () => {
+            window.setTimeout(function clear() {
+                document.querySelector(".loader").classList.add("loaded")
+            }, 1000
+            )
         })
     </script>
 </body>

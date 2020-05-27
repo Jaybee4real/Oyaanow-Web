@@ -2620,7 +2620,7 @@ select {
 
 .dashboard-toggle{
   height: 3rem;
-  z-index: 100;
+  z-index: 11;
   width: 3rem;
   border-radius: 5px 20px 2px 20px ;
   background-color: white;
@@ -2650,6 +2650,15 @@ select {
 .dashboard-page.mobile .left-side{
   position: absolute;
   width: 20rem;
+}
+
+
+.dashboard-page .loader{
+  z-index: 12;
+}
+
+.dashboard-page .loaded{
+  z-index: -12;
 }
 
 @media(max-width: 560px){
@@ -2792,6 +2801,15 @@ select {
            background-color: var(--theme-color);
            transition: .3s ease-out;
            color: white;
+ }
+
+ @media(max-width: 560px){
+  .table-container td:nth-child(4){
+    display: none;
+  }
+  .table-container th:nth-child(4){
+    display: none;
+  }
  }
 
  .table-container tr:hover span{
