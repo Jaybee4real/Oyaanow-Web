@@ -63,11 +63,11 @@
         </div>
 
         <div class="dashboard-middle">
-            <div class="owner-detail-mobile">
-                <img src="./assets/img/2face.jpg">  
-              </div>
+            <div class="user-detail-mobile">
+                <img src="./assets/img/2face.jpg">
+            </div>
 
-            <div class="middle-content dashboard">
+            <div class="middle-content dashboard hide">
                 <a class="page-title">DashBoard</a>
 
                 <div class="activity-area">
@@ -115,50 +115,50 @@
                         <tbody>
                             <tr>
                                 <td>Enugu</td>
-                                <td class="departure">Berger, Lagos  <br/> <span>(9: am)</span></td>
-                                <td class="return">No return <br/> <span>--: --</span></td>
+                                <td class="departure">Berger, Lagos <br /> <span>(9: am)</span></td>
+                                <td class="return">No return <br /> <span>--: --</span></td>
                                 <td>Abc Transport</td>
                             </tr>
                             <tr>
                                 <td>Benin</td>
-                                <td class="departure">lekki, Lagos <br/> <span>(6:am)</span></td>
-                                <td class="return">No return <br/> <span>--: --</span></td>
+                                <td class="departure">lekki, Lagos <br /> <span>(6:am)</span></td>
+                                <td class="return">No return <br /> <span>--: --</span></td>
                                 <td>God Is Good</td>
                             </tr>
                             <tr>
                                 <td>Katsina</td>
-                                <td class="departure">Oshodi, Lagos <br/> <span>(12:pm)</span></td>
-                                <td class="return">No return <br/> <span>--: --</span></td>
+                                <td class="departure">Oshodi, Lagos <br /> <span>(12:pm)</span></td>
+                                <td class="return">No return <br /> <span>--: --</span></td>
                                 <td>Guo Motors</td>
                             </tr>
                             <tr>
                                 <td>Kaduna</td>
-                                <td class="departure">Berger,Ojodu  <br/> <span>(9: am)</span></td>
-                                <td class="return">No return <br/> <span>--: --</span></td>
+                                <td class="departure">Berger,Ojodu <br /> <span>(9: am)</span></td>
+                                <td class="return">No return <br /> <span>--: --</span></td>
                                 <td>Ifesinachi</td>
                             </tr>
                             <tr>
                                 <td>Abuja</td>
-                                <td class="departure">Kara, Lagos <br/> <span>(11: am)</span></td>
-                                <td class="return">Ikeja, Lagos <br/> <span>--: --</span></td>
+                                <td class="departure">Kara, Lagos <br /> <span>(11: am)</span></td>
+                                <td class="return">Ikeja, Lagos <br /> <span>--: --</span></td>
                                 <td>God Is Good</td>
                             </tr>
                             <tr>
                                 <td>Kano</td>
-                                <td class="departure">lekki, Lagos <br/> <span>(6:pm)</span></td>
-                                <td class="return">No return <br/> <span>--: --</span></td>
+                                <td class="departure">lekki, Lagos <br /> <span>(6:pm)</span></td>
+                                <td class="return">No return <br /> <span>--: --</span></td>
                                 <td>Guo Motors</td>
                             </tr>
                             <tr>
                                 <td>Jigawa</td>
-                                <td class="departure">Berger,Ojodu  <br/> <span>(9: am)</span></td>
-                                <td class="return">No return <br/> <span>--: --</span></td>
+                                <td class="departure">Berger,Ojodu <br /> <span>(9: am)</span></td>
+                                <td class="return">No return <br /> <span>--: --</span></td>
                                 <td>God Is Good</td>
                             </tr>
                             <tr>
                                 <td>Lagos</td>
-                                <td class="departure">Laspark,Abuja <br/> <span>(10: am)</span></td>
-                                <td class="return">No return <br/> <span>--: --</span></td>
+                                <td class="departure">Laspark,Abuja <br /> <span>(10: am)</span></td>
+                                <td class="return">No return <br /> <span>--: --</span></td>
                                 <td>Abc Transport</td>
                             </tr>
                         </tbody>
@@ -168,6 +168,16 @@
 
             <div class="middle-content settings hide">
                 <a class="page-title">Settings</a>
+
+                <div class="settings-container">
+                    <div class="options-container">
+                        <div class="setting-option"><i class="fa fa-lock theme-color"></i> Change Password</div>
+                        <div class="setting-option"><i class="fa fa-envelope theme-color"></i> Change Email</div>
+                        <div class="setting-option"><i class="fa fa-user theme-color"></i> Change Account Type</div>
+                        <div class="setting-option"><i class="fa fa-user-plus theme-color"></i> Refer A Friend</div>
+                        <div class="setting-option danger"><i class="fa fa-trash theme-color"></i> Delete Account</div>
+                    </div>
+                </div>
             </div>
 
 
@@ -292,15 +302,41 @@
                     </tbody>
                 </table>
             </div>
+            <div class="middle-content password hide">
+                <a class="page-title">Change Password</a>
+                <div class="password-container">
+                    <form class="password-input-container">
+                        <input type="text" required placeholder="Old Password">
+                        <input type="text" required placeholder="New Password">
+                        <input type="submit" value="submit" class="btn">
+                    </form>
+                    <div class="warning">Note! You Will Be Logged Out Of Your Account When You Change Your Password!!!</div>
+                </div>
+            </div>
+
+
+            <div class="middle-content Email hide">
+                <a class="page-title">Change Email Address</a>
+                <div class="email-container">
+                    <form class="email-input-container">
+                        <input type="text" required placeholder="Old Email Address">
+                        <input type="text" required placeholder="New Email">
+                        <input type="text" required placeholder="Password">
+                        <input type="submit" value="submit" class="btn">
+                    </form>
+                    <div class="note">It Might Take Up To 10 Minutes Before Changes Reflect On The Dashboard.</div>
+                </div>
+            </div>
+
 
         </div>
 
         <div class="dashboard-right-side">
-            <div class="owner-detail">
-                <div class="owner-image">
+            <div class="user-detail">
+                <div class="user-image">
                     <img src="./assets/img/2face.jpg">
                 </div>
-                <div class="owner-text">
+                <div class="user-text">
                     <h2>2face Idibia</h2>
                     <p>useremail@usercompany.com</p>
                 </div>

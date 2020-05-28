@@ -1449,6 +1449,8 @@ a {
   transition-delay: 0.55s;
 }
 
+
+
 .form-i {
   position: relative;
   left: 1.1rem;
@@ -2430,7 +2432,7 @@ select {
   border-radius: 10px 0px 0px 10px;
   background-color: white;
   box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.137);
-  z-index: 100;
+  z-index: 11;
 }
 
 .left-sidebar .dashboard-item {
@@ -2533,7 +2535,7 @@ select {
   margin-left: auto;
 }
 
-.dashboard-right-side .owner-detail {
+.dashboard-right-side .user-detail {
   width: 100%;
   height: 5rem;
   background-color: white;
@@ -2546,7 +2548,7 @@ select {
   min-width: 20rem;
 }
 
-.owner-detail-mobile {
+.user-detail-mobile {
   width: 100%;
   height: 5rem;
   background-color: white;
@@ -2554,38 +2556,39 @@ select {
   border-radius: 50%;
   width: 5rem;
   position: absolute;
-  border: 3px solid var(--theme-color);
+  border: 3px solid white;
+  display: none;
 }
 
-.owner-detail-mobile img {
+.user-detail-mobile img {
   height: 100%;
   border-radius: 50%;
   width: 100% !important;
   object-fit: cover;
 }
 
-.owner-image {
+.user-image {
   height: 4rem;
   width: 4rem !important;
   margin: 0.5rem;
   margin-left: 0 !important;
 }
 
-.owner-image img {
+.user-image img {
   height: 100%;
   border-radius: 50%;
   width: 100% !important;
   object-fit: cover;
 }
 
-.owner-text h2 {
+.user-text h2 {
   font-family: "Baloo Tammudu 2", sans-serif !important;
   font-size: 1.1rem;
   line-height: 1.5;
   color: var(--theme-color);
 }
 
-.owner-text p {
+.user-text p {
   font-family: "Baloo Tammudu 2", sans-serif !important;
   font-size: 1rem;
   line-height: 1;
@@ -2696,7 +2699,7 @@ select {
     transform: translateX(0);
   }
 
-  .owner-detail {
+  .user-detail {
     display: none !important;
   }
 
@@ -2719,7 +2722,7 @@ select {
     text-align: center;
   }
 
-  .owner-detail-mobile {
+  .user-detail-mobile {
     top: -1.5rem;
   }
 
@@ -2841,6 +2844,10 @@ table {
     min-width: 90%;
   }
 
+  .user-detail-mobile{
+    display: flex;
+  }
+
 }
 
 
@@ -2872,4 +2879,99 @@ table {
 .history {
   animation: 0.7s appear linear;
   transition-delay: .5s;
+}
+
+
+/* ///////// */
+
+.setting-option{
+  font-size: 1.1rem;
+  font-family: "Baloo Tammudu 2", sans-serif;
+  width: 85%;
+  background-color: white;
+  padding: 1rem;
+  padding-bottom: .2rem;
+  margin: 1rem;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all .2s ease-in;
+}
+
+.setting-option .fa{
+  margin-right: .5rem;
+}
+
+.setting-option.danger .fa{
+  color: white !important;
+}
+.setting-option:hover{
+  transform: translateX(4%);
+  color: white;
+  background-color: var(--theme-color);
+}
+
+.setting-option:hover .fa{
+  color: white !important;
+  transition-delay: -.3s;
+}
+
+.setting-option.danger{
+  background-color: rgb(224, 5, 1);
+  color: white;
+}
+
+.setting-option.danger:hover{
+  background-color: red;
+}
+
+
+/* Password Change */
+
+.password-input-container, .email-input-container{
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+  margin-left: 7%;
+}
+
+.password-input-container input, .email-input-container input{
+  font-family: "Baloo Tammudu 2", sans-serif;
+  line-height: 1;
+  border-radius: 2px;
+  border: none;
+  margin: .7rem 0;
+  outline: none;
+  padding: 1.1rem;
+  font-size: 1rem;
+  padding-bottom: .3rem;
+  border-bottom: 1px solid grey;
+}
+
+.password-input-container input[type="submit"], .email-input-container input[type="submit"]{
+  width: 50%;
+  margin: auto;
+  margin-top: .5rem;
+  background-color: var(--theme-color);
+  border-radius: 2px 20px 2px 20px;
+  color: white;
+  font-size: 1.3rem;
+  padding-bottom: .5rem;
+}
+
+.password-container .warning{
+  font-family: "Baloo Tammudu 2", sans-serif;
+  line-height: 1;
+  margin-top: 2rem;
+  color: red;
+  text-align: center;
+  margin-right: 15%;
+}
+
+.email-container .note{
+  font-family: "Baloo Tammudu 2", sans-serif;
+  line-height: 1;
+  margin-top: 2rem;
+  color: var(--theme-color);
+  text-align: center;
+  margin-right: 15%;
 }
