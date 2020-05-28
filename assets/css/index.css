@@ -1449,7 +1449,9 @@ a {
   transition-delay: 0.55s;
 }
 
-
+.danger-text{
+  color: red;
+}
 
 .form-i {
   position: relative;
@@ -2420,6 +2422,10 @@ select {
   left: 2rem;
 }
 
+.middle-content{
+  min-width: 30rem;
+}
+
 .left-sidebar {
   width: 16rem;
   padding-top: 10vh;
@@ -2476,6 +2482,7 @@ select {
   font-size: 1.8rem;
   font-family: "Baloo Tammudu 2", sans-serif !important;
   color: var(--theme-color);
+  margin-left: 3rem;
 }
 
 .search-box {
@@ -2627,7 +2634,7 @@ select {
   color: var(--theme-color);
 }
 
-.dashboard-toggle {
+.dashboard-toggle, .back-btn {
   height: 3rem;
   z-index: 11;
   width: 3rem;
@@ -2635,14 +2642,25 @@ select {
   background-color: white;
   transform: rotate(-45deg);
   position: fixed;
-  top: calc(7rem);
+  top: calc(7rem + 3rem);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
 }
+.back-btn{
+  top: 6.5rem;
+  left: 17rem;
+  background-color: transparent;
+}
 
-.dashboard-toggle .fa {
+.left-sidebar.active .dashboard-toggle{
+  position: relative;
+  left: 4rem;
+  background-color: red;
+}
+
+.dashboard-toggle .fa, .back-btn .fa {
   transform: rotate(45deg);
   font-size: 1.6rem;
   text-align: center;
@@ -2674,6 +2692,16 @@ select {
     flex-direction: column;
   }
 
+  .middle-content{
+    min-width: 0rem !important;
+  }
+
+  .back-btn{
+    top: 6.5rem;
+    left: 0rem;
+    background-color: white;
+  }
+
   .dashboard-page {
     overflow-x: hidden !important;
   }
@@ -2682,7 +2710,7 @@ select {
   .dashboard-right-side {
     width: 100vw;
     margin-left: 0;
-    top: 8rem;
+    top: 11rem;
   }
 
   .dashboard-toggle {
@@ -2723,11 +2751,11 @@ select {
   }
 
   .user-detail-mobile {
-    top: -1.5rem;
+    top: -4rem;
   }
 
   .page-title {
-    margin-left: 3rem;
+    margin-left: 4rem !important;
   }
   .booking-switcher:nth-of-type(3){
     padding-left: .5rem;
@@ -2876,8 +2904,12 @@ table {
 
 .dashboard,
 .settings,
-.history {
-  animation: 0.7s appear linear;
+.history,
+.email, 
+.password,
+.refer,
+.delete-account {
+  animation: 0.2s slide-left cubic-bezier(0.6, -0.28, 0.735, 0.045);
   transition-delay: .5s;
 }
 
@@ -2894,7 +2926,7 @@ table {
   margin: 1rem;
   cursor: pointer;
   border-radius: 10px;
-  transition: all .2s ease-in;
+  transition: all .15s ease-in;
 }
 
 .setting-option .fa{
@@ -2905,7 +2937,7 @@ table {
   color: white !important;
 }
 .setting-option:hover{
-  transform: translateX(4%);
+  transform: translateX(.5rem);
   color: white;
   background-color: var(--theme-color);
 }
@@ -2974,4 +3006,27 @@ table {
   color: var(--theme-color);
   text-align: center;
   margin-right: 15%;
+}
+
+
+/* Delete Account */
+.delete-account input{
+  transition: .3s ease-out;
+}
+
+.delete-account input:focus{
+  border-bottom: 3px solid red !important;
+}
+
+
+@keyframes roll-round-and-fade-out{
+  0%{
+    transform : rotate(0deg);
+    opacity: 1;
+  }
+
+  100%{
+    transform : rotate(400deg);
+    opacity: 0;
+  }
 }
