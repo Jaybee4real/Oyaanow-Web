@@ -89,13 +89,12 @@
 }
 
 .loader-2 {
-  box-sizing: border-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   background-color: var(--theme-color);
   background-blend-mode: hard-light;
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 100%;
   -webkit-align-items: center;
@@ -219,6 +218,7 @@
   background-position: center !important;
   border-bottom: 3px solid var(--theme-color);
   transition: background 0.8s cubic-bezier(1, 0, 0, 1);
+  background-color: var(--theme-color);
 }
 
 .options {
@@ -3033,4 +3033,8 @@ table {
     transform : rotate(400deg) scale(0.25);
     opacity: 0;
   }
+}
+
+.header-image{
+  object-fit: cover;
 }

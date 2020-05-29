@@ -17,19 +17,26 @@ document.addEventListener("scroll", function (e) {
 
 //////////////////////////////////////////Picture Sider/////////////////
 
-var images = ["Hiace.jpg", "bus_side.jpg"];
+var images = ["./assets/img/Hiace.jpg", "./assets/img/bus_side.jpg"];
 $(function () {
     var i = 0;
-    $(".header").css("background-image", "url(./assets/img/" + "Hiace.jpg" + ")");
+    $(".header-image").attr("src","./assets/img/Hiace.jpg");
     setInterval(function () {
         i++
         if (i == images.length) {
             i = 0;
         }
 
-        $(".header").css("background-image", "url(./assets/img/" + images[i] + ")");
+        $(".header-image").delay().fadeOut()
+        $(".header-image").fadeIn()
+        window.setTimeout(()=> {
+            $(".header-image").attr("src",this.images[i]);
+        }, 500)
+
+
+
         document.querySelector(".logo-animated").classList.toggle("theme-color")
-    }, 6000);
+    }, 10000);
 });
 
 
