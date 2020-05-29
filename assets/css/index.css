@@ -1600,7 +1600,7 @@ a {
   margin: 25px;
   text-align: center;
   font-family: "Baloo Tammudu 2", sans-serif;
-  box-shadow: 2px 0px 15px 7px rgba(128, 128, 128, 0.363);
+  box-shadow: 2px 0px 10px 7px rgba(128, 128, 128, 0.103);
   padding-bottom: 2rem;
   margin-bottom: 3rem;
   border-radius: 5px;
@@ -1609,7 +1609,7 @@ a {
 }
 
 .box:hover {
-  transform: translateY(-30px);
+  transform: translateY(-20px);
 }
 
 .box h3 {
@@ -1777,7 +1777,7 @@ a {
 .testimonials-box {
   height: fit-content;
   height: -webkit-fit-content;
-  box-shadow: 0px 0px 45px 5px rgba(128, 128, 128, 0.568);
+  box-shadow: 0px 0px 45px 5px rgba(128, 128, 128, 0.168);
   display: flex;
   margin: auto;
   border-radius: 170px 2px 170px 2px;
@@ -1940,7 +1940,7 @@ a {
 footer {
   padding: 20px auto;
   margin-top: 3rem;
-  box-shadow: -1px 0px 15px 7px rgba(128, 128, 128, 0.356);
+  box-shadow: -1px 0px 15px 7px rgba(128, 128, 128, 0.156);
 }
 
 .footer-container {
@@ -2401,6 +2401,10 @@ select {
   overflow: scroll !important;
   width: fit-content !important;
   min-width: 100vw;
+}
+
+.dashboard-page .mobile-menu .options{
+  left: -3rem;
 }
 
 .dashboard-page .scroll {
@@ -3021,12 +3025,12 @@ table {
 
 @keyframes roll-round-and-fade-out{
   0%{
-    transform : rotate(0deg);
+    transform : rotate(0deg) scale(1);
     opacity: 1;
   }
 
   100%{
-    transform : rotate(400deg);
+    transform : rotate(400deg) scale(0.25);
     opacity: 0;
   }
 }
