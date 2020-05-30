@@ -110,7 +110,7 @@ const redirectPage = () => {
 }
   
 ////////////////////Function Calls/////////////////////////////
-
+smallScreenLoginTabsSwitcher()
 redirectPage()
 loginTabsSwitcher();
 openMobileMenu();

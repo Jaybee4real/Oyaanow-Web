@@ -141,11 +141,4 @@ $( function() {
 
 
 /////////////////////////////////////////Picture Loader///////////////////
-window.addEventListener('DOMContentLoaded', () => {
-    window.setTimeout(function clear() {
-        document.querySelector(".loader-2").classList.add("loaded")
-    }, 6100
-    )
-})
-
 

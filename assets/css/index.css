@@ -154,6 +154,7 @@
 
 .navbar {
   width: 100vw;
+  min-width: 100%;
   display: flex;
   flex-direction: row;
   position: absolute;
@@ -459,7 +460,7 @@
 }
 
 .login-page .mobile-menu .options {
-  left: -7px;
+  left: -2rem;
 }
 
 .mobile-menu.open .mobile-nav-item {
@@ -2410,6 +2411,7 @@ select {
 .dashboard-page .scroll {
   box-shadow: none;
   height: 6rem !important;
+  width: 100%
 }
 
 .dashboard-container {
@@ -2435,7 +2437,7 @@ select {
   padding-top: 10vh;
   position: fixed;
   top: 6.6rem;
-  height: calc(100vh - 7rem);
+  height: calc(100% - 7rem);
   display: flex;
   flex-direction: column;
   margin-left: 0.3rem;
@@ -2443,6 +2445,7 @@ select {
   background-color: white;
   box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.137);
   z-index: 11;
+  height: 100%;
 }
 
 .left-sidebar .dashboard-item {
