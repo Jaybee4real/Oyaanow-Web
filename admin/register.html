@@ -6,8 +6,8 @@
     <meta name="theme-color" content="#e67817">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oyaanow - Login/Register</title>
-    <link rel="icon" href="./assets/img/logo-.png">
-    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="icon" href="../assets/img/logo-.png">
+    <link rel="stylesheet" href="../assets/css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/fontawesome.min.css"
         integrity="sha256-CuUPKpitgFmSNQuPDL5cEfPOOJT/+bwUlhfumDJ9CI4=" crossorigin="anonymous" />
 
@@ -16,10 +16,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"
         integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/27fba2f7f0.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js" integrity="sha256-FEqEelWI3WouFOo2VWP/uJfs1y8KJ++FLh2Lbqc8SJk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"
+        integrity="sha256-FEqEelWI3WouFOo2VWP/uJfs1y8KJ++FLh2Lbqc8SJk=" crossorigin="anonymous"></script>
 </head>
 
-<body class="login-page">
+<body class="admin-register-page">
     <!-- Preloader  -->
 
     <div class="loader">
@@ -33,23 +34,23 @@
 
     <!------------------Navbar-------------------->
     <div id="navbar" class="navbar">
-        <a href="index.html" class="logo">OyaaNow</a>
+        <a href="../index.html" class="logo theme-color"><span class="logo-icon"></span>OyaaNow</a>
         <div class="options">
-            <a href="index.html" class="nav-item login btn">Home</a>
+            <a href="../index.html" class="nav-item login btn">Home</a>
             <a class="nav-item about btn">About</a>
             <a class="nav-item contact btn">Contact</a>
-            <a href="booking.html" class="nav-item book-scroll btn">Book Now</a>
+            <a href="../booking.html" class="nav-item book-scroll btn">Book Now</a>
 
             <div class="hamburger fa fa-bars  btn"></div>
         </div>
 
         <div class="mobile-menu">
-            <a href="index.html" class="logo logo-animated "><span class="logo-icon"></span>OyaaNow</a>
+            <a href="../index.html" class="logo logo-animated theme-color"><span class="logo-icon"></span>OyaaNow</a>
             <div class="options ">
-                <a href="index.html" class="mobile-nav-item home btn first">Home Page</a>
+                <a href="../index.html" class="mobile-nav-item home btn first">Home Page</a>
                 <a class="mobile-nav-item about btn second">About</a>
                 <a class="mobile-nav-item contact btn third">Contact</a>
-                <a href="booking.html" class="mobile-nav-item book-now btn fourth">Book Now</a>
+                <a href="../booking.html" class="mobile-nav-item book-now btn fourth">Book Now</a>
                 <a class="mobile-nav-item services btn fifth">Services</a>
                 <a class="mobile-nav-item blog btn sixth">Oyaanow Blog</a>
             </div>
@@ -62,11 +63,11 @@
 
     <div class="login-container">
         <div class="login-box-left-side options-panel-1">
-            <a class="login login-tab active pointer">Login</a>
-            <a class="register register-tab pointer">Register</a>
+            <a class="login login-tab  pointer">Login</a>
+            <a class="register register-tab active pointer">Register</a>
         </div>
 
-        <div class="login-box-right-side login-panel">
+        <div class="login-box-right-side login-panel hide">
             <div class="options-panel-2 ">
                 <div class="login panel-2-login-tab-1 active">Login</div>
                 <div class="register panel-2-register-tab-1">Register</div>
@@ -93,32 +94,48 @@
             </div>
         </div>
 
-        <div class="login-box-right-side register-panel hide">
+
+        <div class="login-box-right-side register-panel">
             <div style="top: -10%; height: fit-content;" class="options-panel-2 reduce">
-                <div style="" class="login active panel-2-login-tab-2">Login</div>
-                <div class="register panel-2-register-tab-2">Register</div>
+                <div style="" class="login panel-2-login-tab-2">Login</div> <div class="register panel-2-register-tab-2 active ">Register</div>
             </div>
-            <a class="logo theme-color">Oyaanow</a>
-            <a class="call-to-action">Register</a>
-            <div class="pointer">Have an account?<a class="login-tab theme-color"> Login</a></div>
+            <a class="call-to-action" style="margin-top: 1rem;">Register As An Admin</a>
             <form>
                 <div class="side-by-side">
                     <label>
                         <i class="form-i fa fa-envelope theme-color"></i>
-                        <input required type="email" placeholder="Email">
+                        <input required type="email" placeholder="Your Email">
                     </label>
                     <label for="username">
                         <br class="dissapear-992">
                         <i class="form-i fa fa-user theme-color" theme-color></i>
-                        <input required name="username" type="username" placeholder="Username">
+                        <input required name="username" type="username" placeholder="Full Name">
                     </label>
                 </div>
+                <div class="side-by-side">
+                    <label>
+                        <i class="form-i fa fa-briefcase theme-color"></i>
+                        <input required type="name" placeholder="Company Name">
+                    </label>
+                    <label for="company-email">
+                        <br class="dissapear-992">
+                        <i class="form-i fa fa-envelope theme-color" theme-color></i>
+                        <input required name="company-email" type="name" placeholder="Company Email">
+                    </label>
+                </div>
+                <label>
+                    <i class="form-i fa fa-user theme-color"></i>
+                    <input required type="name" placeholder="Username">
+                </label>
+                <label class="company-logo" for="myfile">Upload Company Logo:
+                    <input type="file" id="company-logo" name="company-logo">
+                </label>
                 <div class="side-by-side">
                     <label>
                         <label>
                             <i class="form-i fa fa-key theme-color"></i>
                             <input required type="password" placeholder="Password">
-
+        
                         </label>
                         <label>
                             <br class="dissapear-992">
@@ -129,67 +146,20 @@
                 <input class="btn" type="submit" id="dashboard" value="Register">
             </form>
             <div class="or">Or</div>
-            <span>Register with</span>
+            <span class="theme-color" style="margin-left: -1rem;">Register with</span>
             <div style="display: flex; justify-content: center; margin-top: -1rem;">
                 <div class="google"><i class="fa fa-google-plus-official theme-color"></i> Google</div>
                 <div class="google"><i class="fa fa-facebook-official theme-color"></i> Facebook</div>
             </div>
         </div>
 
+
     </div>
 
-    <footer style="margin-top: 10rem;">
-        <div class="footer-container">
-            <div class="left-side">
-                <a class="logo theme-color">Oyaanow</a>
-                <p>OyaaNow Is a Subsidiary of Travel Now And Tours Limited, Provider of Tech Logistics and all the
-                    rest blah blah. Lorem ipsum dolor sit amet.</p>
-
-            </div>
-            <div class="footer-icons-wrapper">
-
-                <div class="middle">
-                    <a href="#"><i class="fa fa-info"></i> About Us</a>
-                    <a href="#"><i class="fa fa-phone"></i>Contact Us</a>
-                    <a href="#"><i class="fa fa-question"></i> Faq</a>
-                    <a href="#"><i class="fa fa-lock"></i> Privacy Policy</a>
-                </div>
-
-                <div class="right-side">
-                    <a href="#" class="social-link"><i class="fa fa-facebook"></i>Facebook</a>
-                    <a href="#" class="social-link"><i class="fa fa-google"></i>Google</a>
-                    <a href="#" class="social-link"><i class="fa fa-whatsapp"></i>Whatsapp</a>
-                    <a href="#" class="social-link"><i class="fa fa-twitter"></i>Twitter</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="copyright">
-            <p class="text">&copy; 2020 OyaaNow - Travel Now and tours Limited</p>
-            <div class="designer">
-                <p>Designed By <a href="https://jaybee.000webhostapp.com" target="blank" class="theme-color">Jaybee</a></p>
-            </div>
-        </div>
-    </footer>
-
- 
-    <script src="./assets/js/login.js"></script>
-
-<!-- /////TO DO - Informations About Each Booking, Admin Dashboard To Add And Remove Busses, Design For Bus Ticket Booked Confirmation, Go Back TO Booking Page And Use Table Instead Of Side By Side Divs, Probably Make A Button Under, Make The New Search Stuff To Be On Top And Then Current Search Will Come Up After Scrolling 600 Down, Create, Must Finish Web App Before Middle Of Next Month .... -->
-
-
-<!--------/////To DO: Super Admin Dashboard, Able to Add Terminals, Able To add Busses, Able To Authorize pending Account approval Request, and to Delete accounts , Can also View All Users of the Platform, Can Also Help Normal User to book...-->
-
-
-<!-------Ordinary Admin panel to have only adding of terminals and Helping users to book Feature-->
-
-
-<!-----TO DO//: Prepayment And Post Payment UI-->
-
-<!-----TO DO//: Normal Booking Ui Details Screen-->
-
-<!-----TO DO//: Booking Confirmation UI Screen-->
+    <script src="./js/register.js"></script>
 
 </body>
 
 </html>
+
+
