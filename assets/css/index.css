@@ -3062,3 +3062,7 @@ table {
   min-height: 80vh !important;
   top: 9rem;
 }
+
+.admin-register-page .mobile-menu .options{
+  left: -2rem;
+}

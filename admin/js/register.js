@@ -85,6 +85,19 @@ const smallScreenLoginTabsSwitcher = () => {
   });
 };
 
+
+////////////////?Mobile Menu Opener///////////
+
+const openMobileMenu = () => {
+    let navButton = document.querySelector(".hamburger");
+    navButton.addEventListener("click", () => {
+      document.querySelector(".mobile-menu").classList.toggle("open");
+      navButton.classList.toggle("fa-bars");
+      navButton.classList.toggle("fa-times");
+    });
+  };
+  
+
 /////////////////Redirect a page when the login or register button is clicked////////
 const redirectPage = () => {
   document.querySelectorAll("#dashboard").forEach((element) => {
@@ -96,4 +109,5 @@ const redirectPage = () => {
 
 smallScreenLoginTabsSwitcher();
 loginTabsSwitcher();
+openMobileMenu()
 removeLoader();
