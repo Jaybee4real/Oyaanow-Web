@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#e67817">
+    <link rel="icon" href="../assets/img/logo-.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oyaanow | Admin Dashboard</title>
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/fontawesome.min.css"
+        integrity="sha256-CuUPKpitgFmSNQuPDL5cEfPOOJT/+bwUlhfumDJ9CI4=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/fontawesome.min.js"
+        integrity="sha256-NP9NujdEzS5m4ZxvNqkcbxyHB0dTRy9hG13RwTVBGwo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/27fba2f7f0.js"></script>
+</head>
+
+<body class="dashboard-page">
+    <div class="loader">
+        <div class="loader-inner ball-scale-ripple-multiple ball-scale-ripple-multiple-color">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div id="navbar" class="navbar scroll">
+        <a href="index.html" class="logo logo-animated theme-color"><span class="logo-icon"></span>OyaaNow</a>
+        <div class="options">
+            <a href="index.html" class="nav-item about btn">Home</a>
+            <a href="" class="nav-item login btn">About Company</a>
+            <a class="nav-item contact btn">Contact</a>
+            <a href="booking.html" class="nav-item book-scroll btn">Book Now</a>
+            <div class="hamburger fa fa-bars btn"></div>
+        </div>
+
+        <div class="mobile-menu">
+            <a href="index.html" class="logo "><span class="logo-icon inverted"></span>Oyaanow</a>
+            <div class="options">
+                <a class="mobile-nav-item about btn first">Home</a>
+                <a class="mobile-nav-item about btn second">About</a>
+                <a class="mobile-nav-item contact btn third">Contact</a>
+                <a href="booking.html" class="mobile-nav-item book-now btn fourth">Book Now</a>
+                <a class="mobile-nav-item services btn fifth">Services</a>
+                <a class="mobile-nav-item blog btn sixth">Blog</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="dashboard-container">
+        <div class="dashboard-toggle"><i class="dash-fa fa fa-align-left"></i></div>
+        <div class="left-sidebar">
+            <a href="index.html" class="logo theme-color "><span class="logo-icon"></span>OyaaNow</a>
+
+            <a class="dashboard-item"></a>
+            <a class="dashboard-item dashboard-tab active"><i class="fa fa-home"></i>Dashboard</a>
+            <a class="dashboard-item busses-tab "><i class="fa fa-plus"></i>Add Busses</a>
+            <a class="dashboard-item terminals-tab"><i class="fa fa-plus"></i>Add Terminals</a>
+            <a class="dashboard-item settings-tab"><i class="fa fa-gear"></i>Account Settings</a>
+            <a class="dashboard-item"></a>
+        </div>
+
+        <div class="dashboard-middle">
+            <div class="user-detail-mobile">
+                <img src="./assets/img/2face.jpg">
+            </div>
+
+            
+
+<!-- //////////////////////////////////Account Settings////////////////////////// -->
+
+            <div class="middle-content settings hide">
+                <a class="page-title">Account Settings</a>
+
+                <div class="settings-container">
+                    <div class="options-container">
+                        <div class="setting-option change-password-tab"><i class="fa fa-lock theme-color"></i> Change
+                            Password</div>
+                        <div class="setting-option change-email-tab"><i class="fa fa-envelope theme-color"></i> Change
+                            Email</div>
+                        <div class="setting-option change-account-type-tab"><i class="fa fa-user theme-color"></i>
+                            Change Account Type</div>
+                        <div class="setting-option refer-friend-tab"><i class="fa fa-user-plus theme-color"></i> Refer A
+                            Friend</div>
+                        <div class="setting-option danger delete-account-tab"><i class="fa fa-trash theme-color"></i>
+                            Delete Account</div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="middle-content password hide">
+                <div class="back-btn"><i class="fa fa-arrow-left"></i></div>
+                <a class="page-title">Change Password</a>
+                <div class="password-container">
+                    <form class="password-input-container">
+                        <input type="text" required placeholder="Old Password">
+                        <input type="text" required placeholder="New Password">
+                        <input type="submit" value="submit" class="btn">
+                    </form>
+                    <div class="warning">Note! You Will Be Logged Out Of Your Account When You Change Your Password!!!
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="middle-content email hide">
+                <div class="back-btn"><i class="fa fa-arrow-left"></i></div>
+                <a class="page-title">Change Email Address</a>
+                <div class="email-container">
+                    <form class="email-input-container">
+                        <input type="text" required placeholder="Old Email Address">
+                        <input type="text" required placeholder="New Email">
+                        <input type="text" required placeholder="Password">
+                        <input type="submit" value="submit" class="btn">
+                    </form>
+                    <div class="note">It Might Take Up To 10 Minutes Before Changes Reflect On The Dashboard.</div>
+                </div>
+            </div>
+
+
+            <div class="middle-content refer hide">
+                <div class="back-btn"><i class="fa fa-arrow-left"></i></div>
+                <a class="page-title ">Refer A Friend</a>
+                <div class="email-container">
+                    <div class="note" style="font-size: 1.3rem; margin-bottom: 2rem;">Have A Friend That You Know Would
+                        Benefit Greatly From Oyaanow Services? Give Us Thier Number And We Would Surely Send Them A
+                        Message!</div>
+                    <form class="email-input-container">
+                        <input type="text" required placeholder="Enter Friend's Phone">
+                        <input type="submit" value="submit" class="btn">
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="middle-content delete-account hide">
+                <div class="back-btn"><i class="fa fa-arrow-left"></i></div>
+                <a class="page-title" style="color: red;">Delete Account</a>
+                <div class="email-container">
+                    <div class="note" style="font-size: 1.3rem; margin-bottom: 2rem; color:black;">Once You Delete Your Account, There Is No Going Back!!! Are You Sure?</div>
+                    <form class="email-input-container">
+                        <input type="text" required placeholder="Enter Your Email">
+                        <input type="text" required placeholder="Enter Your Password">
+                        <input type="submit" class="delete-account-btn" value="Delete" style="background-color: red;">
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ////////////////////////Right Side Begins ////////////////////////////// -->
+
+
+
+        <div class="dashboard-right-side">
+            <div class="user-detail">
+                <div class="user-image">
+                    <img src="../assets/img/2face.jpg">
+                </div>
+                <div class="user-text">
+                    <h2>2face Idibia</h2>
+                    <p>useremail@usercompany.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/dashboard.js"></script>
+
+</body>
+
+</html>
