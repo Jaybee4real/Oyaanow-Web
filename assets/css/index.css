@@ -815,6 +815,7 @@
   border-radius: 20px 20px 0px 0px;
   border: 0.5px solid orange;
   transition: all 0.5s ease-out;
+
 }
 
 select {
@@ -2227,13 +2228,15 @@ select {
 }
 .card-container {
   background-color: white;
-  height: 22rem;
-  margin: 5rem 2vw;
+  height: 25rem;
+  margin: 7rem 2vw;
   border-radius: 10px;
+  padding-top: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  z-index: -1;
 }
 
 
@@ -2250,7 +2253,6 @@ select {
   padding: .8rem;
   padding-bottom: .3rem;
   font-family: "Baloo Tammudu 2", sans-serif;
-  z-index: 100;
 }
 
 .card-container .book-btn .fa{
@@ -2271,6 +2273,10 @@ select {
     width: 100% !important;
     height: 15rem;
     margin-right: 0 !important;
+  }
+
+  .card-container .book-btn{
+    bottom: -4rem;
   }
 
 
@@ -2392,6 +2398,7 @@ select {
   .booking-show {
     display: flex !important;
     z-index: 11 !important;
+    position: fixed;
   }
 
   .close-btn {
