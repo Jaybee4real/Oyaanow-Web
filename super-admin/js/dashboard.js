@@ -151,7 +151,7 @@ function checkWidth() {
           "roll-round-and-fade-out 1.5s ease-in-out";
         setTimeout(function () {
           document.querySelector("body").style.opacity = 0;
-          window.location.href = "../index.html"
+          window.location.href = "index.html"
         }, 1490);
       });
   };

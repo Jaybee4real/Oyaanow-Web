@@ -2221,12 +2221,40 @@ select {
   }
 }
 
+
+.results-page{
+  background-color:rgba(128, 128, 128, 0.108)
+}
 .card-container {
   background-color: white;
-  height: 20rem;
+  height: 22rem;
   margin: 5rem 2vw;
   border-radius: 10px;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+
+.card-container .book-btn{
+  position: absolute;
+  bottom: -1rem;
+  margin: auto;
+  margin-top: .5rem;
+  background-color: var(--theme-color);
+  border-radius: 20px 2px 20px 2px;
+  color: white;
+  font-size: 1.1rem;
+  line-height: 1.2;
+  padding: .8rem;
+  padding-bottom: .3rem;
+  font-family: "Baloo Tammudu 2", sans-serif;
+  z-index: 100;
+}
+
+.card-container .book-btn .fa{
+  font-size: .8rem;
 }
 
 .card-container .left-side img {
@@ -2244,6 +2272,8 @@ select {
     height: 15rem;
     margin-right: 0 !important;
   }
+
+
 }
 
 @media (max-width: 560px) {
@@ -2296,7 +2326,7 @@ select {
   flex-direction: column;
   width: 50%;
   flex: 1;
-  padding-top: 5%;
+  padding-top: 1%;
   border: 2px solid var(--theme-color);
   border-right-width: 0.5px;
 }
@@ -2531,7 +2561,7 @@ select {
 .search .section-header {
   font-size: 1.8rem;
   font-family: "Baloo Tammudu 2", sans-serif !important;
-  color: var(--theme-color);
+  color: var(--theme-color);3
   position: relative;
   top: 1rem;
   font-weight: 400;

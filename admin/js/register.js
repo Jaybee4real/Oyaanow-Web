@@ -80,7 +80,7 @@ const smallScreenLoginTabsSwitcher = () => {
 
   document.querySelectorAll("#dashboard").forEach((element) => {
     element.addEventListener("click", () => {
-      window.location.href = "dashboard.html";
+      window.location.href = "admin-dashboard.html";
     });
   });
 };
@@ -102,7 +102,7 @@ const openMobileMenu = () => {
 const redirectPage = () => {
   document.querySelectorAll("#dashboard").forEach((element) => {
     element.addEventListener("click", () => {
-      window.location.href = "dashboard.html";
+      window.location.href = "../admin-dashboard.html";
     });
   });
 };
