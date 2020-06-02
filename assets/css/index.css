@@ -1267,7 +1267,7 @@ input[type="time"]::placeholder {
 }
 
 .login-container {
-  height: 80vh;
+  height: 110%;
   width: 85vw;
   box-shadow: 1px 0px 50px 15px rgba(0, 0, 0, 0.218);
   border-radius: 100px 2px 100px 2px;
@@ -1277,7 +1277,7 @@ input[type="time"]::placeholder {
   top: 8rem;
   display: flex;
   flex-direction: row;
-  min-height: 37rem !important;
+  min-height: 80vh !important;
 }
 
 .login-box-left-side {
@@ -2677,6 +2677,7 @@ select {
 }
 
 .dashboard-card .info {
+  position: relative;
   font-size: 2.2rem;
   color: var(--theme-color);
 }
