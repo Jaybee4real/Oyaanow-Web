@@ -2479,7 +2479,6 @@ select {
   height: 100%;
 }
 
-
 .left-sidebar .dashboard-item {
   font-size: 1.1rem;
   font-family: "Baloo Tammudu 2", sans-serif !important;
@@ -2515,6 +2514,7 @@ select {
   height: calc(100vh - 7rem);
   padding-left: 1rem;
   margin-left: 17.54rem;
+  margin-right: 20.54rem;
 }
 
 .middle-content .page-title {
@@ -2576,10 +2576,12 @@ select {
   top: 6.6rem;
   height: calc(100vh - 7rem);
   display: flex;
+  position: fixed;
   flex-direction: column;
-  border-radius: 0px 10px 10px 0px;
+  right: 0;
+  border-radius: 10px 0px 10px 0px;
   margin-left: auto;
-  
+  min-height: 100%;
 }
 
 /* .admin-dashboard-right-side {
@@ -2587,7 +2589,6 @@ select {
   border-radius: 10px;
   min-height: 100%;
 } */
-
 
 .dashboard-right-side .user-detail {
   width: 100%;
@@ -2673,7 +2674,7 @@ select {
   cursor: pointer;
   background-color: white;
   width: 100%;
-  min-width: 12rem;
+  min-width: 11rem;
 }
 
 .dashboard-card .info {
@@ -2756,11 +2757,15 @@ select {
     overflow-x: hidden !important;
   }
 
-  .dashboard-middle,
-  .dashboard-right-side {
+  .dashboard-middle {
     width: 100vw;
     margin-left: 0;
+    margin-right: 0;
     top: 11rem;
+  }
+
+  .dashboard-right-side {
+    display: none;
   }
 
   .dashboard-toggle {
@@ -2956,7 +2961,7 @@ table {
 .email,
 .password,
 .refer,
-.delete-account, 
+.delete-account,
 .add-busses {
   animation: 0.2s slide-left cubic-bezier(0.6, -0.28, 0.735, 0.045);
   transition-delay: 0.5s;
@@ -3106,10 +3111,9 @@ table {
   left: -2rem;
 }
 
-
 /* ///////////////////Super Admin Container //////////////////// */
 
-.info-note{
+.info-note {
   font-family: "Baloo Tammudu 2", sans-serif;
   font-size: 1.4rem;
   color: var(--theme-color);
@@ -3119,8 +3123,7 @@ table {
   margin-bottom: 2rem;
 }
 
-
-.add-busses-input-container{
+.add-busses-input-container {
   display: flex;
   flex-direction: column;
   max-width: 70%;
@@ -3128,7 +3131,7 @@ table {
   margin-bottom: 3rem;
 }
 
-.add-busses-input-container input{
+.add-busses-input-container input {
   font-family: "Baloo Tammudu 2", sans-serif;
   line-height: 1;
   border-radius: 2px;
@@ -3153,20 +3156,57 @@ table {
   font-size: 1.2rem;
 }
 
-.recurring-checkbox{
+.recurring-checkbox {
   font-family: "Baloo Tammudu 2", sans-serif;
   font-size: 1.2rem;
   color: var(--theme-color);
   margin-left: 3rem;
-  transition: .3s ease-out;
+  transition: 0.3s ease-out;
 }
 
-.recurring-checkbox sup{
+.recurring-checkbox sup {
   color: red;
 }
 
-.recurring-checkbox-info{
+.recurring-checkbox-info {
   font-family: "Baloo Tammudu 2", sans-serif;
-  font-size: .95rem;
+  font-size: 0.95rem;
   color: red;
+}
+
+.super-admin-dashboard-page .dashboard-right-side {
+  background-color: white;
+}
+
+.dashboard-right-side .page-title {
+  font-family: "Baloo Tammudu 2", sans-serif;
+  font-size: 1.4rem;
+  color: var(--theme-color);
+  text-align: center;
+}
+
+/* //////////Pending Items///////////// */
+
+.actions {
+  display: none;
+}
+
+.pending-item:hover .actions {
+  display: flex !important;
+  background-color: yellow !important;
+}
+
+.pending-item .actions {
+  width: 100%;
+  position: relative;
+  background-color: yellow !important;
+  display: flex;
+  flex-direction: row;
+}
+td .options{
+  width: 2rem !important;
+}
+
+.options:hover{
+  background-color: green !important;
 }

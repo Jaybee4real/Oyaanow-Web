@@ -68,6 +68,7 @@
             <a class="dashboard-item"></a>
             <a class="dashboard-item dashboard-tab active"><i class="fa fa-home"></i>Dashboard</a>
             <a class="dashboard-item add-busses-tab "><i class="fa fa-plus"></i>Add Busses</a>
+            <a class="dashboard-item add-busses-tab "><i class="fa fa-plus"></i>Pending Requests</a>
             <a class="dashboard-item terminals-tab"><i class="fa fa-plus"></i>Add Terminals</a>
             <a class="dashboard-item settings-tab"><i class="fa fa-gear"></i>Account Settings</a>
             <a class="dashboard-item"></a>
@@ -203,7 +204,7 @@
                         <div class="add-busses-details-row">
                             <input type="text" class="departure-time" placeholder="Departure Time">
                             <label class="recurring-checkbox">
-                                <input id="recurring"  onclick="onCheckboxChange()" type="checkbox">
+                                <input id="recurring" onclick="onCheckboxChange()" type="checkbox">
                                 Recurring<sup>*</sup>
                             </label>
                             <br>
@@ -211,7 +212,8 @@
                             <br>
                             <input type="submit" value="submit" class="btn">
 
-                            <div class="recurring-checkbox-info"><sup>*</sup>Meaning that The Bus Will Leave At The Selected Time Everyday?</div>
+                            <div class="recurring-checkbox-info"><sup>*</sup>Meaning that The Bus Will Leave At The
+                                Selected Time Everyday?</div>
                         </div>
                     </form>
                 </div>
@@ -307,11 +309,47 @@
 
 
         <div class="dashboard-right-side admin-dashboard-right-side">
+            <div class="page-title">Pending Admin Requests</div>
 
+            <div class="pending-requests-container">
+                <div class="item">
+                    <table class="table-container">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <h1>Name</h1>
+                                </th>
+                                <th>
+                                    <h1>Company</h1>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="pending-item">
+                                <td>Jane Doe</td>
+                                <td>God Is Good Motors</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 
     <script src="./js/dashboard.js"></script>
+
+    <script>
+        document.querySelectorAll(".pending-item").forEach(element => {
+            element.addEventListener("mouseover", () => {
+                element.lastChild.style.display = "contents"
+            })
+        })
+        // document.querySelectorAll(".pending-item").forEach(element => {
+        //     element.addEventListener("mouseout", () => {
+        //         document.querySelector(".actions").style.display = "none"
+        //     })
+        // })
+    </script>
 
 </body>
 
