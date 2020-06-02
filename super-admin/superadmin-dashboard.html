@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="theme-color" content="#e67817">
-    <link rel="icon" href="./assets/img/logo-.png">
+    <link rel="icon" href="../assets/img/logo-.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oyaanow | User Dashboard</title>
-    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/fontawesome.min.css"
         integrity="sha256-CuUPKpitgFmSNQuPDL5cEfPOOJT/+bwUlhfumDJ9CI4=" crossorigin="anonymous" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/fontawesome.min.js"
@@ -15,9 +15,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"
         integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/27fba2f7f0.js"></script>
+    <!-- ////////// -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-KM512VNnjElC30ehFwehXjx1YCHPiQkOPmqnrWtpccM=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"
+        integrity="sha256-rByPlHULObEjJ6XQxW/flG2r+22R5dKiAoef+aXWfik=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"
+        integrity="sha256-+jmym6PChFok5u02khNcYDy5AdfiIN7Y/QCbBqiNgeE=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css"
+        integrity="sha256-DVV5cU9pxHH2Rofop3XD3b3rbfrOSIy2nU61DEbYy1Q=" crossorigin="anonymous" />
 </head>
 
-<body class="dashboard-page">
+<body class="super-admin-dashboard-page dashboard-page">
     <div class="loader">
         <div class="loader-inner ball-scale-ripple-multiple ball-scale-ripple-multiple-color">
             <div></div>
@@ -27,9 +37,9 @@
     </div>
 
     <div id="navbar" class="navbar scroll">
-        <a href="index.html" class="logo logo-animated theme-color"><span class="logo-icon"></span>OyaaNow</a>
+        <a href="../index.html" class="logo logo-animated theme-color"><span class="logo-icon"></span>OyaaNow</a>
         <div class="options">
-            <a href="index.html" class="nav-item about btn">Home</a>
+            <a href="../index.html" class="nav-item about btn">Home</a>
             <a href="" class="nav-item login btn">About Company</a>
             <a class="nav-item contact btn">Contact</a>
             <a href="booking.html" class="nav-item book-scroll btn">Book Now</a>
@@ -37,7 +47,7 @@
         </div>
 
         <div class="mobile-menu">
-            <a href="index.html" class="logo "><span class="logo-icon inverted"></span>Oyaanow</a>
+            <a href="../index.html" class="logo "><span class="logo-icon inverted"></span>Oyaanow</a>
             <div class="options">
                 <a class="mobile-nav-item about btn first">Home</a>
                 <a class="mobile-nav-item about btn second">About</a>
@@ -53,40 +63,38 @@
     <div class="dashboard-container">
         <div class="dashboard-toggle"><i class="dash-fa fa fa-align-left"></i></div>
         <div class="left-sidebar">
-            <a href="index.html" class="logo theme-color "><span class="logo-icon"></span>OyaaNow</a>
+            <a href="../index.html" class="logo theme-color "><span class="logo-icon"></span>OyaaNow</a>
 
             <a class="dashboard-item"></a>
             <a class="dashboard-item dashboard-tab active"><i class="fa fa-home"></i>Dashboard</a>
-            <a class="dashboard-item history-tab "><i class="fa fa-history"></i>Booking History</a>
+            <a class="dashboard-item add-busses-tab "><i class="fa fa-plus"></i>Add Busses</a>
+            <a class="dashboard-item terminals-tab"><i class="fa fa-plus"></i>Add Terminals</a>
             <a class="dashboard-item settings-tab"><i class="fa fa-gear"></i>Account Settings</a>
             <a class="dashboard-item"></a>
         </div>
 
         <div class="dashboard-middle">
-            <div class="user-detail-mobile">
-                <img src="./assets/img/2face.jpg">
-            </div>
 
-            <div class="middle-content dashboard">
+            <div class="middle-content super-admin-dashboard dashboard">
                 <a class="page-title">DashBoard</a>
 
                 <div class="activity-area">
                     <div class="dashboard-card">
-                        <h2>Booked Trips</h2>
+                        <h2>Total Busses Available</h2>
                         <div class="info">27</div>
                     </div>
                     <div class="dashboard-card">
-                        <h2>Departure</h2>
+                        <h2>Total Terminals In Use</h2>
                         <div class="info">25</div>
                     </div>
                     <div class="dashboard-card">
-                        <h2>Return</h2>
-                        <div class="info">2</div>
+                        <h2>Total Admins</h2>
+                        <div class="info">6</div>
                     </div>
                 </div>
 
                 <div class="search">
-                    <h2 class="section-header">Recent Bookings</h2>
+                    <h2 class="section-header">Oyaanow Users</h2>
                     <div class="search-box">
                         <i class="fa fa-search"></i>
                         <input placeholder="search">
@@ -99,207 +107,115 @@
                         <thead>
                             <tr>
                                 <th>
-                                    <h1>Destination</h1>
+                                    <h1>UserName</h1>
                                 </th>
                                 <th>
-                                    <h1>Departure</h1>
+                                    <h1>Full Name</h1>
                                 </th>
                                 <th>
-                                    <h1>Return</h1>
+                                    <h1>User Type</h1>
                                 </th>
                                 <th>
-                                    <h1>Service Provider</h1>
+                                    <h1>Signup Date</h1>
                                 </th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Enugu</td>
-                                <td class="departure">Berger, Lagos <br /> <span>(9: am)</span></td>
-                                <td class="return">No return <br /> <span>--: --</span></td>
-                                <td>Abc Transport</td>
+                                <td>Jaybee</td>
+                                <td>Faith Okoroji</td>
+                                <td>Admin</td>
+                                <td>March 24th 2020</td>
                             </tr>
+
                             <tr>
-                                <td>Benin</td>
-                                <td class="departure">lekki, Lagos <br /> <span>(6:am)</span></td>
-                                <td class="return">No return <br /> <span>--: --</span></td>
-                                <td>God Is Good</td>
+                                <td>Cece</td>
+                                <td>Cynthia Duru</td>
+                                <td>Admin</td>
+                                <td>March 18th 2020</td>
                             </tr>
+
                             <tr>
-                                <td>Katsina</td>
-                                <td class="departure">Oshodi, Lagos <br /> <span>(12:pm)</span></td>
-                                <td class="return">No return <br /> <span>--: --</span></td>
-                                <td>Guo Motors</td>
+                                <td>Esther</td>
+                                <td>Esther Ukandu</td>
+                                <td>Admin</td>
+                                <td>April 1st 2020</td>
                             </tr>
+
                             <tr>
-                                <td>Kaduna</td>
-                                <td class="departure">Berger,Ojodu <br /> <span>(9: am)</span></td>
-                                <td class="return">No return <br /> <span>--: --</span></td>
-                                <td>Ifesinachi</td>
+                                <td>Niyi</td>
+                                <td>Niyi Ojeyinka</td>
+                                <td>Admin</td>
+                                <td>April 1st 2020</td>
                             </tr>
+
                             <tr>
-                                <td>Abuja</td>
-                                <td class="departure">Kara, Lagos <br /> <span>(11: am)</span></td>
-                                <td class="return">Ikeja, Lagos <br /> <span>--: --</span></td>
-                                <td>God Is Good</td>
+                                <td>Sai-Baba</td>
+                                <td>Mohammadu Buhari</td>
+                                <td>Ordinary User</td>
+                                <td>April 5th 2020</td>
                             </tr>
+
+
                             <tr>
-                                <td>Kano</td>
-                                <td class="departure">lekki, Lagos <br /> <span>(6:pm)</span></td>
-                                <td class="return">No return <br /> <span>--: --</span></td>
-                                <td>Guo Motors</td>
+                                <td>Tiwababy</td>
+                                <td>Tiwatoke Savage</td>
+                                <td>Ordinary User</td>
+                                <td>April 5th 2020</td>
                             </tr>
+
+
                             <tr>
-                                <td>Jigawa</td>
-                                <td class="departure">Berger,Ojodu <br /> <span>(9: am)</span></td>
-                                <td class="return">No return <br /> <span>--: --</span></td>
-                                <td>God Is Good</td>
-                            </tr>
-                            <tr>
-                                <td>Lagos</td>
-                                <td class="departure">Laspark,Abuja <br /> <span>(10: am)</span></td>
-                                <td class="return">No return <br /> <span>--: --</span></td>
-                                <td>Abc Transport</td>
+                                <td>Innocent</td>
+                                <td>Idibia</td>
+                                <td>Ordinary User</td>
+                                <td>April 5th 2020</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
 
-            <div class="middle-content history hide">
-                <a class="page-title">History</a>
 
-
-                <div class="search" style="margin-bottom: 3rem;">
-                    <h2 class="section-header">Bookings History</h2>
-                    <div class="search-box">
-                        <i class="fa fa-search"></i>
-                        <input placeholder="search">
-                    </div>
+            <div class="middle-content add-busses hide">
+                <div class="page-title">Add Busses</div>
+                <div class="dashboard-card">
+                    <h2>Total Busses Available</h2>
+                    <div class="info">27</div>
                 </div>
 
-                <table class="table-container">
-                    <thead>
-                        <tr>
-                            <th>
-                                <h1>Destination</h1>
-                            </th>
-                            <th>
-                                <h1>Departure</h1>
-                            </th>
-                            <th>
-                                <h1>Return</h1>
-                            </th>
-                            <th>
-                                <h1>Service Provider</h1>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Enugu</td>
-                            <td class="departure">Berger, Lagos <br /> <span>(9: am)</span></td>
-                            <td class="return">No return<br /> <span>--: --</span></td>
-                            <td>Abc Transport</td>
-                        </tr>
-                        <tr>
-                            <td>Kano</td>
-                            <td class="departure">lekki, Lagos<br /> <span>(6:pm)</span></td>
-                            <td class="return">No return<br /> <span>--: --</span></td>
-                            <td>Guo Motors</td>
-                        </tr>
-                        <tr>
-                            <td>Benin</td>
-                            <td class="departure">lekki, Lagos<br /> <span>(6:am)</span></td>
-                            <td class="return">No return<br /> <span>--: --</span></td>
-                            <td>God Is Good</td>
-                        </tr>
-                        <tr>
-                            <td>Katsina</td>
-                            <td class="departure">Oshodi, Lagos<br /> <span>(12:pm)</span></td>
-                            <td class="return">No return<br /> <span>--: --</span></td>
-                            <td>Guo Motors</td>
-                        </tr>
-                        <tr>
-                            <td>Benin</td>
-                            <td class="departure">lekki, Lagos<br /> <span>(6:am)</span></td>
-                            <td class="return">No return<br /> <span>--: --</span></td>
-                            <td>God Is Good</td>
-                        </tr>
-                        <tr>
-                            <td>Kaduna</td>
-                            <td class="departure">Berger,Ojodu <br /> <span>(9: am)</span></td>
-                            <td class="return">No return<br /> <span>--: --</span></td>
-                            <td>Ifesinachi</td>
-                        </tr>
-                        <tr>
-                            <td>Jigawa</td>
-                            <td class="departure">Berger,Ojodu <br /> <span>(9: am)</span></td>
-                            <td class="return">No return<br /> <span>--: --</span></td>
-                            <td>God Is Good</td>
-                        </tr>
-                        <tr>
-                            <td>Abuja</td>
-                            <td class="departure">Kara, Lagos<br /> <span>(11: am)</span></td>
-                            <td class="return">Ikeja, Lagos<br /> <span>--: --</span></td>
-                            <td>God Is Good</td>
-                        </tr>
-                        <tr>
-                            <td>Kano</td>
-                            <td class="departure">lekki, Lagos
-                                <br<<br /> <span>(6:pm)</span></td>
-                            <td class="return">No return<br /> <span>--: --</span></td>
-                            <td>Guo Motors</td>
-                        </tr>
-                        <tr>
-                            <td>Jigawa</td>
-                            <td class="departure">Berger,Ojodu <br /> <span>(9: am)</span></td>
-                            <td class="return">No return<br /> <span>--: --</span></td>
-                            <td>God Is Good</td>
-                        </tr>
-                        <tr>
-                            <td>Abuja</td>
-                            <td class="departure">Kara, Lagos<br /> <span>(11: am)</span></td>
-                            <td class="return">Ikeja, Lagos<br /> <span>--: --</span></td>
-                            <td>God Is Good</td>
-                        </tr>
-                        <tr>
-                            <td>Lagos</td>
-                            <td class="departure">Laspark,Abuja<br /> <span>(10: am)</span></td>
-                            <td class="return">No return<br /> <span>--: --</span></td>
-                            <td>Abc Transport</td>
-                        </tr>
-                        <tr>
-                            <td>Kaduna</td>
-                            <td class="departure">Berger,Ojodu <br /> <span>(9: am)</span></td>
-                            <td class="return">No return<br /> <span>--: --</span></td>
-                            <td>Ifesinachi</td>
-                        </tr>
+                <div class="info-note">Bus Will Be Added To The List Of Available Busses For Booking On The Oyaanow
+                    Platform</div>
 
-                        <tr>
-                            <td>Jigawa</td>
-                            <td class="departure">Berger,Ojodu <br /> <span>(9: am)</span></td>
-                            <td class="return">No return<br /> <span>--: --</span></td>
-                            <td>God Is Good</td>
-                        </tr>
-                        <tr>
-                            <td>Lagos</td>
-                            <td class="departure">Laspark,Abuja<br /> <span>(10: am)</span></td>
-                            <td class="return">No return<br /> <span>--: --</span></td>
-                            <td>Abc Transport</td>
-                        </tr>
-                        <tr>
-                            <td>Kaduna</td>
-                            <td class="departure">Berger,Ojodu <br /> <span>(9: am)</span></td>
-                            <td class="return">No return<br /> <span>--: --</span></td>
-                            <td>Ifesinachi</td>
-                        </tr>
+                <div class="add-busses-container">
+                    <div class="info-note" style="font-size: 1.1rem;">Fill In The Input Fields Below
+                    </div>
+                    <form class="add-busses-input-container password-input-container">
+                        <input type="text" required placeholder="Bus Name">
+                        <input type="text" required placeholder="Bus Model / Type">
+                        <label class="bus-picture" for="bus-picture">Upload Bus Picture:
+                            <input type="file" id="bus-picture" name="bus-picture">
+                        </label>
+                        <div class="add-busses-details-row">
+                            <input type="text" class="departure-time" placeholder="Departure Time">
+                            <label class="recurring-checkbox">
+                                <input id="recurring"  onclick="onCheckboxChange()" type="checkbox">
+                                Recurring<sup>*</sup>
+                            </label>
+                            <br>
+                            <input type="text" class="departure-date" placeholder="Departure Date">
+                            <br>
+                            <input type="submit" value="submit" class="btn">
 
-                    </tbody>
-                </table>
+                            <div class="recurring-checkbox-info"><sup>*</sup>Meaning that The Bus Will Leave At The Selected Time Everyday?</div>
+                        </div>
+                    </form>
+                </div>
             </div>
 
-<!-- //////////////////////////////////Account Settings////////////////////////// -->
+
+
+            <!-- //////////////////////////////////Account Settings////////////////////////// -->
 
             <div class="middle-content settings hide">
                 <a class="page-title">Account Settings</a>
@@ -371,7 +287,8 @@
                 <div class="back-btn"><i class="fa fa-arrow-left"></i></div>
                 <a class="page-title" style="color: red;">Delete Account</a>
                 <div class="email-container">
-                    <div class="note" style="font-size: 1.3rem; margin-bottom: 2rem; color:black;">Once You Delete Your Account, There Is No Going Back!!! Are You Sure?</div>
+                    <div class="note" style="font-size: 1.3rem; margin-bottom: 2rem; color:black;">Once You Delete Your
+                        Account, There Is No Going Back!!! Are You Sure?</div>
                     <form class="email-input-container">
                         <input type="text" required placeholder="Enter Your Email">
                         <input type="text" required placeholder="Enter Your Password">
@@ -385,21 +302,12 @@
         <!-- ////////////////////////Right Side Begins ////////////////////////////// -->
 
 
+        <div class="dashboard-right-side admin-dashboard-right-side">
 
-        <div class="dashboard-right-side">
-            <div class="user-detail">
-                <div class="user-image">
-                    <img src="./assets/img/2face.jpg">
-                </div>
-                <div class="user-text">
-                    <h2>2face Idibia</h2>
-                    <p>useremail@usercompany.com</p>
-                </div>
-            </div>
         </div>
     </div>
 
-    <script src="./assets/js/dashboard.js"></script>
+    <script src="./js/dashboard.js"></script>
 
 </body>
 

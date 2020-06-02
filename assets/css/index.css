@@ -589,8 +589,6 @@
     left: 0;
   }
 
-
-
   .other-services-container {
     min-height: fit-content;
   }
@@ -815,7 +813,6 @@
   border-radius: 20px 20px 0px 0px;
   border: 0.5px solid orange;
   transition: all 0.5s ease-out;
-
 }
 
 select {
@@ -1452,7 +1449,7 @@ a {
   transition-delay: 0.55s;
 }
 
-.danger-text{
+.danger-text {
   color: red;
 }
 
@@ -2222,9 +2219,8 @@ select {
   }
 }
 
-
-.results-page{
-  background-color:rgba(128, 128, 128, 0.108)
+.results-page {
+  background-color: rgba(128, 128, 128, 0.108);
 }
 .card-container {
   background-color: white;
@@ -2239,24 +2235,23 @@ select {
   z-index: -1;
 }
 
-
-.card-container .book-btn{
+.card-container .book-btn {
   position: absolute;
   bottom: -1rem;
   margin: auto;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   background-color: var(--theme-color);
   border-radius: 20px 2px 20px 2px;
   color: white;
   font-size: 1.1rem;
   line-height: 1.2;
-  padding: .8rem;
-  padding-bottom: .3rem;
+  padding: 0.8rem;
+  padding-bottom: 0.3rem;
   font-family: "Baloo Tammudu 2", sans-serif;
 }
 
-.card-container .book-btn .fa{
-  font-size: .8rem;
+.card-container .book-btn .fa {
+  font-size: 0.8rem;
 }
 
 .card-container .left-side img {
@@ -2275,11 +2270,9 @@ select {
     margin-right: 0 !important;
   }
 
-  .card-container .book-btn{
+  .card-container .book-btn {
     bottom: -4rem;
   }
-
-
 }
 
 @media (max-width: 560px) {
@@ -2442,14 +2435,14 @@ select {
   min-width: 100vw;
 }
 
-.dashboard-page .mobile-menu .options{
+.dashboard-page .mobile-menu .options {
   left: -3rem;
 }
 
 .dashboard-page .scroll {
   box-shadow: none;
   height: 6rem !important;
-  width: 100%
+  width: 100%;
 }
 
 .dashboard-container {
@@ -2466,7 +2459,7 @@ select {
   left: 2rem;
 }
 
-.middle-content{
+.middle-content {
   min-width: 30rem;
 }
 
@@ -2485,6 +2478,7 @@ select {
   z-index: 11;
   height: 100%;
 }
+
 
 .left-sidebar .dashboard-item {
   font-size: 1.1rem;
@@ -2568,7 +2562,7 @@ select {
 .search .section-header {
   font-size: 1.8rem;
   font-family: "Baloo Tammudu 2", sans-serif !important;
-  color: var(--theme-color);3
+  color: var(--theme-color);
   position: relative;
   top: 1rem;
   font-weight: 400;
@@ -2585,7 +2579,15 @@ select {
   flex-direction: column;
   border-radius: 0px 10px 10px 0px;
   margin-left: auto;
+  
 }
+
+/* .admin-dashboard-right-side {
+  background-color: white;
+  border-radius: 10px;
+  min-height: 100%;
+} */
+
 
 .dashboard-right-side .user-detail {
   width: 100%;
@@ -2679,7 +2681,8 @@ select {
   color: var(--theme-color);
 }
 
-.dashboard-toggle, .back-btn {
+.dashboard-toggle,
+.back-btn {
   height: 3rem;
   z-index: 11;
   width: 3rem;
@@ -2693,19 +2696,20 @@ select {
   justify-content: center;
   cursor: pointer;
 }
-.back-btn{
+.back-btn {
   top: 6.5rem;
   left: 17rem;
   background-color: transparent;
 }
 
-.left-sidebar.active .dashboard-toggle{
+.left-sidebar.active .dashboard-toggle {
   position: relative;
   left: 4rem;
   background-color: red;
 }
 
-.dashboard-toggle .fa, .back-btn .fa {
+.dashboard-toggle .fa,
+.back-btn .fa {
   transform: rotate(45deg);
   font-size: 1.6rem;
   text-align: center;
@@ -2737,11 +2741,11 @@ select {
     flex-direction: column;
   }
 
-  .middle-content{
+  .middle-content {
     min-width: 0rem !important;
   }
 
-  .back-btn{
+  .back-btn {
     top: 6.5rem;
     left: 0rem;
     background-color: white;
@@ -2802,8 +2806,8 @@ select {
   .page-title {
     margin-left: 4rem !important;
   }
-  .booking-switcher:nth-of-type(3){
-    padding-left: .5rem;
+  .booking-switcher:nth-of-type(3) {
+    padding-left: 0.5rem;
   }
 }
 
@@ -2907,22 +2911,20 @@ table {
     display: none;
   }
 
-  .booking-status-container{
+  .booking-status-container {
     min-width: 90vw;
-    padding: .5rem !important;
+    padding: 0.5rem !important;
     margin-left: -3.5rem;
   }
 
-  .other-services-container input:not([type="submit"]){
+  .other-services-container input:not([type="submit"]) {
     min-width: 90%;
   }
 
-  .user-detail-mobile{
+  .user-detail-mobile {
     display: flex;
   }
-
 }
-
 
 @media (max-width: 350px) {
   .table-container td:nth-child(3) {
@@ -2950,92 +2952,94 @@ table {
 .dashboard,
 .settings,
 .history,
-.email, 
+.email,
 .password,
 .refer,
-.delete-account {
+.delete-account, 
+.add-busses {
   animation: 0.2s slide-left cubic-bezier(0.6, -0.28, 0.735, 0.045);
-  transition-delay: .5s;
+  transition-delay: 0.5s;
 }
-
 
 /* ///////// */
 
-.setting-option{
+.setting-option {
   font-size: 1.1rem;
   font-family: "Baloo Tammudu 2", sans-serif;
   width: 85%;
   background-color: white;
   padding: 1rem;
-  padding-bottom: .2rem;
+  padding-bottom: 0.2rem;
   margin: 1rem;
   cursor: pointer;
   border-radius: 10px;
-  transition: all .15s ease-in;
+  transition: all 0.15s ease-in;
 }
 
-.setting-option .fa{
-  margin-right: .5rem;
+.setting-option .fa {
+  margin-right: 0.5rem;
 }
 
-.setting-option.danger .fa{
+.setting-option.danger .fa {
   color: white !important;
 }
-.setting-option:hover{
-  transform: translateX(.5rem);
+.setting-option:hover {
+  transform: translateX(0.5rem);
   color: white;
   background-color: var(--theme-color);
 }
 
-.setting-option:hover .fa{
+.setting-option:hover .fa {
   color: white !important;
-  transition-delay: -.3s;
+  transition-delay: -0.3s;
 }
 
-.setting-option.danger{
+.setting-option.danger {
   background-color: rgb(224, 5, 1);
   color: white;
 }
 
-.setting-option.danger:hover{
+.setting-option.danger:hover {
   background-color: red;
 }
 
-
 /* Password Change */
 
-.password-input-container, .email-input-container{
+.password-input-container,
+.email-input-container {
   display: flex;
   flex-direction: column;
   max-width: 70%;
   margin-left: 7%;
 }
 
-.password-input-container input, .email-input-container input{
+.password-input-container input,
+.email-input-container input {
   font-family: "Baloo Tammudu 2", sans-serif;
   line-height: 1;
   border-radius: 2px;
   border: none;
-  margin: .7rem 0;
+  margin: 0.7rem 0;
   outline: none;
   padding: 1.1rem;
   font-size: 1rem;
-  padding-bottom: .3rem;
+  padding-bottom: 0.3rem;
   border-bottom: 1px solid grey;
 }
 
-.password-input-container input[type="submit"], .email-input-container input[type="submit"]{
+.password-input-container input[type="submit"],
+.email-input-container input[type="submit"] {
   width: 50%;
   margin: auto;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   background-color: var(--theme-color);
   border-radius: 2px 20px 2px 20px;
   color: white;
   font-size: 1.3rem;
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
 }
 
-.password-container .warning{
+.password-container .warning {
   font-family: "Baloo Tammudu 2", sans-serif;
   line-height: 1;
   margin-top: 2rem;
@@ -3044,7 +3048,7 @@ table {
   margin-right: 15%;
 }
 
-.email-container .note{
+.email-container .note {
   font-family: "Baloo Tammudu 2", sans-serif;
   line-height: 1;
   margin-top: 2rem;
@@ -3053,34 +3057,32 @@ table {
   margin-right: 15%;
 }
 
-
 /* Delete Account */
-.delete-account input{
-  transition: .3s ease-out;
+.delete-account input {
+  transition: 0.3s ease-out;
 }
 
-.delete-account input:focus{
+.delete-account input:focus {
   border-bottom: 3px solid red !important;
 }
 
-
-@keyframes roll-round-and-fade-out{
-  0%{
-    transform : rotate(0deg) scale(1);
+@keyframes roll-round-and-fade-out {
+  0% {
+    transform: rotate(0deg) scale(1);
     opacity: 1;
   }
 
-  100%{
-    transform : rotate(400deg) scale(0.25);
+  100% {
+    transform: rotate(400deg) scale(0.25);
     opacity: 0;
   }
 }
 
-.header-image{
+.header-image {
   object-fit: cover;
 }
 
-.company-logo{
+.company-logo {
   font-family: "Baloo Tammudu 2", sans-serif;
   font-size: 1.2rem;
   line-height: 1;
@@ -3088,18 +3090,82 @@ table {
   color: var(--theme-color);
 }
 
-
-.company-logo input{
+.company-logo input {
   font-family: "Baloo Tammudu 2", sans-serif;
   font-size: 1.2rem;
 }
 
-.admin-register-page .login-container{
+.admin-register-page .login-container {
   height: 100%;
   min-height: 80vh !important;
   top: 9rem;
 }
 
-.admin-register-page .mobile-menu .options{
+.admin-register-page .mobile-menu .options {
   left: -2rem;
+}
+
+
+/* ///////////////////Super Admin Container //////////////////// */
+
+.info-note{
+  font-family: "Baloo Tammudu 2", sans-serif;
+  font-size: 1.4rem;
+  color: var(--theme-color);
+  line-height: 1.1;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+
+.add-busses-input-container{
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+  margin-left: 7%;
+  margin-bottom: 3rem;
+}
+
+.add-busses-input-container input{
+  font-family: "Baloo Tammudu 2", sans-serif;
+  line-height: 1;
+  border-radius: 2px;
+  border: none;
+  margin: 0.7rem 0;
+  outline: none;
+  padding: 1.1rem;
+  font-size: 1rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid grey;
+}
+.bus-picture {
+  font-family: "Baloo Tammudu 2", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1;
+  margin-top: 1rem;
+  color: var(--theme-color);
+}
+
+.bus-picture input {
+  font-family: "Baloo Tammudu 2", sans-serif;
+  font-size: 1.2rem;
+}
+
+.recurring-checkbox{
+  font-family: "Baloo Tammudu 2", sans-serif;
+  font-size: 1.2rem;
+  color: var(--theme-color);
+  margin-left: 3rem;
+  transition: .3s ease-out;
+}
+
+.recurring-checkbox sup{
+  color: red;
+}
+
+.recurring-checkbox-info{
+  font-family: "Baloo Tammudu 2", sans-serif;
+  font-size: .95rem;
+  color: red;
 }
