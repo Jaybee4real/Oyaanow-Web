@@ -3187,26 +3187,3 @@ table {
 
 /* //////////Pending Items///////////// */
 
-.actions {
-  display: none;
-}
-
-.pending-item:hover .actions {
-  display: flex !important;
-  background-color: yellow !important;
-}
-
-.pending-item .actions {
-  width: 100%;
-  position: relative;
-  background-color: yellow !important;
-  display: flex;
-  flex-direction: row;
-}
-td .options{
-  width: 2rem !important;
-}
-
-.options:hover{
-  background-color: green !important;
-}
