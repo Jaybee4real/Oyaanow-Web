@@ -238,7 +238,7 @@
                             <th>
                                 <h1>Company</h1>
                             </th>
-                            <th colspan="2" >
+                            <th colspan="2">
                                 <h1>Actions</h1>
                             </th>
                         </tr>
@@ -246,7 +246,7 @@
                     <tbody>
                         <tr>
                             <td>Jdoe</td>
-                            <td >Jane Doe</span></td>
+                            <td>Jane Doe</span></td>
                             <td>God Is Good Motors</td>
                             <td class="pending-screen-accept"><i class=" fa fa-check"></i>Accept</td>
                             <td class="pending-screen-reject"><i class=" fa fa-times"></i>Ignore</td>
@@ -254,7 +254,7 @@
 
                         <tr>
                             <td>Jsmith</td>
-                            <td >John Smith</span></td>
+                            <td>John Smith</span></td>
                             <td>Abc Transport</td>
                             <td class="pending-screen-accept"><i class=" fa fa-check"></i>Accept</td>
                             <td class="pending-screen-reject"><i class=" fa fa-times"></i>Ignore</td>
@@ -262,7 +262,7 @@
 
                         <tr>
                             <td>MJordan</td>
-                            <td >Michael Jordan</span></td>
+                            <td>Michael Jordan</span></td>
                             <td>Chisco Group</td>
                             <td class="pending-screen-accept"><i class=" fa fa-check"></i>Accept</td>
                             <td class="pending-screen-reject"><i class=" fa fa-times"></i>Ignore</td>
@@ -270,7 +270,7 @@
 
                         <tr>
                             <td>Seun01</td>
-                            <td >Seun Johnson</span></td>
+                            <td>Seun Johnson</span></td>
                             <td>Cross Country</td>
                             <td class="pending-screen-accept"><i class=" fa fa-check"></i>Accept</td>
                             <td class="pending-screen-reject"><i class=" fa fa-times"></i>Ignore</td>
@@ -278,16 +278,40 @@
 
                         <tr>
                             <td>Nelsonjoshua</td>
-                            <td >Nelson Joshua</span></td>
+                            <td>Nelson Joshua</span></td>
                             <td>Guo Transport</td>
                             <td class="pending-screen-accept"><i class=" fa fa-check"></i>Accept</td>
                             <td class="pending-screen-reject"><i class=" fa fa-times"></i>Ignore</td>
                         </tr>
 
-                
+
                     </tbody>
                 </table>
             </div>
+
+
+            <!-- ///////////////////////////Add Terminals Screen///////////////////////////// -->
+
+            <div class="middle-content add-terminals-screen hide">
+                <div class="page-title">Add Terminals</div>
+                <div class="dashboard-card" style="width: 95%">
+                    <h2>Total Terminals Available</h2>
+                    <div class="info">25</div>
+                </div>
+                <div class="info-note">Terminal Will Be Added To The List Of Available Busses For Booking On The Oyaanow
+                    Platform</div>
+
+                <div class="add-busses-container">
+                    <div class="info-note" style="font-size: 1.1rem;">Fill In The Input Fields Below
+                    </div>
+                    <form class="add-busses-input-container password-input-container">
+                        <input type="text" required placeholder="Terminal Name">
+                        <input type="text" required placeholder="Terminal Location">
+                        <input type="submit" value="submit" class="btn">
+                </div>
+                </form>
+            </div>
+
 
             <!-- //////////////////////////////////Account Settings////////////////////////// -->
 
@@ -391,7 +415,7 @@
                     </thead>
                 </table>
                 <div class="items-container">
-                    <div class="item">
+                    <div class="pending-item">
                         <div class="top item-top">
                             <div class="left-side">Jane Doe</div>
                             <div class="right-side">God Is Good Motors</div>
@@ -399,28 +423,28 @@
 
                     </div>
 
-                    <div class="item">
+                    <div class="pending-item">
                         <div class="top item-top">
                             <div class="left-side">John Smith </div>
                             <div class="right-side">Abc Transport </div>
                         </div>
                     </div>
 
-                    <div class="item">
+                    <div class="pending-item">
                         <div class="top item-top">
                             <div class="left-side">Michael Jordan </div>
                             <div class="right-side">Chisco Group</div>
                         </div>
                     </div>
 
-                    <div class="item">
+                    <div class="pending-item">
                         <div class="top item-top">
                             <div class="left-side">Seun Johnson</div>
                             <div class="right-side">Cross Country</div>
                         </div>
                     </div>
 
-                    <div class="item">
+                    <div class="pending-item">
                         <div class="top item-top">
                             <div class="left-side">Nelson Joshua</div>
                             <div class="right-side">Guo Transport </div>
@@ -436,11 +460,11 @@
     <script src="./js/dashboard.js"></script>
 
     <script>
-        document.querySelectorAll(".pending-item").forEach(element => {
-            element.addEventListener("mouseover", () => {
-                element.lastChild.style.display = "contents"
-            })
-        })
+        // document.querySelectorAll(".pending-item").forEach(element => {
+        //     element.addEventListener("mouseover", () => {
+        //         element.lastChild.style.display = "contents"
+        //     })
+        // })
         // document.querySelectorAll(".pending-item").forEach(element => {
         //     element.addEventListener("mouseout", () => {
         //         document.querySelector(".actions").style.display = "none"

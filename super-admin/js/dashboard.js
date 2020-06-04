@@ -46,14 +46,18 @@ const selectSideBarItem = () => {
   let dashboardTab = document.querySelector(".dashboard-tab");
   let addBussesTab = document.querySelector(".add-busses-tab");
   let settingsTab = document.querySelector(".settings-tab");
+  let pendingTab = document.querySelector(".pending-requests-tab");
+  let terminalsTab = document.querySelector(".terminals-tab");
 
   dashboardTab.addEventListener("click", () => {
     document.querySelector(".dashboard").classList.remove("hide");
+    document.querySelector(".add-terminals-screen").classList.add("hide");
     document.querySelector(".settings").classList.add("hide");
     document.querySelector(".add-busses").classList.add("hide");
     dashboardTab.classList.add("active");
     addBussesTab.classList.remove("active");
     settingsTab.classList.remove("active");
+    pendingTab.classList.remove("active");
     document.querySelector(".left-sidebar").classList.toggle("active");
     document.querySelector(".dash-fa").classList.toggle("fa-align-left");
     document.querySelector(".dash-fa").classList.toggle("fa-times");
@@ -61,31 +65,37 @@ const selectSideBarItem = () => {
     document.querySelector(".email").classList.add("hide");
     document.querySelector(".refer").classList.add("hide");
     document.querySelector(".pending-requests-screen").classList.add("hide");
-
   });
 
-  settingsTab.addEventListener("click", () => {
-    document.querySelector(".settings").classList.remove("hide");
-    document.querySelector(".dashboard").classList.add("hide");
-    document.querySelector(".add-busses").classList.add("hide");
-    settingsTab.classList.add("active");
-    dashboardTab.classList.remove("active");
-    addBussesTab.classList.remove("active");
-    document.querySelector(".left-sidebar").classList.toggle("active");
-    document.querySelector(".dash-fa").classList.toggle("fa-align-left");
-    document.querySelector(".dash-fa").classList.toggle("fa-times");
-    document.querySelector(".password").classList.add("hide");
-    document.querySelector(".email").classList.add("hide");
-    document.querySelector(".refer").classList.add("hide");
-    document.querySelector(".pending-requests-screen").classList.add("hide");
-
-  });
 
   addBussesTab.addEventListener("click", () => {
     document.querySelector(".add-busses").classList.remove("hide");
+    document.querySelector(".add-terminals-screen").classList.add("hide");
     document.querySelector(".settings").classList.add("hide");
     document.querySelector(".dashboard").classList.add("hide");
     addBussesTab.classList.add("active");
+    dashboardTab.classList.remove("active");
+    settingsTab.classList.remove("active");
+    terminalsTab.classList.remove("active");
+    pendingTab.classList.remove("active");
+    document.querySelector(".left-sidebar").classList.toggle("active");
+    document.querySelector(".dash-fa").classList.toggle("fa-align-left");
+    document.querySelector(".dash-fa").classList.toggle("fa-times");
+    document.querySelector(".password").classList.add("hide");
+    document.querySelector(".email").classList.add("hide");
+    document.querySelector(".refer").classList.add("hide");
+    document.querySelector(".pending-requests-screen").classList.add("hide");
+  });
+
+  pendingTab.addEventListener("click", () => {
+    document.querySelector(".pending-requests-screen").classList.remove("hide");
+    document.querySelector(".add-terminals-screen").classList.add("hide");
+    document.querySelector(".add-busses").classList.add("hide");
+    document.querySelector(".settings").classList.add("hide");
+    document.querySelector(".dashboard").classList.add("hide");
+    pendingTab.classList.add("active");
+    addBussesTab.classList.remove("active");
+    terminalsTab.classList.remove("active");
     dashboardTab.classList.remove("active");
     settingsTab.classList.remove("active");
     document.querySelector(".left-sidebar").classList.toggle("active");
@@ -94,8 +104,45 @@ const selectSideBarItem = () => {
     document.querySelector(".password").classList.add("hide");
     document.querySelector(".email").classList.add("hide");
     document.querySelector(".refer").classList.add("hide");
-    document.querySelector(".pending-requests-screen").classList.add("hide");
+  });
 
+  terminalsTab.addEventListener("click", () => {
+    document.querySelector(".add-terminals-screen").classList.remove("hide");
+    document.querySelector(".pending-requests-screen").classList.add("hide");
+    document.querySelector(".add-busses").classList.add("hide");
+    document.querySelector(".settings").classList.add("hide");
+    document.querySelector(".dashboard").classList.add("hide");
+    terminalsTab.classList.add("active");
+    pendingTab.classList.remove("active");
+    addBussesTab.classList.remove("active");
+    dashboardTab.classList.remove("active");
+    settingsTab.classList.remove("active");
+    document.querySelector(".left-sidebar").classList.toggle("active");
+    document.querySelector(".dash-fa").classList.toggle("fa-align-left");
+    document.querySelector(".dash-fa").classList.toggle("fa-times");
+    document.querySelector(".password").classList.add("hide");
+    document.querySelector(".email").classList.add("hide");
+    document.querySelector(".refer").classList.add("hide");
+  });
+
+
+  settingsTab.addEventListener("click", () => {
+    document.querySelector(".settings").classList.remove("hide");
+    document.querySelector(".add-terminals-screen").classList.add("hide");
+    document.querySelector(".pending-requests-screen").classList.add("hide");
+    document.querySelector(".add-busses").classList.add("hide");
+    document.querySelector(".dashboard").classList.add("hide");
+    settingsTab.classList.add("active");
+    terminalsTab.classList.remove("active");
+    pendingTab.classList.remove("active");
+    addBussesTab.classList.remove("active");
+    dashboardTab.classList.remove("active");
+    document.querySelector(".left-sidebar").classList.toggle("active");
+    document.querySelector(".dash-fa").classList.toggle("fa-align-left");
+    document.querySelector(".dash-fa").classList.toggle("fa-times");
+    document.querySelector(".password").classList.add("hide");
+    document.querySelector(".email").classList.add("hide");
+    document.querySelector(".refer").classList.add("hide");
   });
 
   ////////Little Back Button//////
@@ -111,6 +158,27 @@ const selectSideBarItem = () => {
     });
   });
 };
+
+/////////////////When Somebody Selects A Pending Item //////////
+document.querySelectorAll(".pending-item").forEach((element) => {
+  element.addEventListener("click", () => {
+    document.querySelector(".pending-requests-screen").classList.remove("hide");
+    document.querySelector(".add-busses").classList.add("hide");
+    document.querySelector(".settings").classList.add("hide");
+    document.querySelector(".dashboard").classList.add("hide");
+    document.querySelector(".pending-requests-tab").classList.add("active");
+    document.querySelector(".add-busses-tab").classList.remove("active");
+    document.querySelector(".terminals-tab").classList.remove("active");
+    document.querySelector(".dashboard-tab").remove("active");
+    document.querySelector(".settings-tab").classList.remove("active");
+    document.querySelector(".left-sidebar").classList.toggle("active");
+    document.querySelector(".dash-fa").classList.toggle("fa-align-left");
+    document.querySelector(".dash-fa").classList.toggle("fa-times");
+    document.querySelector(".password").classList.add("hide");
+    document.querySelector(".email").classList.add("hide");
+    document.querySelector(".refer").classList.add("hide");
+  });
+});
 
 /////////////////////Settings Screens Functions///////////////
 const changeSettingsScreen = () => {
@@ -147,19 +215,6 @@ const changeSettingsScreen = () => {
     .querySelector(".delete-account-tab")
     .addEventListener("click", () => {
       document.querySelector(".delete-account").classList.remove("hide");
-      document.querySelector(".refer").classList.add("hide");
-      document.querySelector(".email").classList.add("hide");
-      document.querySelector(".password").classList.add("hide");
-      document.querySelector(".settings").classList.add("hide");
-      document.querySelector(".dashboard").classList.add("hide");
-      document.querySelector(".add-busses").classList.add("hide");
-    });
-
-    document
-    .querySelector(".pending-requests-tab")
-    .addEventListener("click", () => {
-      document.querySelector(".pending-requests-screen").classList.remove("hide");
-      document.querySelector(".delete-account").classList.add("hide");
       document.querySelector(".refer").classList.add("hide");
       document.querySelector(".email").classList.add("hide");
       document.querySelector(".password").classList.add("hide");
