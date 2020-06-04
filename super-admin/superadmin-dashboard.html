@@ -68,7 +68,7 @@
             <a class="dashboard-item"></a>
             <a class="dashboard-item dashboard-tab active"><i class="fa fa-home"></i>Dashboard</a>
             <a class="dashboard-item add-busses-tab "><i class="fa fa-plus"></i>Add Busses</a>
-            <a class="dashboard-item add-busses-tab "><i class="fa fa-plus"></i>Pending Requests</a>
+            <a class="dashboard-item pending-requests-tab "><i class="fa fa-question"></i>Pending Requests</a>
             <a class="dashboard-item terminals-tab"><i class="fa fa-plus"></i>Add Terminals</a>
             <a class="dashboard-item settings-tab"><i class="fa fa-gear"></i>Account Settings</a>
             <a class="dashboard-item"></a>
@@ -184,7 +184,7 @@
 
             <div class="middle-content add-busses hide">
                 <div class="page-title">Add Busses</div>
-                <div class="dashboard-card">
+                <div class="dashboard-card" style="width: 95%">
                     <h2>Total Busses Available</h2>
                     <div class="info">27</div>
                 </div>
@@ -220,6 +220,74 @@
             </div>
 
 
+            <!-- /////////////////////Pending Request Screen//////////////////////? -->
+
+
+            <div class="middle-content pending-requests-screen hide">
+                <a class="page-title">Pending Request</a>
+
+                <table class="table-container">
+                    <thead>
+                        <tr>
+                            <th>
+                                <h1>Username</h1>
+                            </th>
+                            <th>
+                                <h1>Name</h1>
+                            </th>
+                            <th>
+                                <h1>Company</h1>
+                            </th>
+                            <th colspan="2" >
+                                <h1>Actions</h1>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Jdoe</td>
+                            <td >Jane Doe</span></td>
+                            <td>God Is Good Motors</td>
+                            <td class="pending-screen-accept"><i class=" fa fa-check"></i>Accept</td>
+                            <td class="pending-screen-reject"><i class=" fa fa-times"></i>Ignore</td>
+                        </tr>
+
+                        <tr>
+                            <td>Jsmith</td>
+                            <td >John Smith</span></td>
+                            <td>Abc Transport</td>
+                            <td class="pending-screen-accept"><i class=" fa fa-check"></i>Accept</td>
+                            <td class="pending-screen-reject"><i class=" fa fa-times"></i>Ignore</td>
+                        </tr>
+
+                        <tr>
+                            <td>MJordan</td>
+                            <td >Michael Jordan</span></td>
+                            <td>Chisco Group</td>
+                            <td class="pending-screen-accept"><i class=" fa fa-check"></i>Accept</td>
+                            <td class="pending-screen-reject"><i class=" fa fa-times"></i>Ignore</td>
+                        </tr>
+
+                        <tr>
+                            <td>Seun01</td>
+                            <td >Seun Johnson</span></td>
+                            <td>Cross Country</td>
+                            <td class="pending-screen-accept"><i class=" fa fa-check"></i>Accept</td>
+                            <td class="pending-screen-reject"><i class=" fa fa-times"></i>Ignore</td>
+                        </tr>
+
+                        <tr>
+                            <td>Nelsonjoshua</td>
+                            <td >Nelson Joshua</span></td>
+                            <td>Guo Transport</td>
+                            <td class="pending-screen-accept"><i class=" fa fa-check"></i>Accept</td>
+                            <td class="pending-screen-reject"><i class=" fa fa-times"></i>Ignore</td>
+                        </tr>
+
+                
+                    </tbody>
+                </table>
+            </div>
 
             <!-- //////////////////////////////////Account Settings////////////////////////// -->
 
@@ -232,8 +300,6 @@
                             Password</div>
                         <div class="setting-option change-email-tab"><i class="fa fa-envelope theme-color"></i> Change
                             Email</div>
-                        <div class="setting-option change-account-type-tab"><i class="fa fa-user theme-color"></i>
-                            Change Account Type</div>
                         <div class="setting-option refer-friend-tab"><i class="fa fa-user-plus theme-color"></i> Refer A
                             Friend</div>
                         <div class="setting-option danger delete-account-tab"><i class="fa fa-trash theme-color"></i>
@@ -312,27 +378,59 @@
             <div class="page-title">Pending Admin Requests</div>
 
             <div class="pending-requests-container">
-                    <table class="table-container">
-                        <thead>
-                            <tr>
-                                <th>
-                                    <h1>Name</h1>
-                                </th>
-                                <th>
-                                    <h1>Company</h1>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr >
-                                <td>Jane Doe</td>
-                                <td>God Is Good Motors</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <table class="table-container" style="margin-bottom: 2rem;">
+                    <thead>
+                        <tr>
+                            <th>
+                                <h1>Name</h1>
+                            </th>
+                            <th>
+                                <h1>Company</h1>
+                            </th>
+                        </tr>
+                    </thead>
+                </table>
+                <div class="items-container">
+                    <div class="item">
+                        <div class="top item-top">
+                            <div class="left-side">Jane Doe</div>
+                            <div class="right-side">God Is Good Motors</div>
+                        </div>
+
+                    </div>
+
+                    <div class="item">
+                        <div class="top item-top">
+                            <div class="left-side">John Smith </div>
+                            <div class="right-side">Abc Transport </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="top item-top">
+                            <div class="left-side">Michael Jordan </div>
+                            <div class="right-side">Chisco Group</div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="top item-top">
+                            <div class="left-side">Seun Johnson</div>
+                            <div class="right-side">Cross Country</div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="top item-top">
+                            <div class="left-side">Nelson Joshua</div>
+                            <div class="right-side">Guo Transport </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
     <script src="./js/dashboard.js"></script>

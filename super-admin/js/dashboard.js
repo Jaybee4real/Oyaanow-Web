@@ -60,6 +60,8 @@ const selectSideBarItem = () => {
     document.querySelector(".password").classList.add("hide");
     document.querySelector(".email").classList.add("hide");
     document.querySelector(".refer").classList.add("hide");
+    document.querySelector(".pending-requests-screen").classList.add("hide");
+
   });
 
   settingsTab.addEventListener("click", () => {
@@ -75,6 +77,8 @@ const selectSideBarItem = () => {
     document.querySelector(".password").classList.add("hide");
     document.querySelector(".email").classList.add("hide");
     document.querySelector(".refer").classList.add("hide");
+    document.querySelector(".pending-requests-screen").classList.add("hide");
+
   });
 
   addBussesTab.addEventListener("click", () => {
@@ -90,6 +94,8 @@ const selectSideBarItem = () => {
     document.querySelector(".password").classList.add("hide");
     document.querySelector(".email").classList.add("hide");
     document.querySelector(".refer").classList.add("hide");
+    document.querySelector(".pending-requests-screen").classList.add("hide");
+
   });
 
   ////////Little Back Button//////
@@ -101,6 +107,7 @@ const selectSideBarItem = () => {
       document.querySelector(".email").classList.add("hide");
       document.querySelector(".refer").classList.add("hide");
       document.querySelector(".delete-account").classList.add("hide");
+      document.querySelector(".pending-requests-screen").classList.add("hide");
     });
   });
 };
@@ -147,6 +154,19 @@ const changeSettingsScreen = () => {
       document.querySelector(".dashboard").classList.add("hide");
       document.querySelector(".add-busses").classList.add("hide");
     });
+
+    document
+    .querySelector(".pending-requests-tab")
+    .addEventListener("click", () => {
+      document.querySelector(".pending-requests-screen").classList.remove("hide");
+      document.querySelector(".delete-account").classList.add("hide");
+      document.querySelector(".refer").classList.add("hide");
+      document.querySelector(".email").classList.add("hide");
+      document.querySelector(".password").classList.add("hide");
+      document.querySelector(".settings").classList.add("hide");
+      document.querySelector(".dashboard").classList.add("hide");
+      document.querySelector(".add-busses").classList.add("hide");
+    });
 };
 
 /////////////////Handle Delete////////////
@@ -164,23 +184,42 @@ const handleDelete = () => {
     });
 };
 
-
 /////////////////super Admin Dashboard Timepicker Function//////
-$( function() {
-  $( ".departure-date").datepicker();
-} );
+$(function () {
+  $(".departure-date").datepicker();
+});
 
-$( function() {
-  $( ".departure-time").timepicker();
-} );
-
+$(function () {
+  $(".departure-time").timepicker();
+});
 
 ///////////////////////Recurring Checkbox Function///////////
 const onCheckboxChange = () => {
-  document.querySelector(".departure-date").classList.toggle("hide")
-}
+  document.querySelector(".departure-date").classList.toggle("hide");
+};
 
-////////////////////Redirect Page FUnction///////////?//////
+////////////////////Pending Items Hover Fuction//////////////////
+
+// document.querySelectorAll(".item-top").forEach((element) => {
+//   const options = document.createElement("div");
+//   options.classList.add("bottom");
+//   options.innerHTML = `<div class="accept">
+//     <i class="fa fa-times"></i>Ignore
+//   </div>
+//   <div class="ignore">
+//     <i class="fa fa-check"></i>Accept
+//   </div>`;
+
+//   element.addEventListener("click", () => {
+//     element.parentNode.innerHTML += options.innerHTML
+//     options.style.display = 'flex'
+//     options.style.flexDirection = 'row'
+//     options.style.backgroundColor = 'red'
+//     console.log(options)
+//   });
+// });
+
+//////////////////////////
 handleDelete();
 changeSettingsScreen();
 selectSideBarItem();

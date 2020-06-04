@@ -2843,6 +2843,7 @@ select {
   max-width: 100vw;
   line-height: 1.3;
   padding: 2rem;
+  cursor: pointer;
 }
 
 td.departure,
@@ -3172,6 +3173,8 @@ table {
   font-family: "Baloo Tammudu 2", sans-serif;
   font-size: 0.95rem;
   color: red;
+  line-height: 1;
+  margin-top: 1rem
 }
 
 .super-admin-dashboard-page .dashboard-right-side {
@@ -3187,3 +3190,89 @@ table {
 
 /* //////////Pending Items///////////// */
 
+.items-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.items-container .item{
+  display: flex;
+  flex-direction: column;
+}
+
+.items-container .item .top{
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  border-bottom: 5px solid white;
+  align-items: center;
+  padding-left: 5%;
+  cursor: pointer;
+  background-color: rgba(128, 128, 128, 0.163);
+}
+/* 
+.items-container .item .bottom{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 0;
+  align-items: center;
+  border-bottom: 5px solid white;
+  padding-left: 5%;
+  display: none;
+  cursor: pointer;
+  transition: all .7s ease-in-out;
+} */
+
+.items-container .item .top:hover{
+  background-color: var(--theme-color);
+  color: white;
+}
+/*
+.items-container .item .top:hover + .bottom {
+  display: flex;
+  transition: all .7s ease-in-out;
+}
+
+.items-container .item .bottom .accept:hover {
+  background-color: green;
+} */
+.items-container .item .fa{
+  margin-right: .3rem;
+  font-size: 1rem !important;
+}
+
+.items-container .item .top .right-side, .items-container .item .top .left-side, .items-container .item .bottom .accept, .items-container .item .bottom .ignore{
+  width: 50%;
+  font-family: "Baloo Tammudu 2", sans-serif;
+  line-height: 1;
+  padding: .5rem 0;
+}
+
+.items-container .item .bottom .accept, .items-container .item .bottom .ignore{
+  padding: 0;
+  padding-top: .3rem;
+}
+
+
+.pending-screen-accept:hover {
+  background-color: green !important;
+  cursor: pointer;
+}
+
+.pending-screen-accept .fa{
+  color: green;
+  margin-right: .5rem;
+  font-size: 1.1rem;
+}
+
+.pending-screen-reject .fa{
+  color: red !important;
+  margin-right: .5rem;
+  font-size: 1.1rem !important;
+}
+
+.pending-screen-reject:hover{
+  background-color: red !important;
+  cursor: pointer;
+}
