@@ -184,7 +184,7 @@
 
             <div class="middle-content add-busses hide">
                 <div class="page-title">Add Busses</div>
-                <div class="dashboard-card" style="width: 95%">
+                <div class="dashboard-card" style="width: 92%">
                     <h2>Total Busses Available</h2>
                     <div class="info">27</div>
                 </div>
@@ -198,11 +198,12 @@
                     <form class="add-busses-input-container password-input-container">
                         <input type="text" required placeholder="Bus Name">
                         <input type="text" required placeholder="Bus Model / Type">
-                        <label class="bus-picture" for="bus-picture">Upload Bus Picture:
+                        <label style="max-width: 90vw;" class="bus-picture" for="bus-picture">Upload Bus Picture:
                             <input type="file" id="bus-picture" name="bus-picture">
                         </label>
                         <div class="add-busses-details-row">
                             <input type="text" class="departure-time" placeholder="Departure Time">
+                            <br class="appear-560">
                             <label class="recurring-checkbox">
                                 <input id="recurring" onclick="onCheckboxChange()" type="checkbox">
                                 Recurring<sup>*</sup>
@@ -238,7 +239,7 @@
                             <th>
                                 <h1>Company</h1>
                             </th>
-                            <th colspan="2">
+                            <th colspan="2" id="col-span">
                                 <h1>Actions</h1>
                             </th>
                         </tr>

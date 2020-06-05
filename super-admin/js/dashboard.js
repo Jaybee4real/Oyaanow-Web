@@ -7,19 +7,20 @@ const removeLoader = () => {
   });
 };
 
-// function checkWidth() {
-//     if ($(window).width() < 560) {
-//       $(".dashboard-page").addClass("mobile");
-//       console.log("small");
-//     } else {
-//       $(".dashboard-page").removeClass("mobile");
-//     }
-//   }
+function checkWidth() {
+    if ($(window).width() < 560) {
+      $(".dashboard-page").addClass("mobile");
+      $("#col-span").attr("colspan", 2)
+    } else {
+      $(".dashboard-page").removeClass("mobile");
+    }
+    
+  }
 
-//   $(window).ready(checkWidth);
-//   $(window).resize(checkWidth);
+  $(window).ready(checkWidth);
+  $(window).resize(checkWidth);
 
-//   //////////////////////Open Sidebar Function///////////////
+  //////////////////////Open Sidebar Function///////////////
 
 const openSidebar = () => {
   document.querySelector(".dashboard-toggle").addEventListener("click", () => {

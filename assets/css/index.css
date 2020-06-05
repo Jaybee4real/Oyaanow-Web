@@ -2925,6 +2925,11 @@ table {
   .pending-requests-screen .table-container th:nth-child(4) {
     display: table;
   }
+
+  .pending-requests-screen .table-container th:nth-child(5){
+    display: contents;
+    background-color: yellow;
+  } 
   .pending-requests-screen .table-container td:nth-child(3) {
     display: none;
   }
@@ -2948,6 +2953,10 @@ table {
 
   .user-detail-mobile {
     display: flex;
+  }
+
+  .appear-560{
+    display: flex !important;
   }
 }
 
@@ -3170,6 +3179,14 @@ table {
   line-height: 1;
   margin-top: 1rem;
   color: var(--theme-color);
+}
+
+.input[type="file"]{
+  max-width: 80vw !important;
+}
+
+.appear-560{
+  display: none;
 }
 
 .bus-picture input {
