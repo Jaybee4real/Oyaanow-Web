@@ -328,7 +328,7 @@
                         <div class="setting-option refer-friend-tab"><i class="fa fa-user-plus theme-color"></i> Refer A
                             Friend</div>
                         <div class="setting-option danger delete-account-tab"><i class="fa fa-trash theme-color"></i>
-                            Delete Account</div>
+                            Delete An Oyaanow Admin Account</div>
                     </div>
                 </div>
             </div>
@@ -384,11 +384,16 @@
                 <div class="back-btn"><i class="fa fa-arrow-left"></i></div>
                 <a class="page-title" style="color: red;">Delete Account</a>
                 <div class="email-container">
-                    <div class="note" style="font-size: 1.3rem; margin-bottom: 2rem; color:black;">Once You Delete Your
-                        Account, There Is No Going Back!!! Are You Sure?</div>
+                    <div class="note" style="font-size: 1.3rem; margin-bottom: 2rem; color:black;">Once You Delete This Oyaanow Admin Account, There Is No Going Back!!! Are You Sure?</div>
                     <form class="email-input-container">
-                        <input type="text" required placeholder="Enter Your Email">
-                        <input type="text" required placeholder="Enter Your Password">
+                        <div class="note" style="text-align: left; font-size: 1rem; color:black;">Enter The Username Of The Admin Account You Want To Delete :</div>
+                        <input type="text" required placeholder="Enter The Account Username">
+                        <div class="note" style="text-align: left; font-size: 1rem; color:black;">Enter The Email Of The Admin Account You Want To Delete :</div>
+                        <input type="text" required placeholder="Enter The Account Email">
+                        <div class="note" style="text-align: left; font-size: 1rem; color:black;">Enter The Company The Admin Is Representing: </div>
+                        <input type="text" required placeholder="Enter The Account Company">
+                        <div class="note" style="text-align: left; font-size: 1rem; color:black;">Enter The SuperAdmin Password :</div>
+                        <input type="text" required placeholder="Enter SuperAdmin Password">
                         <input type="submit" class="delete-account-btn" value="Delete" style="background-color: red;">
                     </form>
                 </div>
@@ -459,20 +464,6 @@
     </div>
 
     <script src="./js/dashboard.js"></script>
-
-    <script>
-        // document.querySelectorAll(".pending-item").forEach(element => {
-        //     element.addEventListener("mouseover", () => {
-        //         element.lastChild.style.display = "contents"
-        //     })
-        // })
-        // document.querySelectorAll(".pending-item").forEach(element => {
-        //     element.addEventListener("mouseout", () => {
-        //         document.querySelector(".actions").style.display = "none"
-        //     })
-        // })
-    </script>
-
 </body>
 
 </html>
