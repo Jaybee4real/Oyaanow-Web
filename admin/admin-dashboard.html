@@ -15,9 +15,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"
         integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/27fba2f7f0.js"></script>
+    <!-- ////////// -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-KM512VNnjElC30ehFwehXjx1YCHPiQkOPmqnrWtpccM=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"
+        integrity="sha256-rByPlHULObEjJ6XQxW/flG2r+22R5dKiAoef+aXWfik=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"
+        integrity="sha256-+jmym6PChFok5u02khNcYDy5AdfiIN7Y/QCbBqiNgeE=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css"
+        integrity="sha256-DVV5cU9pxHH2Rofop3XD3b3rbfrOSIy2nU61DEbYy1Q=" crossorigin="anonymous" />
 </head>
 
-<body class="dashboard-page">
+<body class="admin-dashboard-page dashboard-page">
     <div class="loader">
         <div class="loader-inner ball-scale-ripple-multiple ball-scale-ripple-multiple-color">
             <div></div>
@@ -27,9 +37,9 @@
     </div>
 
     <div id="navbar" class="navbar scroll">
-        <a href="index.html" class="logo logo-animated theme-color"><span class="logo-icon"></span>OyaaNow</a>
+        <a href="../index.html" class="logo logo-animated theme-color"><span class="logo-icon"></span>OyaaNow</a>
         <div class="options">
-            <a href="index.html" class="nav-item about btn">Home</a>
+            <a href="../index.html" class="nav-item about btn">Home</a>
             <a href="" class="nav-item login btn">About Company</a>
             <a class="nav-item contact btn">Contact</a>
             <a href="booking.html" class="nav-item book-scroll btn">Book Now</a>
@@ -37,7 +47,7 @@
         </div>
 
         <div class="mobile-menu">
-            <a href="index.html" class="logo "><span class="logo-icon inverted"></span>Oyaanow</a>
+            <a href="../index.html" class="logo "><span class="logo-icon inverted"></span>Oyaanow</a>
             <div class="options">
                 <a class="mobile-nav-item about btn first">Home</a>
                 <a class="mobile-nav-item about btn second">About</a>
@@ -53,24 +63,179 @@
     <div class="dashboard-container">
         <div class="dashboard-toggle"><i class="dash-fa fa fa-align-left"></i></div>
         <div class="left-sidebar">
-            <a href="index.html" class="logo theme-color "><span class="logo-icon"></span>OyaaNow</a>
+            <a href="../index.html" class="logo theme-color "><span class="logo-icon"></span>OyaaNow</a>
 
             <a class="dashboard-item"></a>
             <a class="dashboard-item dashboard-tab active"><i class="fa fa-home"></i>Dashboard</a>
-            <a class="dashboard-item busses-tab "><i class="fa fa-plus"></i>Add Busses</a>
+            <a class="dashboard-item add-busses-tab "><i class="fa fa-plus"></i>Add Busses</a>
             <a class="dashboard-item terminals-tab"><i class="fa fa-plus"></i>Add Terminals</a>
             <a class="dashboard-item settings-tab"><i class="fa fa-gear"></i>Account Settings</a>
             <a class="dashboard-item"></a>
         </div>
 
         <div class="dashboard-middle">
-            <div class="user-detail-mobile">
-                <img src="../assets/img/2face.jpg">
+
+            <div class="middle-content super-admin-dashboard dashboard">
+                <a class="page-title">DashBoard</a>
+
+                <div class="activity-area">
+                    <div class="dashboard-card">
+                        <h2>Total Company Busses Available</h2>
+                        <div class="info">9</div>
+                    </div>
+                    <div class="dashboard-card">
+                        <h2>Total Company Terminals In Use</h2>
+                        <div class="info">5</div>
+                    </div>
+                </div>
+
+                <div class="search">
+                    <h2 class="section-header">Oyaanow Users</h2>
+                    <div class="search-box">
+                        <i class="fa fa-search"></i>
+                        <input placeholder="search">
+                    </div>
+                </div>
+
+                <div class="recent-bookings-container">
+
+                    <table class="table-container">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <h1>UserName</h1>
+                                </th>
+                                <th>
+                                    <h1>Full Name</h1>
+                                </th>
+                                <th>
+                                    <h1>User Type</h1>
+                                </th>
+                                <th>
+                                    <h1>Signup Date</h1>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Jaybee</td>
+                                <td>Faith Okoroji</td>
+                                <td>Admin</td>
+                                <td>March 24th 2020</td>
+                            </tr>
+
+                            <tr>
+                                <td>Cece</td>
+                                <td>Cynthia Duru</td>
+                                <td>Admin</td>
+                                <td>March 18th 2020</td>
+                            </tr>
+
+                            <tr>
+                                <td>Esther</td>
+                                <td>Esther Ukandu</td>
+                                <td>Admin</td>
+                                <td>April 1st 2020</td>
+                            </tr>
+
+                            <tr>
+                                <td>Niyi</td>
+                                <td>Niyi Ojeyinka</td>
+                                <td>Admin</td>
+                                <td>April 1st 2020</td>
+                            </tr>
+
+                            <tr>
+                                <td>Sai-Baba</td>
+                                <td>Mohammadu Buhari</td>
+                                <td>Ordinary User</td>
+                                <td>April 5th 2020</td>
+                            </tr>
+
+
+                            <tr>
+                                <td>Tiwababy</td>
+                                <td>Tiwatoke Savage</td>
+                                <td>Ordinary User</td>
+                                <td>April 5th 2020</td>
+                            </tr>
+
+
+                            <tr>
+                                <td>2face</td>
+                                <td>Innocent Idibia</td>
+                                <td>Ordinary User</td>
+                                <td>April 5th 2020</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
-            
 
-<!-- //////////////////////////////////Account Settings////////////////////////// -->
+            <div class="middle-content add-busses hide">
+                <div class="page-title">Add Busses</div>
+                <div class="dashboard-card" style="width: 92%">
+                    <h2>Total Company Busses Available</h2>
+                    <div class="info">27</div>
+                </div>
+
+                <div class="info-note">Bus Will Be Added To The List Of Available Busses For Your Company Booking On The Oyaanow
+                    Platform</div>
+
+                <div class="add-busses-container">
+                    <div class="info-note" style="font-size: 1.1rem;">Fill In The Input Fields Below
+                    </div>
+                    <form class="add-busses-input-container password-input-container">
+                        <input type="text" required placeholder="Bus Name">
+                        <input type="text" required placeholder="Bus Model / Type">
+                        <label style="max-width: 90vw;" class="bus-picture" for="bus-picture">Upload Bus Picture:
+                            <input type="file" id="bus-picture" name="bus-picture">
+                        </label>
+                        <div class="add-busses-details-row">
+                            <input type="text" class="departure-time" placeholder="Departure Time">
+                            <br class="appear-560">
+                            <label class="recurring-checkbox">
+                                <input id="recurring" onclick="onCheckboxChange()" type="checkbox">
+                                Recurring<sup>*</sup>
+                            </label>
+                            <br>
+                            <input type="text" class="departure-date" placeholder="Departure Date">
+                            <br>
+                            <input type="submit" value="submit" class="btn">
+
+                            <div class="recurring-checkbox-info"><sup>*</sup>Meaning that The Bus Will Leave At The
+                                Selected Time Everyday?</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+            <!-- ///////////////////////////Add Terminals Screen///////////////////////////// -->
+
+            <div class="middle-content add-terminals-screen hide">
+                <div class="page-title">Add Terminals</div>
+                <div class="dashboard-card" style="width: 95%">
+                    <h2>Total Company Terminals Available</h2>
+                    <div class="info">25</div>
+                </div>
+                <div class="info-note">Terminal Will Be Added To The List Of Available Busses For Booking On The Oyaanow
+                    Platform</div>
+
+                <div class="add-busses-container">
+                    <div class="info-note" style="font-size: 1.1rem;">Fill In The Input Fields Below
+                    </div>
+                    <form class="add-busses-input-container password-input-container">
+                        <input type="text" required placeholder="Terminal Name">
+                        <input type="text" required placeholder="Terminal Location">
+                        <input type="submit" value="submit" class="btn">
+                </div>
+                </form>
+            </div>
+
+
+            <!-- //////////////////////////////////Account Settings////////////////////////// -->
 
             <div class="middle-content settings hide">
                 <a class="page-title">Account Settings</a>
@@ -81,8 +246,6 @@
                             Password</div>
                         <div class="setting-option change-email-tab"><i class="fa fa-envelope theme-color"></i> Change
                             Email</div>
-                        <div class="setting-option change-account-type-tab"><i class="fa fa-user theme-color"></i>
-                            Change Account Type</div>
                         <div class="setting-option refer-friend-tab"><i class="fa fa-user-plus theme-color"></i> Refer A
                             Friend</div>
                         <div class="setting-option danger delete-account-tab"><i class="fa fa-trash theme-color"></i>
@@ -142,7 +305,8 @@
                 <div class="back-btn"><i class="fa fa-arrow-left"></i></div>
                 <a class="page-title" style="color: red;">Delete Account</a>
                 <div class="email-container">
-                    <div class="note" style="font-size: 1.3rem; margin-bottom: 2rem; color:black;">Once You Delete Your Account, There Is No Going Back!!! Are You Sure?</div>
+                    <div class="note" style="font-size: 1.3rem; margin-bottom: 2rem; color:black;">Once You Delete Your
+                        Account, There Is No Going Back!!! Are You Sure?</div>
                     <form class="email-input-container">
                         <input type="text" required placeholder="Enter Your Email">
                         <input type="text" required placeholder="Enter Your Password">
@@ -156,21 +320,23 @@
         <!-- ////////////////////////Right Side Begins ////////////////////////////// -->
 
 
-
-        <div class="dashboard-right-side">
+        <div class="dashboard-right-side admin-dashboard-right-side" style="background-color: transparent;">
             <div class="user-detail">
                 <div class="user-image">
-                    <img src="../assets/img/2face.jpg">
+                    <img src="../assets/img/logo-.png">
                 </div>
                 <div class="user-text">
-                    <h2>2face Idibia</h2>
-                    <p>useremail@usercompany.com</p>
+                    <h3>God Is Good Motors</h3>
+                    <h2>Jane Doe</h2>
+                    <p>janedoe@godisgoodmotors.com</p>
                 </div>
             </div>
         </div>
     </div>
+    
 
     <script src="./js/dashboard.js"></script>
+
 
 </body>
 

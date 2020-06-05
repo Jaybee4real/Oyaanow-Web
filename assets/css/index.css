@@ -2642,6 +2642,14 @@ select {
   line-height: 1.5;
   color: var(--theme-color);
 }
+.user-text h3 {
+  font-family: "Baloo Tammudu 2", sans-serif !important;
+  font-size: 1.4rem;
+  line-height: 1;
+  margin-bottom: -.25rem;
+  color: black;
+  text-transform: uppercase;
+}
 
 .user-text p {
   font-family: "Baloo Tammudu 2", sans-serif !important;
