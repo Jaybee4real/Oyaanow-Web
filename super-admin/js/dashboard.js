@@ -164,6 +164,7 @@ const selectSideBarItem = () => {
 document.querySelectorAll(".pending-item").forEach((element) => {
   element.addEventListener("click", () => {
     document.querySelector(".pending-requests-screen").classList.remove("hide");
+    document.querySelector(".add-terminals-screen").classList.add("hide");
     document.querySelector(".add-busses").classList.add("hide");
     document.querySelector(".settings").classList.add("hide");
     document.querySelector(".dashboard").classList.add("hide");

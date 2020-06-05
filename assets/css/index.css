@@ -2907,7 +2907,6 @@ table {
 }
 
 .table-container tr:hover {
-  background-color: white;
   -webkit-box-shadow: 0 6px 6px -6px #0e1119;
   -moz-box-shadow: 0 6px 6px -6px #0e1119;
   box-shadow: 0 6px 6px -6px #0e1119;
@@ -3307,7 +3306,9 @@ table {
   background-color: green !important;
   cursor: pointer;
 }
-
+.pending-screen-accept:hover .fa, .pending-screen-reject:hover .fa{
+  color: white !important
+}
 .pending-screen-accept .fa {
   color: green;
   margin-right: 0.5rem;
