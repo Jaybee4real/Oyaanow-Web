@@ -2935,7 +2935,7 @@ table {
 
   .pending-requests-screen .table-container th:nth-child(5){
     display: contents;
-    background-color: yellow;
+    background-color: #2052f5c2;
   } 
   .pending-requests-screen .table-container td:nth-child(3) {
     display: none;

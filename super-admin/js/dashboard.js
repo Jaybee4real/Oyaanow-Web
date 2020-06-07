@@ -56,6 +56,7 @@ const selectSideBarItem = () => {
     document.querySelector(".settings").classList.add("hide");
     document.querySelector(".add-busses").classList.add("hide");
     dashboardTab.classList.add("active");
+    terminalsTab.classList.remove("active");
     addBussesTab.classList.remove("active");
     settingsTab.classList.remove("active");
     pendingTab.classList.remove("active");
