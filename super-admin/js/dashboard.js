@@ -161,7 +161,7 @@ const selectSideBarItem = () => {
   });
 };
 
-/////////////////When Somebody Selects A Pending Item //////////
+/////////////////Selecting A Pending Item //////////
 document.querySelectorAll(".pending-item").forEach((element) => {
   element.addEventListener("click", () => {
     document.querySelector(".pending-requests-screen").classList.remove("hide");
@@ -172,7 +172,7 @@ document.querySelectorAll(".pending-item").forEach((element) => {
     document.querySelector(".pending-requests-tab").classList.add("active");
     document.querySelector(".add-busses-tab").classList.remove("active");
     document.querySelector(".terminals-tab").classList.remove("active");
-    document.querySelector(".dashboard-tab").remove("active");
+    document.querySelector(".dashboard-tab").classList.remove("active");
     document.querySelector(".settings-tab").classList.remove("active");
     document.querySelector(".left-sidebar").classList.toggle("active");
     document.querySelector(".dash-fa").classList.toggle("fa-align-left");

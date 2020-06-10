@@ -3234,17 +3234,17 @@ table {
 
 /* //////////Pending Items///////////// */
 
-.items-container {
+.pending-items-container {
   display: flex;
   flex-direction: column;
 }
 
-.items-container .pending-item {
+.pending-items-container .pending-item {
   display: flex;
   flex-direction: column;
 }
 
-.items-container .pending-item .top {
+.pending-items-container .pending-item .top {
   display: flex;
   flex-direction: row;
   padding: 0;
@@ -3255,7 +3255,7 @@ table {
   background-color: rgba(128, 128, 128, 0.163);
 }
 /* 
-.items-container .pending-item .bottom{
+.pending-items-container .pending-item .bottom{
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -3268,36 +3268,36 @@ table {
   transition: all .7s ease-in-out;
 } */
 
-.items-container .pending-item .top:hover {
+.pending-items-container .pending-item .top:hover {
   background-color: var(--theme-color);
   color: white;
 }
 /*
-.items-container .pending-item .top:hover + .bottom {
+.pending-items-container .pending-item .top:hover + .bottom {
   display: flex;
   transition: all .7s ease-in-out;
 }
 
-.items-container .pending-item .bottom .accept:hover {
+.pending-items-container .pending-item .bottom .accept:hover {
   background-color: green;
 } */
-.items-container .pending-item .fa {
+.pending-items-container .pending-item .fa {
   margin-right: 0.3rem;
   font-size: 1rem !important;
 }
 
-.items-container .pending-item .top .right-side,
-.items-container .pending-item .top .left-side,
-.items-container .pending-item .bottom .accept,
-.items-container .pending-item .bottom .ignore {
+.pending-items-container .pending-item .top .right-side,
+.pending-items-container .pending-item .top .left-side,
+.pending-items-container .pending-item .bottom .accept,
+.pending-items-container .pending-item .bottom .ignore {
   width: 50%;
   font-family: "Baloo Tammudu 2", sans-serif;
   line-height: 1;
   padding: 0.5rem 0;
 }
 
-.items-container .pending-item .bottom .accept,
-.items-container .pending-item .bottom .ignore {
+.pending-items-container .pending-item .bottom .accept,
+.pending-items-container .pending-item .bottom .ignore {
   padding: 0;
   padding-top: 0.3rem;
 }
